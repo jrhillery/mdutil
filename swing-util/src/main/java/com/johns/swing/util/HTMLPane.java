@@ -11,6 +11,9 @@ import javax.swing.text.Element;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.StyleSheet;
 
+/**
+ * Swing component with HTML output style control.
+ */
 public class HTMLPane extends JEditorPane {
 
 	public static final String CL_INCREASE = "increase";
@@ -29,7 +32,7 @@ public class HTMLPane extends JEditorPane {
 		ss.addRule("p { margin-top: 0; white-space: nowrap; }");
 		ss.addRule("p { font-family: Tahoma, Geneva, sans-serif; font-size: small; }");
 		ss.addRule('.' + CL_INCREASE + " { color: green; }");
-		ss.addRule('.' + CL_DECREASE + " { color: red; }");
+		ss.addRule('.' + CL_DECREASE + " { color: rgb(238,0,0); }");
 
 	} // end () constructor
 
