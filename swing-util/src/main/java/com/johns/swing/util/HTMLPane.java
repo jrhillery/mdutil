@@ -16,8 +16,8 @@ import javax.swing.text.html.StyleSheet;
  */
 public class HTMLPane extends JEditorPane {
 
-	public static final String CL_INCREASE = "increase";
-	public static final String CL_DECREASE = "decrease";
+	public static final String CL_INCREASE = "incrs";
+	public static final String CL_DECREASE = "decrs";
 
 	private static final long serialVersionUID = 9006371832274789173L;
 
@@ -32,7 +32,7 @@ public class HTMLPane extends JEditorPane {
 		ss.addRule("p { margin-top: 0; white-space: nowrap; }");
 		ss.addRule("p { font-family: Tahoma, Geneva, sans-serif; font-size: small; }");
 		ss.addRule('.' + CL_INCREASE + " { color: green; }");
-		ss.addRule('.' + CL_DECREASE + " { color: rgb(238,0,0); }");
+		ss.addRule('.' + CL_DECREASE + " { color: rgb(221,0,0); }");
 
 	} // end () constructor
 
