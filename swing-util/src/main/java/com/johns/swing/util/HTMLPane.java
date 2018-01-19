@@ -6,6 +6,9 @@ package com.johns.swing.util;
 import static javax.swing.text.StyleConstants.NameAttribute;
 import static javax.swing.text.html.HTML.Tag.BODY;
 
+import java.awt.Dimension;
+
+import javax.swing.JComponent;
 import javax.swing.JEditorPane;
 import javax.swing.text.Element;
 import javax.swing.text.html.HTMLDocument;
@@ -19,7 +22,7 @@ public class HTMLPane extends JEditorPane {
 	public static final String CL_INCREASE = "incrs";
 	public static final String CL_DECREASE = "decrs";
 
-	private static final long serialVersionUID = 9006371832274789173L;
+	private static final long serialVersionUID = -1872591747328518613L;
 
 	/**
 	 * Sole constructor.
@@ -87,5 +90,34 @@ public class HTMLPane extends JEditorPane {
 		}
 
 	} // end clearText()
+
+	/**
+	 * Reduce the minimum, preferred and maximum size of the supplied button to a
+	 * specified lower height.
+	 *
+	 * @param button
+	 * @param lowerHeight
+	 */
+	public static void reduceHeight(JComponent button, int lowerHeight) {
+		Dimension buttonDim = button.getMinimumSize();
+
+		if (buttonDim.height > lowerHeight) {
+			buttonDim.height = lowerHeight;
+			button.setMinimumSize(buttonDim);
+		}
+		buttonDim = button.getPreferredSize();
+
+		if (buttonDim.height > lowerHeight) {
+			buttonDim.height = lowerHeight;
+			button.setPreferredSize(buttonDim);
+		}
+		buttonDim = button.getMaximumSize();
+
+		if (buttonDim.height > lowerHeight) {
+			buttonDim.height = lowerHeight;
+			button.setMaximumSize(buttonDim);
+		}
+
+	} // end reduceHeight(JComponent, int)
 
 } // end class HTMLPane
