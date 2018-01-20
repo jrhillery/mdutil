@@ -7,7 +7,10 @@ import static javax.swing.text.StyleConstants.NameAttribute;
 import static javax.swing.text.html.HTML.Tag.BODY;
 
 import java.awt.Dimension;
+import java.awt.image.BufferedImage;
+import java.io.InputStream;
 
+import javax.imageio.ImageIO;
 import javax.swing.JComponent;
 import javax.swing.JEditorPane;
 import javax.swing.text.Element;
@@ -90,6 +93,30 @@ public class HTMLPane extends JEditorPane {
 		}
 
 	} // end clearText()
+
+	/**
+	 * @param name
+	 * @param obj
+	 * @return the named image from obj's class loader
+	 */
+	public static BufferedImage readResourceImage(String name, Object obj) {
+		BufferedImage image = null;
+		InputStream stream = obj.getClass().getResourceAsStream(name);
+
+		if (stream != null) {
+			try {
+				image = ImageIO.read(stream);
+			} catch (Exception e) {
+				System.err.println("Exception reading resource image" + e);
+			} finally {
+				try {
+					stream.close();
+				} catch (Exception e) { /* ignore */ }
+			}
+		}
+
+		return image;
+	} // end readResourceImage(String, Object)
 
 	/**
 	 * Reduce the minimum, preferred and maximum size of the supplied button to a
