@@ -1,7 +1,7 @@
 /*
  * Created on Jan 5, 2018
  */
-package com.johns.swing.util;
+package com.leastlogic.swing.util;
 
 import static javax.swing.text.StyleConstants.NameAttribute;
 import static javax.swing.text.html.HTML.Tag.BODY;

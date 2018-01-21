@@ -1,7 +1,7 @@
 /*
  * Created on Jan 20, 2018
  */
-package com.johns.moneydance.util;
+package com.leastlogic.moneydance.util;
 
 /**
  * This interface provides a way to add a security handler to a collection.

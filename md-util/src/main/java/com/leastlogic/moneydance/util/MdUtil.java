@@ -1,7 +1,7 @@
 /*
  * Created on Jan 10, 2018
  */
-package com.johns.moneydance.util;
+package com.leastlogic.moneydance.util;
 
 import static java.math.RoundingMode.HALF_EVEN;
 
