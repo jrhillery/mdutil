@@ -10,6 +10,7 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import com.infinitekind.moneydance.model.Account;
@@ -24,10 +25,10 @@ public class MdUtil {
 	private static final double[] centMult = { 1, 10, 100, 1000, 10000 };
 
 	/**
-	 * @param security
-	 * @param latestSnapshot
-	 * @param priceFmt
-	 * @return the price in latestSnapshot
+	 * @param security The Moneydance security
+	 * @param latestSnapshot The last currency snap shot for the supplied security
+	 * @param priceFmt A currency number format for prices
+	 * @return The price in latestSnapshot
 	 */
 	public static double validateCurrentUserRate(CurrencyType security,
 			CurrencySnapshot latestSnapshot, NumberFormat priceFmt) {
@@ -45,8 +46,8 @@ public class MdUtil {
 	} // end validateCurrentUserRate(CurrencyType, CurrencySnapshot, NumberFormat)
 
 	/**
-	 * @param rate the Moneydance currency rate for a security
-	 * @return the security price rounded to the tenth place past the decimal point
+	 * @param rate The Moneydance currency rate for a security
+	 * @return The security price rounded to the tenth place past the decimal point
 	 */
 	public static double convRateToPrice(double rate) {
 
@@ -54,8 +55,8 @@ public class MdUtil {
 	} // end convRateToPrice(double)
 
 	/**
-	 * @param price
-	 * @return price rounded to the tenth place past the decimal point
+	 * @param price The price
+	 * @return Price rounded to the tenth place past the decimal point
 	 */
 	public static double roundPrice(double price) {
 		BigDecimal bd = BigDecimal.valueOf(price);
@@ -64,8 +65,8 @@ public class MdUtil {
 	} // end roundPrice(double)
 
 	/**
-	 * @param dateInt the numeric date value in decimal form YYYYMMDD
-	 * @return the corresponding local date
+	 * @param dateInt The numeric date value in decimal form YYYYMMDD
+	 * @return The corresponding local date
 	 */
 	public static LocalDate convDateIntToLocal(int dateInt) {
 		int year = dateInt / 10000;
@@ -76,8 +77,8 @@ public class MdUtil {
 	} // end convDateIntToLocal(int)
 
 	/**
-	 * @param date the local date value
-	 * @return the corresponding numeric date value in decimal form YYYYMMDD
+	 * @param date The local date value
+	 * @return The corresponding numeric date value in decimal form YYYYMMDD
 	 */
 	public static int convLocalToDateInt(LocalDate date) {
 		int dateInt = date.getYear() * 10000
@@ -88,8 +89,8 @@ public class MdUtil {
 	} // end convLocalToDateInt(LocalDate)
 
 	/**
-	 * @param security the Moneydance security
-	 * @return the last currency snap shot for the supplied security
+	 * @param security The Moneydance security
+	 * @return The last currency snap shot for the supplied security
 	 */
 	public static CurrencySnapshot getLatestSnapshot(CurrencyType security) {
 		List<CurrencySnapshot> snapShots = security.getSnapshots();
@@ -98,9 +99,9 @@ public class MdUtil {
 	} // end getLatestSnapshot(CurrencyType)
 
 	/**
-	 * @param account the parent account
-	 * @param securityName
-	 * @return the Moneydance security subaccount with the specified name
+	 * @param account The parent account
+	 * @param securityName Security name
+	 * @return The Moneydance security subaccount with the specified name
 	 */
 	public static Account getSubAccountByName(Account account, String securityName) {
 		List<Account> subs = account.getSubAccounts(new AcctFilter() {
@@ -121,9 +122,9 @@ public class MdUtil {
 	} // end getSubAccountByName(Account, String)
 
 	/**
-	 * @param account the root account
-	 * @param accountNum
-	 * @return the Moneydance investment account with the specified number
+	 * @param account The root account
+	 * @param accountNum Investment account number
+	 * @return The Moneydance investment account with the specified number
 	 */
 	public static Account getSubAccountByInvestNumber(Account account, String accountNum) {
 		List<Account> subs = account.getSubAccounts(new AcctFilter() {
@@ -144,8 +145,8 @@ public class MdUtil {
 	} // end getSubAccountByInvestNumber(Account, String)
 
 	/**
-	 * @param account
-	 * @return the current account balance
+	 * @param account Moneydance account
+	 * @return The current account balance
 	 */
 	public static double getCurrentBalance(Account account) {
 		int decimalPlaces = account.getCurrencyType().getDecimalPlaces();
@@ -154,14 +155,15 @@ public class MdUtil {
 	} // end getCurrentBalance(Account)
 
 	/**
-	 * @param baseBundleName
-	 * @return a resource bundle instance for the specified base bundle name
+	 * @param baseBundleName The base name of the resource bundle, a fully qualified class name
+	 * @param locale The locale for which a resource bundle is desired
+	 * @return A resource bundle instance for the specified base bundle name
 	 */
-	public static ResourceBundle getMsgBundle(String baseBundleName) {
+	public static ResourceBundle getMsgBundle(String baseBundleName, Locale locale) {
 		ResourceBundle messageBundle;
 
 		try {
-			messageBundle = ResourceBundle.getBundle(baseBundleName);
+			messageBundle = ResourceBundle.getBundle(baseBundleName, locale);
 		} catch (Exception e) {
 			System.err.format("Unable to load message bundle %s. %s%n", baseBundleName, e);
 
