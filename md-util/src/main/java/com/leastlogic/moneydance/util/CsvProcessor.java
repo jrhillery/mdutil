@@ -241,7 +241,12 @@ public abstract class CsvProcessor {
 	 */
 	protected NumberFormat getCurrencyFormat(BigDecimal amount) {
 		DecimalFormat formatter = (DecimalFormat) NumberFormat.getCurrencyInstance(this.locale);
-		formatter.setMinimumFractionDigits(amount.scale());
+		int amtScale = amount.scale();
+
+		if (amtScale < 2) {
+			amtScale = 2; // some quotes omit the trailing zeros
+		}
+		formatter.setMinimumFractionDigits(amtScale);
 
 		return formatter;
 	} // end getCurrencyFormat(BigDecimal)
