@@ -6,6 +6,7 @@ package com.leastlogic.moneydance.util;
 import static java.math.RoundingMode.HALF_EVEN;
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.Enumeration;
@@ -26,17 +27,18 @@ public class MdUtil {
 
 	/**
 	 * @param security The Moneydance security
-	 * @param latestSnapshot The last currency snap shot for the supplied security
-	 * @param priceFmt A currency number format for prices
+	 * @param latestSnapshot The last currency snapshot for the supplied security
 	 * @return The price in latestSnapshot
 	 */
 	public static double validateCurrentUserRate(CurrencyType security,
-			CurrencySnapshot latestSnapshot, NumberFormat priceFmt) {
+			CurrencySnapshot latestSnapshot) {
 		double price = convRateToPrice(latestSnapshot.getUserRate());
 		double oldPrice = convRateToPrice(security.getUserRate());
 
 		if (price != oldPrice) {
 			security.setUserRate(latestSnapshot.getUserRate());
+			DecimalFormat priceFmt = (DecimalFormat) NumberFormat.getCurrencyInstance();
+			priceFmt.setMinimumFractionDigits(8);
 
 			System.err.format("Changed security %s current price from %s to %s.%n",
 				security.getName(), priceFmt.format(oldPrice), priceFmt.format(price));
@@ -90,13 +92,34 @@ public class MdUtil {
 
 	/**
 	 * @param security The Moneydance security
-	 * @return The last currency snap shot for the supplied security
+	 * @return The last currency snapshot for the supplied security
 	 */
 	public static CurrencySnapshot getLatestSnapshot(CurrencyType security) {
 		List<CurrencySnapshot> snapShots = security.getSnapshots();
 
 		return snapShots.get(snapShots.size() - 1);
 	} // end getLatestSnapshot(CurrencyType)
+
+	/**
+	 * @param security The Moneydance security
+	 * @param dateInt The desired date
+	 * @return The currency snapshot for the supplied security on the specified date
+	 */
+	public static CurrencySnapshot getSnapshotForDate(CurrencyType security, int dateInt) {
+		List<CurrencySnapshot> snapShots = security.getSnapshots();
+		int index = snapShots.size();
+
+		// start with the latest snapshot
+		CurrencySnapshot candidate = snapShots.get(--index);
+		validateCurrentUserRate(security, candidate);
+
+		while (candidate.getDateInt() > dateInt && index > 0) {
+			// examine the prior snapshot
+			candidate = snapShots.get(--index);
+		}
+
+		return candidate;
+	} // end getSnapshotForDate(CurrencyType, int, NumberFormat)
 
 	/**
 	 * @param account The parent account

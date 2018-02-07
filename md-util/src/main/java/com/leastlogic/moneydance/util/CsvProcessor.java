@@ -80,10 +80,10 @@ public abstract class CsvProcessor {
 	} // end processFile()
 
 	/**
-	 * @param propKey property key for column header
+	 * @param propKey Property key for column header
 	 * @return value from the csv row map with any surrounding double quotes removed
 	 */
-	protected String stripQuotes(String propKey) throws MduException {
+	protected String getCol(String propKey) throws MduException {
 		String csvColumnKey = getCsvProps().getProperty(propKey);
 		String val = this.csvRowMap.get(csvColumnKey);
 		if (val == null) {
@@ -104,7 +104,7 @@ public abstract class CsvProcessor {
 		}
 
 		return val.trim();
-	} // end stripQuotes(String)
+	} // end getCol(String)
 
 	/**
 	 * @return a buffered reader to read from the file selected to import
