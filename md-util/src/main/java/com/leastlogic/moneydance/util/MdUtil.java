@@ -40,8 +40,9 @@ public class MdUtil {
 			DecimalFormat priceFmt = (DecimalFormat) NumberFormat.getCurrencyInstance();
 			priceFmt.setMinimumFractionDigits(8);
 
-			System.err.format("Changed security %s current price from %s to %s.%n",
-				security.getName(), priceFmt.format(oldPrice), priceFmt.format(price));
+			System.err.format("Changed security %s (%s) current price from %s to %s.%n",
+				security.getName(), security.getTickerSymbol(), priceFmt.format(oldPrice),
+				priceFmt.format(price));
 		}
 
 		return price;
