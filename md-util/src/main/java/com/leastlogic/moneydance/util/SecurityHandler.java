@@ -86,7 +86,15 @@ public class SecurityHandler {
 	} // end applyUpdate()
 
 	/**
-	 * @return a string representation of this SecurityHandler
+	 * @return This handler's security
+	 */
+	public CurrencyType getSecurity() {
+
+		return this.security;
+	} // end getSecurity()
+
+	/**
+	 * @return A string representation of this SecurityHandler
 	 */
 	public String toString() {
 
