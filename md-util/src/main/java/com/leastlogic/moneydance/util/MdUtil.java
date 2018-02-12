@@ -5,6 +5,7 @@ package com.leastlogic.moneydance.util;
 
 import static java.math.RoundingMode.HALF_EVEN;
 
+import java.io.InputStream;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Locale;
+import java.util.Properties;
 import java.util.ResourceBundle;
 
 import com.infinitekind.moneydance.model.Account;
@@ -205,5 +207,32 @@ public class MdUtil {
 
 		return messageBundle;
 	} // end getMsgBundle(String)
+
+	/**
+	 * @param propsFileName
+	 * @param srcClass The class whose class loader will be used
+	 * @return A properties instance with the specified file content
+	 */
+	public static Properties loadProps(String propsFileName, Class<? extends Object> srcClass)
+			throws MduException {
+		InputStream propsStream = srcClass.getClassLoader().getResourceAsStream(propsFileName);
+		if (propsStream == null) {
+			throw new MduException(null, "Unable to find %s on %s class path.", propsFileName,
+				srcClass);
+		}
+
+		Properties props = new Properties();
+		try {
+			props.load(propsStream);
+		} catch (Exception e) {
+			throw new MduException(e, "Exception loading %s.", propsFileName);
+		} finally {
+			try {
+				propsStream.close();
+			} catch (Exception e) { /* ignore */ }
+		}
+
+		return props;
+	} // end loadProps(String, Class<? extends Object>)
 
 } // end class MdUtil
