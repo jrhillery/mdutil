@@ -48,7 +48,7 @@ public class MdUtil {
 		}
 
 		return price;
-	} // end validateCurrentUserRate(CurrencyType, CurrencySnapshot, NumberFormat)
+	} // end validateCurrentUserRate(CurrencyType, CurrencySnapshot)
 
 	/**
 	 * @param rate The Moneydance currency rate for a security
@@ -122,7 +122,7 @@ public class MdUtil {
 		}
 
 		return candidate;
-	} // end getSnapshotForDate(CurrencyType, int, NumberFormat)
+	} // end getSnapshotForDate(CurrencyType, int)
 
 	/**
 	 * @param account The parent account
@@ -206,26 +206,26 @@ public class MdUtil {
 		} // end catch
 
 		return messageBundle;
-	} // end getMsgBundle(String)
+	} // end getMsgBundle(String, Locale)
 
 	/**
 	 * @param propsFileName
 	 * @param srcClass The class whose class loader will be used
 	 * @return A properties instance with the specified file content
 	 */
-	public static Properties loadProps(String propsFileName, Class<? extends Object> srcClass)
+	public static Properties loadProps(String propsFileName, Class<?> srcClass)
 			throws MduException {
 		InputStream propsStream = srcClass.getClassLoader().getResourceAsStream(propsFileName);
 		if (propsStream == null) {
-			throw new MduException(null, "Unable to find %s on %s class path.", propsFileName,
-				srcClass);
+			throw new MduException(null, "Unable to find properties %s on %s class path.",
+				propsFileName, srcClass);
 		}
 
 		Properties props = new Properties();
 		try {
 			props.load(propsStream);
 		} catch (Exception e) {
-			throw new MduException(e, "Exception loading %s.", propsFileName);
+			throw new MduException(e, "Exception loading properties %s.", propsFileName);
 		} finally {
 			try {
 				propsStream.close();
@@ -233,6 +233,6 @@ public class MdUtil {
 		}
 
 		return props;
-	} // end loadProps(String, Class<? extends Object>)
+	} // end loadProps(String, Class<?>)
 
 } // end class MdUtil

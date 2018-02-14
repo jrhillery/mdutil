@@ -64,7 +64,7 @@ public class HTMLPane extends JEditorPane {
 
 	/**
 	 * @param doc
-	 * @return the body element of doc
+	 * @return The body element of doc
 	 */
 	private Element getBody(HTMLDocument doc) {
 		Element root = doc.getDefaultRootElement();
@@ -95,28 +95,31 @@ public class HTMLPane extends JEditorPane {
 	} // end clearText()
 
 	/**
-	 * @param name
-	 * @param obj
-	 * @return the named image from obj's class loader
+	 * @param imgFileName
+	 * @param srcClass The class whose class loader will be used
+	 * @return The named image from the class loader
 	 */
-	public static BufferedImage readResourceImage(String name, Object obj) {
+	public static BufferedImage readResourceImage(String imgFileName, Class<?> srcClass) {
 		BufferedImage image = null;
-		InputStream stream = obj.getClass().getResourceAsStream(name);
+		InputStream imgStream = srcClass.getResourceAsStream(imgFileName);
 
-		if (stream != null) {
+		if (imgStream == null) {
+			System.err.format("Unable to find image %s on %s class path.", imgFileName,
+				srcClass);
+		} else {
 			try {
-				image = ImageIO.read(stream);
+				image = ImageIO.read(imgStream);
 			} catch (Exception e) {
-				System.err.println("Exception reading resource image" + e);
+				System.err.format("Exception reading image %s: %s", imgFileName, e);
 			} finally {
 				try {
-					stream.close();
+					imgStream.close();
 				} catch (Exception e) { /* ignore */ }
 			}
 		}
 
 		return image;
-	} // end readResourceImage(String, Object)
+	} // end readResourceImage(String, Class<?>)
 
 	/**
 	 * Reduce the minimum, preferred and maximum size of the supplied button to a
