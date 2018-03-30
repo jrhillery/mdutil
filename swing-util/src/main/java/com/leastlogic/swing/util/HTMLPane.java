@@ -104,13 +104,13 @@ public class HTMLPane extends JEditorPane {
 		InputStream imgStream = srcClass.getResourceAsStream(imgFileName);
 
 		if (imgStream == null) {
-			System.err.format("Unable to find image %s on %s class path.", imgFileName,
+			System.err.format("Unable to find image %s on %s class path.%n", imgFileName,
 				srcClass);
 		} else {
 			try {
 				image = ImageIO.read(imgStream);
 			} catch (Exception e) {
-				System.err.format("Exception reading image %s: %s", imgFileName, e);
+				System.err.format("Exception reading image %s: %s%n", imgFileName, e);
 			} finally {
 				try {
 					imgStream.close();
