@@ -3,6 +3,7 @@
  */
 package com.leastlogic.moneydance.util;
 
+import static com.infinitekind.moneydance.model.Account.AccountType.ASSET;
 import static java.math.RoundingMode.HALF_EVEN;
 
 import java.io.InputStream;
@@ -11,6 +12,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.Enumeration;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
@@ -177,26 +179,62 @@ public class MdUtil {
 	 * @return The current account balance
 	 */
 	public static double getCurrentBalance(Account account) {
+		long centBalance;
+
+		if (account.getAccountType() == ASSET) {
+			centBalance = account.getRecursiveUserCurrentBalance();
+		} else {
+			centBalance = account.getUserCurrentBalance();
+		}
 		int decimalPlaces = account.getCurrencyType().getDecimalPlaces();
 
-		return account.getUserCurrentBalance() / centMult[decimalPlaces];
+		return centBalance / centMult[decimalPlaces];
 	} // end getCurrentBalance(Account)
 
 	/**
 	 * @param book The root account for all transactions
 	 * @param account Moneydance account to obtain the balance for
 	 * @param asOfDates The dates to obtain the balance for
-	 * @return The balances of the given account as of the end of the
-	 *         corresponding given dates in asOfDates
+	 * @return Account cent balances as of the end of each date in asOfDates
+	 */
+	private static long[] getCentBalancesAsOfDates(AccountBook book, Account account,
+			int[] asOfDates) {
+		long[] centBalances = AccountUtil.getBalancesAsOfDates(book, account, asOfDates);
+
+		if (account.getAccountType() == ASSET) {
+			// recurse to get subaccount balances
+			Iterator<Account> accts = AccountUtil.getAccountIterator(account);
+
+			while (accts.hasNext()) {
+				Account subAcct = accts.next();
+
+				if (subAcct != account) {
+					long[] subBalances = getCentBalancesAsOfDates(book, subAcct, asOfDates);
+
+					for (int i = 0; i < centBalances.length; ++i) {
+						centBalances[i] += subBalances[i];
+					}
+				}
+			}
+		}
+
+		return centBalances;
+	} // end getCentBalancesAsOfDates(AccountBook, Account, int[])
+
+	/**
+	 * @param book The root account for all transactions
+	 * @param account Moneydance account to obtain the balance for
+	 * @param asOfDates The dates to obtain the balance for
+	 * @return Account balances as of the end of each date in asOfDates
 	 */
 	public static double[] getBalancesAsOfDates(AccountBook book, Account account,
 			int[] asOfDates) {
-		long[] lBalances = AccountUtil.getBalancesAsOfDates(book, account, asOfDates);
-		double[] balances = new double[lBalances.length];
+		long[] centBalances = getCentBalancesAsOfDates(book, account, asOfDates);
+		double[] balances = new double[centBalances.length];
 		int decimalPlaces = account.getCurrencyType().getDecimalPlaces();
 
 		for (int i = 0; i < balances.length; ++i) {
-			balances[i] = lBalances[i] / centMult[decimalPlaces];
+			balances[i] = centBalances[i] / centMult[decimalPlaces];
 		} // end for
 
 		return balances;
