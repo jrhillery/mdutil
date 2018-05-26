@@ -38,6 +38,9 @@ public class MdUtil {
 	 */
 	public static double validateCurrentUserRate(CurrencyType security,
 			CurrencySnapshot latestSnapshot) {
+		if (latestSnapshot == null)
+			return 1; // default price to 1 when no snapshot
+
 		double price = convRateToPrice(latestSnapshot.getUserRate());
 		double oldPrice = convRateToPrice(security.getUserRate());
 
@@ -104,7 +107,10 @@ public class MdUtil {
 	public static CurrencySnapshot getLatestSnapshot(CurrencyType security) {
 		List<CurrencySnapshot> snapShots = security.getSnapshots();
 
-		return snapShots.get(snapShots.size() - 1);
+		if (snapShots.size() == 0)
+			return null;
+		else
+			return snapShots.get(snapShots.size() - 1);
 	} // end getLatestSnapshot(CurrencyType)
 
 	/**
@@ -115,6 +121,9 @@ public class MdUtil {
 	public static CurrencySnapshot getSnapshotForDate(CurrencyType security, int dateInt) {
 		List<CurrencySnapshot> snapShots = security.getSnapshots();
 		int index = snapShots.size();
+
+		if (index == 0)
+			return null;
 
 		// start with the latest snapshot
 		CurrencySnapshot candidate = snapShots.get(--index);
