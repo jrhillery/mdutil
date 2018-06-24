@@ -29,7 +29,7 @@ import com.infinitekind.moneydance.model.CurrencyType;
  * Collection of common utility methods handy for Moneydance extensions.
  */
 public class MdUtil {
-	private static final double[] centMult = { 1, 10, 100, 1000, 10000 };
+	private static final double[] centMult = { 1, 10, 100, 1000, 10000, 100000, 1000000 };
 
 	/**
 	 * @param security The Moneydance security
