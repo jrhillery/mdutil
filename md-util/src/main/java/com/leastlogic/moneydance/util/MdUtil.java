@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
@@ -102,10 +103,21 @@ public class MdUtil {
 
 	/**
 	 * @param security The Moneydance security
+	 * @return Sorted list of snapshots for the specified security
+	 */
+	private static List<CurrencySnapshot> getSnapshots(CurrencyType security) {
+		List<CurrencySnapshot> snapShots = security.getSnapshots();
+		snapShots.sort(Comparator.comparing(CurrencySnapshot::getDateInt));
+
+		return snapShots;
+	} // end getSnapshots(CurrencyType)
+
+	/**
+	 * @param security The Moneydance security
 	 * @return The last currency snapshot for the supplied security
 	 */
 	public static CurrencySnapshot getLatestSnapshot(CurrencyType security) {
-		List<CurrencySnapshot> snapShots = security.getSnapshots();
+		List<CurrencySnapshot> snapShots = getSnapshots(security);
 
 		if (snapShots.size() == 0)
 			return null;
@@ -119,7 +131,7 @@ public class MdUtil {
 	 * @return The currency snapshot for the supplied security on the specified date
 	 */
 	public static CurrencySnapshot getSnapshotForDate(CurrencyType security, int dateInt) {
-		List<CurrencySnapshot> snapShots = security.getSnapshots();
+		List<CurrencySnapshot> snapShots = getSnapshots(security);
 		int index = snapShots.size();
 
 		if (index == 0)
