@@ -149,7 +149,7 @@ public class MdUtil {
 	 * @param account Moneydance account
 	 * @return The current account balance
 	 */
-	public static double getCurrentBalance(Account account) {
+	public static BigDecimal getCurrentBalance(Account account) {
 		BigDecimal centBalance;
 
 		if (account.getAccountType() == ASSET) {
@@ -159,7 +159,7 @@ public class MdUtil {
 		}
 		int decimalPlaces = account.getCurrencyType().getDecimalPlaces();
 
-		return centBalance.movePointLeft(decimalPlaces).doubleValue(); // TODO return the BigDecimal
+		return centBalance.movePointLeft(decimalPlaces);
 	} // end getCurrentBalance(Account)
 
 	/**
@@ -198,18 +198,18 @@ public class MdUtil {
 	 * @param asOfDates The dates to obtain the balance for
 	 * @return Account balances as of the end of each date in asOfDates
 	 */
-	public static double[] getBalancesAsOfDates(AccountBook book, Account account,
+	public static BigDecimal[] getBalancesAsOfDates(AccountBook book, Account account,
 			int[] asOfDates) {
 		long[] centBalances = getCentBalancesAsOfDates(book, account, asOfDates);
-		double[] balances = new double[centBalances.length];
+		BigDecimal[] balances = new BigDecimal[centBalances.length];
 		int decimalPlaces = account.getCurrencyType().getDecimalPlaces();
 
 		for (int i = 0; i < balances.length; ++i) {
 			BigDecimal centBalance = BigDecimal.valueOf(centBalances[i]);
-			balances[i] = centBalance.movePointLeft(decimalPlaces).doubleValue();
+			balances[i] = centBalance.movePointLeft(decimalPlaces);
 		} // end for
 
-		return balances; // TODO return the BigDecimals
+		return balances;
 	} // end getBalancesAsOfDates(AccountBook, Account, int[])
 
 	/**
