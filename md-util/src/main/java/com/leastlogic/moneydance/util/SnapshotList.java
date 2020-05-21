@@ -10,7 +10,7 @@ import com.infinitekind.moneydance.model.CurrencySnapshot;
 import com.infinitekind.moneydance.model.CurrencyType;
 
 /**
- * Utility class to house a list of snapshots for a Moneydance security
+ * Utility class to house a list of snapshots for a Moneydance security.
  */
 public class SnapshotList {
 

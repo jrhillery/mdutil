@@ -29,7 +29,6 @@ import com.infinitekind.moneydance.model.CurrencyType;
  * Collection of common utility methods handy for Moneydance extensions.
  */
 public class MdUtil {
-	private static final double[] centMult = { 1, 10, 100, 1000, 10000, 100000, 1000000 };
 
 	/**
 	 * @param security The Moneydance security
@@ -151,16 +150,16 @@ public class MdUtil {
 	 * @return The current account balance
 	 */
 	public static double getCurrentBalance(Account account) {
-		long centBalance;
+		BigDecimal centBalance;
 
 		if (account.getAccountType() == ASSET) {
-			centBalance = account.getRecursiveUserCurrentBalance();
+			centBalance = BigDecimal.valueOf(account.getRecursiveUserCurrentBalance());
 		} else {
-			centBalance = account.getUserCurrentBalance();
+			centBalance = BigDecimal.valueOf(account.getUserCurrentBalance());
 		}
 		int decimalPlaces = account.getCurrencyType().getDecimalPlaces();
 
-		return centBalance / centMult[decimalPlaces];
+		return centBalance.movePointLeft(decimalPlaces).doubleValue(); // TODO return the BigDecimal
 	} // end getCurrentBalance(Account)
 
 	/**
@@ -206,10 +205,11 @@ public class MdUtil {
 		int decimalPlaces = account.getCurrencyType().getDecimalPlaces();
 
 		for (int i = 0; i < balances.length; ++i) {
-			balances[i] = centBalances[i] / centMult[decimalPlaces];
+			BigDecimal centBalance = BigDecimal.valueOf(centBalances[i]);
+			balances[i] = centBalance.movePointLeft(decimalPlaces).doubleValue();
 		} // end for
 
-		return balances;
+		return balances; // TODO return the BigDecimals
 	} // end getBalancesAsOfDates(AccountBook, Account, int[])
 
 	/**
