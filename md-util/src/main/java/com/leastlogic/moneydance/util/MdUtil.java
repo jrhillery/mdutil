@@ -40,11 +40,11 @@ public class MdUtil {
 		if (latestSnapshot == null)
 			return 1; // default price to 1 when no snapshot
 
-		double price = convRateToPrice(latestSnapshot.getUserRate());
-		double oldPrice = convRateToPrice(security.getUserRate());
+		double price = convRateToPrice(latestSnapshot.getRate());
+		double oldPrice = convRateToPrice(security.getRelativeRate());
 
 		if (price != oldPrice) {
-			security.setUserRate(latestSnapshot.getUserRate());
+			security.setRelativeRate(latestSnapshot.getRate());
 			DecimalFormat priceFmt = (DecimalFormat) NumberFormat.getCurrencyInstance();
 			priceFmt.setMinimumFractionDigits(8);
 
