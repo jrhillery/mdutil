@@ -9,6 +9,7 @@ import static javax.swing.text.html.HTML.Tag.BODY;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
+import java.math.BigDecimal;
 
 import javax.imageio.ImageIO;
 import javax.swing.JComponent;
@@ -22,8 +23,8 @@ import javax.swing.text.html.StyleSheet;
  */
 public class HTMLPane extends JEditorPane {
 
-	public static final String CL_INCREASE = "incrs";
-	public static final String CL_DECREASE = "decrs";
+	private static final String CL_INCREASE = "incrs";
+	private static final String CL_DECREASE = "decrs";
 
 	private static final long serialVersionUID = -1872591747328518613L;
 
@@ -93,6 +94,29 @@ public class HTMLPane extends JEditorPane {
 		}
 
 	} // end clearText()
+
+	/**
+	 * @param newPrice
+	 * @param oldPrice
+	 * @return the html class for the price change
+	 */
+	public static String getSpanCl(BigDecimal newPrice, BigDecimal oldPrice) {
+		String spanCl;
+
+		switch (newPrice.compareTo(oldPrice)) {
+		case 1:
+			spanCl = CL_INCREASE;
+			break;
+		case -1:
+			spanCl = CL_DECREASE;
+			break;
+		default:
+			spanCl = "";
+			break;
+		}
+
+		return spanCl;
+	} // end getSpanCl(BigDecimal, BigDecimal)
 
 	/**
 	 * @param imgFileName

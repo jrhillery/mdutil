@@ -35,15 +35,15 @@ public class MdUtil {
 	 * @param latestSnapshot The last currency snapshot for the supplied security
 	 * @return The price in latestSnapshot
 	 */
-	public static double validateCurrentUserRate(CurrencyType security,
+	public static BigDecimal validateCurrentUserRate(CurrencyType security,
 			CurrencySnapshot latestSnapshot) {
 		if (latestSnapshot == null)
-			return 1; // default price to 1 when no snapshot
+			return BigDecimal.ONE; // default price to 1 when no snapshot
 
-		double price = convRateToPrice(latestSnapshot.getRate());
-		double oldPrice = convRateToPrice(security.getRelativeRate());
+		BigDecimal price = convRateToPrice(latestSnapshot.getRate());
+		BigDecimal oldPrice = convRateToPrice(security.getRelativeRate());
 
-		if (price != oldPrice) {
+		if (price.compareTo(oldPrice) != 0) {
 			security.setRelativeRate(latestSnapshot.getRate());
 			DecimalFormat priceFmt = (DecimalFormat) NumberFormat.getCurrencyInstance();
 			priceFmt.setMinimumFractionDigits(8);
@@ -60,7 +60,7 @@ public class MdUtil {
 	 * @param rate The Moneydance currency rate for a security
 	 * @return The security price rounded to the tenth place past the decimal point
 	 */
-	public static double convRateToPrice(double rate) {
+	public static BigDecimal convRateToPrice(double rate) {
 
 		return roundPrice(1 / rate);
 	} // end convRateToPrice(double)
@@ -69,10 +69,10 @@ public class MdUtil {
 	 * @param price The price
 	 * @return Price rounded to the tenth place past the decimal point
 	 */
-	public static double roundPrice(double price) {
+	public static BigDecimal roundPrice(double price) {
 		BigDecimal bd = BigDecimal.valueOf(price);
 
-		return bd.setScale(10, HALF_EVEN).doubleValue();
+		return bd.setScale(10, HALF_EVEN);
 	} // end roundPrice(double)
 
 	/**
