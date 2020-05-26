@@ -19,6 +19,7 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 import com.infinitekind.moneydance.model.Account;
+import com.infinitekind.moneydance.model.Account.AccountType;
 import com.infinitekind.moneydance.model.AccountBook;
 import com.infinitekind.moneydance.model.AccountUtil;
 import com.infinitekind.moneydance.model.AcctFilter;
@@ -98,6 +99,28 @@ public class MdUtil {
 
 		return dateInt;
 	} // end convLocalToDateInt(LocalDate)
+
+	/**
+	 * @param book The overall container for the Moneydance data file
+	 * @param type The type of accounts to return
+	 * @return The Moneydance accounts with the specified type in the book
+	 */
+	public static List<Account> getAccounts(AccountBook book, AccountType type) {
+		List<Account> invAccounts = AccountUtil.allMatchesForSearch(book, new AcctFilter() {
+
+			public boolean matches(Account acct) {
+
+				return acct.getAccountType() == type;
+			} // end matches(Account)
+
+			public String format(Account acct) {
+
+				return acct.getFullAccountName();
+			} // end format(Account)
+		}); // end new AcctFilter() {...}
+
+		return invAccounts;
+	} // end getAccounts(AccountBook, AccountType)
 
 	/**
 	 * @param account The parent account
