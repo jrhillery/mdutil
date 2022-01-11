@@ -38,8 +38,8 @@ public class HTMLPane extends JEditorPane {
 		StyleSheet ss = doc.getStyleSheet();
 		ss.addRule("p { margin-top: 0; white-space: nowrap; }");
 		ss.addRule("p { font-family: Tahoma, Geneva, sans-serif; font-size: 12pt; }");
-		ss.addRule('.' + CL_INCREASE + " { color: green; }");
-		ss.addRule('.' + CL_DECREASE + " { color: rgb(221,0,0); }");
+		ss.addRule('.' + CL_INCREASE + " { color: rgb(0,217,0); }");
+		ss.addRule('.' + CL_DECREASE + " { color: red; }");
 
 	} // end () constructor
 
