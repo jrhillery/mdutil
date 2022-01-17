@@ -15,25 +15,6 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module-library">
-      <library name="extadmin.jar">
-        <CLASSES>
-          <root url="file:///moneydance-devkit-5.1/lib/extadmin.jar" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="moneydance-dev.jar">
-        <CLASSES>
-          <root url="file:///moneydance-devkit-5.1/lib/moneydance-dev.jar" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="file://$MODULE_DIR$/../../../moneydance-devkit-5.1/doc/" />
-        </JAVADOC>
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="moneydance-devkit-5.1" level="application" />
   </component>
 </module>
