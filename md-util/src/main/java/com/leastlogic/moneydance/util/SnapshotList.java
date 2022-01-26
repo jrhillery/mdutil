@@ -14,8 +14,8 @@ import com.infinitekind.moneydance.model.CurrencyType;
  */
 public class SnapshotList {
 
-	private CurrencyType security;
-	private List<CurrencySnapshot> snapshots;
+	private final CurrencyType security;
+	private final List<CurrencySnapshot> snapshots;
 
 	/**
 	 * Sole constructor.

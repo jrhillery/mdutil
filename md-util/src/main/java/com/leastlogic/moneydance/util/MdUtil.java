@@ -32,7 +32,7 @@ import com.infinitekind.moneydance.model.CurrencyType;
 public class MdUtil {
 
 	/**
-	 * @param security The Moneydance security
+	 * @param security       The Moneydance security
 	 * @param latestSnapshot The last currency snapshot for the supplied security
 	 * @return The price in latestSnapshot
 	 */
@@ -93,11 +93,10 @@ public class MdUtil {
 	 * @return The corresponding numeric date value in decimal form YYYYMMDD
 	 */
 	public static int convLocalToDateInt(LocalDate date) {
-		int dateInt = date.getYear() * 10000
-				+ date.getMonthValue() * 100
-				+ date.getDayOfMonth();
 
-		return dateInt;
+		return date.getYear() * 10000
+			+ date.getMonthValue() * 100
+			+ date.getDayOfMonth();
 	} // end convLocalToDateInt(LocalDate)
 
 	/**
@@ -106,7 +105,8 @@ public class MdUtil {
 	 * @return The Moneydance accounts with the specified type in the book
 	 */
 	public static List<Account> getAccounts(AccountBook book, AccountType type) {
-		List<Account> invAccounts = AccountUtil.allMatchesForSearch(book, new AcctFilter() {
+
+		return AccountUtil.allMatchesForSearch(book, new AcctFilter() {
 
 			public boolean matches(Account acct) {
 
@@ -118,14 +118,12 @@ public class MdUtil {
 				return acct.getFullAccountName();
 			} // end format(Account)
 		}); // end new AcctFilter() {...}
-
-		return invAccounts;
 	} // end getAccounts(AccountBook, AccountType)
 
 	/**
-	 * @param account The parent account
+	 * @param account      The parent account
 	 * @param securityName Security name
-	 * @return The Moneydance security subaccount with the specified name
+	 * @return The Moneydance security sub-account with the specified name
 	 */
 	public static Account getSubAccountByName(Account account, String securityName) {
 		List<Account> subs = account.getSubAccounts(new AcctFilter() {
@@ -146,7 +144,7 @@ public class MdUtil {
 	} // end getSubAccountByName(Account, String)
 
 	/**
-	 * @param account The root account
+	 * @param account    The root account
 	 * @param accountNum Investment account number
 	 * @return The Moneydance investment account with the specified number
 	 */
@@ -186,8 +184,8 @@ public class MdUtil {
 	} // end getCurrentBalance(Account)
 
 	/**
-	 * @param book The root account for all transactions
-	 * @param account Moneydance account to obtain the balance for
+	 * @param book      The root account for all transactions
+	 * @param account   Moneydance account to obtain the balance for
 	 * @param asOfDates The dates to obtain the balance for
 	 * @return Account cent balances as of the end of each date in asOfDates
 	 */
@@ -196,11 +194,11 @@ public class MdUtil {
 		long[] centBalances = AccountUtil.getBalancesAsOfDates(book, account, asOfDates);
 
 		if (account.getAccountType() == ASSET) {
-			// recurse to get subaccount balances
-			Iterator<Account> accts = AccountUtil.getAccountIterator(account);
+			// recurse to get sub-account balances
+			Iterator<Account> accounts = AccountUtil.getAccountIterator(account);
 
-			while (accts.hasNext()) {
-				Account subAcct = accts.next();
+			while (accounts.hasNext()) {
+				Account subAcct = accounts.next();
 
 				if (subAcct != account) {
 					long[] subBalances = getCentBalancesAsOfDates(book, subAcct, asOfDates);
@@ -216,8 +214,8 @@ public class MdUtil {
 	} // end getCentBalancesAsOfDates(AccountBook, Account, int[])
 
 	/**
-	 * @param book The root account for all transactions
-	 * @param account Moneydance account to obtain the balance for
+	 * @param book      The root account for all transactions
+	 * @param account   Moneydance account to obtain the balance for
 	 * @param asOfDates The dates to obtain the balance for
 	 * @return Account balances as of the end of each date in asOfDates
 	 */
@@ -237,7 +235,7 @@ public class MdUtil {
 
 	/**
 	 * @param baseBundleName The base name of the resource bundle, a fully qualified class name
-	 * @param locale The locale for which a resource bundle is desired
+	 * @param locale         The locale for which a resource bundle is desired
 	 * @return A resource bundle instance for the specified base bundle name
 	 */
 	public static ResourceBundle getMsgBundle(String baseBundleName, Locale locale) {
@@ -255,8 +253,11 @@ public class MdUtil {
 				}
 
 				public Enumeration<String> getKeys() {
-					return null;
-				}
+					return new Enumeration<>() {
+						public boolean hasMoreElements() { return false; }
+						public String nextElement() { return null; }
+					};
+				} // end getKeys()
 			}; // end new ResourceBundle() {...}
 		} // end catch
 
@@ -264,8 +265,8 @@ public class MdUtil {
 	} // end getMsgBundle(String, Locale)
 
 	/**
-	 * @param propsFileName
-	 * @param srcClass The class whose class loader will be used
+	 * @param propsFileName Our properties file name
+	 * @param srcClass      The class whose class loader will be used
 	 * @return A properties instance with the specified file content
 	 */
 	public static Properties loadProps(String propsFileName, Class<?> srcClass)
@@ -277,14 +278,11 @@ public class MdUtil {
 		}
 
 		Properties props = new Properties();
-		try {
+		try (propsStream) {
 			props.load(propsStream);
-		} catch (Exception e) {
+		} // end try-with-resource propsStream
+		catch (Exception e) {
 			throw new MduException(e, "Exception loading properties %s.", propsFileName);
-		} finally {
-			try {
-				propsStream.close();
-			} catch (Exception e) { /* ignore */ }
 		}
 
 		return props;

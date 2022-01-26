@@ -9,6 +9,7 @@ import static javax.swing.text.html.HTML.Tag.BODY;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
+import java.io.Serial;
 import java.math.BigDecimal;
 
 import javax.imageio.ImageIO;
@@ -23,9 +24,12 @@ import javax.swing.text.html.StyleSheet;
  */
 public class HTMLPane extends JEditorPane {
 
+	@SuppressWarnings("SpellCheckingInspection")
 	private static final String CL_INCREASE = "incrs";
+	@SuppressWarnings("SpellCheckingInspection")
 	private static final String CL_DECREASE = "decrs";
 
+	@Serial
 	private static final long serialVersionUID = -1872591747328518613L;
 
 	/**
@@ -44,7 +48,7 @@ public class HTMLPane extends JEditorPane {
 	} // end () constructor
 
 	/**
-	 * @param text HTML text to append to the output log text area
+	 * @param text HTML-text to append to the output log text area
 	 */
 	public void addText(String text) {
 		HTMLDocument doc = (HTMLDocument) getDocument();
@@ -64,7 +68,7 @@ public class HTMLPane extends JEditorPane {
 	} // end addText(String)
 
 	/**
-	 * @param doc
+	 * @param doc An HTML document instance
 	 * @return The body element of doc
 	 */
 	private Element getBody(HTMLDocument doc) {
@@ -96,31 +100,22 @@ public class HTMLPane extends JEditorPane {
 	} // end clearText()
 
 	/**
-	 * @param newPrice
-	 * @param oldPrice
+	 * @param newPrice The new price
+	 * @param oldPrice The old price
 	 * @return the html class for the price change
 	 */
 	public static String getSpanCl(BigDecimal newPrice, BigDecimal oldPrice) {
-		String spanCl;
 
-		switch (newPrice.compareTo(oldPrice)) {
-		case 1:
-			spanCl = CL_INCREASE;
-			break;
-		case -1:
-			spanCl = CL_DECREASE;
-			break;
-		default:
-			spanCl = "";
-			break;
-		}
-
-		return spanCl;
+		return switch (newPrice.compareTo(oldPrice)) {
+			case 1 -> CL_INCREASE;
+			case -1 -> CL_DECREASE;
+			default -> "";
+		};
 	} // end getSpanCl(BigDecimal, BigDecimal)
 
 	/**
-	 * @param imgFileName
-	 * @param srcClass The class whose class loader will be used
+	 * @param imgFileName The image file name
+	 * @param srcClass    The class whose class loader will be used
 	 * @return The named image from the class loader
 	 */
 	public static BufferedImage readResourceImage(String imgFileName, Class<?> srcClass) {
@@ -131,14 +126,11 @@ public class HTMLPane extends JEditorPane {
 			System.err.format("Unable to find image %s on %s class path.%n", imgFileName,
 				srcClass);
 		} else {
-			try {
+			try (imgStream) {
 				image = ImageIO.read(imgStream);
-			} catch (Exception e) {
+			} // end try-with-resource imgStream
+			catch (Exception e) {
 				System.err.format("Exception reading image %s: %s%n", imgFileName, e);
-			} finally {
-				try {
-					imgStream.close();
-				} catch (Exception e) { /* ignore */ }
 			}
 		}
 
@@ -149,8 +141,8 @@ public class HTMLPane extends JEditorPane {
 	 * Reduce the minimum, preferred and maximum size of the supplied button to a
 	 * specified lower height.
 	 *
-	 * @param button
-	 * @param lowerHeight
+	 * @param button      The button to change
+	 * @param lowerHeight The maximum height for the result
 	 */
 	public static void reduceHeight(JComponent button, int lowerHeight) {
 		Dimension buttonDim = button.getMinimumSize();
