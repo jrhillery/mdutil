@@ -6,6 +6,7 @@ package com.leastlogic.swing.util;
 import static javax.swing.text.StyleConstants.NameAttribute;
 import static javax.swing.text.html.HTML.Tag.BODY;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
@@ -37,6 +38,8 @@ public class HTMLPane extends JEditorPane {
 	 */
 	public HTMLPane() {
 		super("text/html", null);
+		Color darkerColor = getBackground().darker().darker();
+		setBackground(darkerColor);
 		setEditable(false);
 		HTMLDocument doc = (HTMLDocument) getDocument();
 		StyleSheet ss = doc.getStyleSheet();
