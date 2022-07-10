@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/fwlookup.iml" filepath="$PROJECT_DIR$/fwlookup.iml" />
       <module fileurl="file://$PROJECT_DIR$/import-util.iml" filepath="$PROJECT_DIR$/import-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/md-util.iml" filepath="$PROJECT_DIR$/md-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mdscripts.iml" filepath="$PROJECT_DIR$/mdscripts.iml" />
       <module fileurl="file://$PROJECT_DIR$/more-decimal.iml" filepath="$PROJECT_DIR$/more-decimal.iml" />
       <module fileurl="file://$PROJECT_DIR$/nw-sync.iml" filepath="$PROJECT_DIR$/nw-sync.iml" />
       <module fileurl="file://$PROJECT_DIR$/swing-util.iml" filepath="$PROJECT_DIR$/swing-util.iml" />
