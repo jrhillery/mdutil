@@ -16,6 +16,7 @@
         <list>
           <option value="javax.swing.GroupLayout.Alignment" />
           <option value="javax.swing.LayoutStyle.ComponentPlacement" />
+          <option value="com.infinitekind.moneydance.model.Account.AccountType" />
         </list>
       </option>
     </inspection_tool>
