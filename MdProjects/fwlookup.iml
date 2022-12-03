@@ -16,7 +16,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="Jython 2.7 interpreter library" level="application" />
     <orderEntry type="module" module-name="md-util" />
-    <orderEntry type="library" name="selenium-java-4.3" level="application" />
     <orderEntry type="library" name="moneydance-devkit-5.1" level="application" />
     <orderEntry type="module-library">
       <library>
@@ -29,5 +28,6 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="selenium-java-4.7" level="application" />
   </component>
 </module>
