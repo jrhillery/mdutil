@@ -28,6 +28,6 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="selenium-java-4.81" level="application" />
+    <orderEntry type="library" name="selenium-java-4.8.3" level="application" />
   </component>
 </module>
