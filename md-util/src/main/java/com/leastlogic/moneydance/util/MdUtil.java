@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
@@ -22,7 +23,6 @@ import com.infinitekind.moneydance.model.Account;
 import com.infinitekind.moneydance.model.Account.AccountType;
 import com.infinitekind.moneydance.model.AccountBook;
 import com.infinitekind.moneydance.model.AccountUtil;
-import com.infinitekind.moneydance.model.AcctFilter;
 import com.infinitekind.moneydance.model.CurrencySnapshot;
 import com.infinitekind.moneydance.model.CurrencyType;
 
@@ -105,19 +105,17 @@ public class MdUtil {
 	 * @return The Moneydance accounts with the specified type in the book
 	 */
 	public static List<Account> getAccounts(AccountBook book, AccountType type) {
+		List<Account> subs = new ArrayList<>();
+		Iterator<Account> accounts = AccountUtil.getAccountIterator(book);
 
-		return AccountUtil.allMatchesForSearch(book, new AcctFilter() {
+		while (accounts.hasNext()) {
+			Account subAcct = accounts.next();
 
-			public boolean matches(Account acct) {
+			if (subAcct.getAccountType() == type)
+				subs.add(subAcct);
+		}
 
-				return acct.getAccountType() == type;
-			} // end matches(Account)
-
-			public String format(Account acct) {
-
-				return acct.getFullAccountName();
-			} // end format(Account)
-		}); // end new AcctFilter() {...}
+		return subs;
 	} // end getAccounts(AccountBook, AccountType)
 
 	/**
@@ -126,21 +124,17 @@ public class MdUtil {
 	 * @return The Moneydance security sub-account with the specified name
 	 */
 	public static Account getSubAccountByName(Account account, String securityName) {
-		List<Account> subs = account.getSubAccounts(new AcctFilter() {
+		Iterator<Account> accounts = AccountUtil.getAccountIterator(account);
 
-			public boolean matches(Account acct) {
-				String acctName = acct.getAccountName();
+		while (accounts.hasNext()) {
+			Account subAcct = accounts.next();
+			String acctName = subAcct.getAccountName();
 
-				return acctName.equalsIgnoreCase(securityName);
-			} // end matches(Account)
+			if (acctName.equalsIgnoreCase(securityName))
+				return subAcct;
+		}
 
-			public String format(Account acct) {
-
-				return acct.getFullAccountName();
-			} // end format(Account)
-		}); // end new AcctFilter() {...}
-
-		return subs == null || subs.isEmpty() ? null : subs.get(0);
+		return null;
 	} // end getSubAccountByName(Account, String)
 
 	/**
@@ -149,21 +143,17 @@ public class MdUtil {
 	 * @return The Moneydance investment account with the specified number
 	 */
 	public static Account getSubAccountByInvestNumber(Account account, String accountNum) {
-		List<Account> subs = account.getSubAccounts(new AcctFilter() {
+		Iterator<Account> accounts = AccountUtil.getAccountIterator(account);
 
-			public boolean matches(Account acct) {
-				String acctNum = acct.getInvestAccountNumber();
+		while (accounts.hasNext()) {
+			Account subAcct = accounts.next();
+			String acctNum = subAcct.getInvestAccountNumber();
 
-				return acctNum.equalsIgnoreCase(accountNum);
-			} // end matches(Account)
+			if (acctNum.equalsIgnoreCase(accountNum))
+				return subAcct;
+		}
 
-			public String format(Account acct) {
-
-				return acct.getFullAccountName();
-			} // end format(Account)
-		}); // end new AcctFilter() {...}
-
-		return subs == null || subs.isEmpty() ? null : subs.get(0);
+		return null;
 	} // end getSubAccountByInvestNumber(Account, String)
 
 	/**
