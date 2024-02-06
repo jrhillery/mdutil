@@ -369,6 +369,8 @@ class PyClassGenerator extends ClassGenerator {
         } catch (SecurityException e) {
             e.printStackTrace();
         }
+        Arrays.sort(fields, Comparator.comparing(Field::getName));
+
         for (Field f : fields) {
             int modifiers = f.getModifiers();
             if (Modifier.isPublic(modifiers)) {
@@ -386,6 +388,8 @@ class PyClassGenerator extends ClassGenerator {
             e.printStackTrace();
         }
         methods = filterOverrideMethods(methods);
+        Arrays.sort(methods, Comparator.comparing(Method::getName));
+
         for (Method m : methods) {
             int modifiers = m.getModifiers();
             if (Modifier.isPublic(modifiers)) {
