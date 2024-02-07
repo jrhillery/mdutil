@@ -70,7 +70,7 @@ public class EasyJython {
     }
 
     public void generatePys(String... pyFiles) {
-        Set<String> classList = new HashSet<String>();
+        Set<String> classList = new TreeSet<>();
         classList.addAll(Arrays.asList(PREDEFINED_CLASSES));
         for (String f : pyFiles) {
             File file = new File(f);
@@ -336,7 +336,7 @@ class PyClassGenerator extends ClassGenerator {
         BufferedReader br = new BufferedReader(new FileReader(initFile));
         String line;
         boolean inClass = false;
-        Map<String, StringBuilder> maps = new HashMap<String, StringBuilder>();
+        Map<String, StringBuilder> maps = new TreeMap<>();
         StringBuilder sb = null;
         while ((line = br.readLine()) != null) {
             if (line.startsWith("class")) {
