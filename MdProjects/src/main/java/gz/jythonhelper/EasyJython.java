@@ -285,6 +285,12 @@ abstract class ClassGenerator {
                 Class<?>[] newParameterTypes = m.getParameterTypes();
                 if (newParameterTypes.length > parameterTypes.length) {
                     methodMap.put(name, m);
+                } else if (newParameterTypes.length == parameterTypes.length) {
+                    String signature = existingMethod.toGenericString();
+                    String newSignature = m.toGenericString();
+                    if (newSignature.compareToIgnoreCase(signature) < 0) {
+                        methodMap.put(name, m);
+                    }
                 }
             }
         }
