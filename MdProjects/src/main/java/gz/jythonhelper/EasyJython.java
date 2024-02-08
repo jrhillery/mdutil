@@ -177,11 +177,13 @@ abstract class ClassGenerator {
             {"wait", "toString", "hashCode", "notify", "notifyAll", "getClass", "yield"}));
 
     private String outputDir;
-    public static final String INIT_TEMPLATE = "# encoding: utf-8\n" +
-            "# module %s\n" +
-            "# from (built-in)\n" +
-            "# by generator 999.999\n" +
-            "# source:%s\n";
+    public static final String INIT_TEMPLATE = """
+       # encoding: utf-8
+       # module %s
+       # from (built-in)
+       # by generator 999.999
+       # source:%s
+       """;
 
     protected ClassGenerator(String outputDir) {
         this.outputDir = outputDir;
