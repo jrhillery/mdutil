@@ -43,12 +43,8 @@ public class EasyJython {
                 }
                 File file = new File(name);
                 if (file.isDirectory()) {
-                    File[] files = file.listFiles(new FileFilter() {
-                        @Override
-                        public boolean accept(File pathname) {
-                            return pathname.isFile() && pathname.getName().toLowerCase().endsWith(".jar");
-                        }
-                    });
+                    File[] files = file.listFiles(
+                       pathname -> pathname.isFile() && pathname.getName().toLowerCase().endsWith(".jar"));
                     for (File f : files) {
                         urls.add(f.toURI().toURL());
                     }
@@ -92,12 +88,7 @@ public class EasyJython {
                 classList.addAll(getClassListFromPy(file));
             } else {
                 System.out.println("Directory:--->" + stripUserDir(file.getAbsolutePath()));
-                File[] files = file.listFiles(new FilenameFilter() {
-                    @Override
-                    public boolean accept(File dir, String name) {
-                        return name.endsWith(".py");
-                    }
-                });
+                File[] files = file.listFiles((dir, name) -> name.endsWith(".py"));
                 if (files != null) {
                     for (File child : files) {
                         System.out.println("--->" + child.getName());
