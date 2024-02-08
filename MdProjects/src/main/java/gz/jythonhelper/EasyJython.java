@@ -180,10 +180,10 @@ abstract class ClassGenerator {
     public static final String INIT_TEMPLATE = """
        # encoding: utf-8
        # module %s
-       # from (built-in)
-       # by generator 999.999
-       # source:%s
        """;
+//       # from (built-in)
+//       # by generator 999.999
+//       # source:%s
 
     protected ClassGenerator(String outputDir) {
         this.outputDir = outputDir;
