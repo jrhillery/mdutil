@@ -169,7 +169,7 @@ abstract class ClassGenerator {
     private static final Object INDENT = "    ";
     public static final String STATIC_METHOD = "@staticmethod";
 
-    public static final String LINE_SEPARATOR = System.getProperty("line.separator");
+    public static final String LINE_SEPARATOR = "\n";
     public static final Set<String> IGNORED_FIELDS = new HashSet<String>(Arrays.asList(new String[]{
             "in"
     }));
