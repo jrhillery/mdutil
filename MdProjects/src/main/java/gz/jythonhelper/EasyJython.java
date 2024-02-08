@@ -35,7 +35,7 @@ public class EasyJython {
     }
 
     public void setLibs(String[] libs) {
-        List<URL> urls = new ArrayList<URL>();
+        List<URL> urls = new ArrayList<>();
         for (String name : libs) {
             try {
                 if (name.endsWith("*")) {
@@ -63,7 +63,7 @@ public class EasyJython {
     }
 
     private static String[] getFilesFromArgs(String[] args) {
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         for (String arg : args) {
             String[] split = arg.split(";|:");
             list.addAll(Arrays.asList(split));
@@ -84,8 +84,7 @@ public class EasyJython {
     } // end stripUserDir(String)
 
     public void generatePys(String... pyFiles) {
-        Set<String> classList = new TreeSet<>();
-        classList.addAll(Arrays.asList(PREDEFINED_CLASSES));
+       Set<String> classList = new TreeSet<>(Arrays.asList(PREDEFINED_CLASSES));
         for (String f : pyFiles) {
             File file = new File(f);
             if (file.isFile()) {
@@ -124,7 +123,7 @@ public class EasyJython {
 
     private Set<String> getClassListFromPy(File file) {
         StringBuilder sb = new StringBuilder();
-        Set<String> classes = new HashSet<String>();
+        Set<String> classes = new HashSet<>();
         try {
             String line;
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -184,11 +183,9 @@ abstract class ClassGenerator {
     public static final String STATIC_METHOD = "@staticmethod";
 
     public static final String LINE_SEPARATOR = "\n";
-    public static final Set<String> IGNORED_FIELDS = new HashSet<String>(Arrays.asList(new String[]{
-            "in"
-    }));
-    public static final Set<String> IGNORED_METHODS = new HashSet<String>(Arrays.asList(new String[]
-            {"wait", "toString", "hashCode", "notify", "notifyAll", "getClass", "yield"}));
+    public static final Set<String> IGNORED_FIELDS = new HashSet<>(List.of("in"));
+    public static final Set<String> IGNORED_METHODS = new HashSet<>(Arrays.asList(
+       "wait", "toString", "hashCode", "notify", "notifyAll", "getClass", "yield"));
 
     private String outputDir;
     public static final String INIT_TEMPLATE = """
@@ -289,7 +286,7 @@ abstract class ClassGenerator {
     }
 
     Method[] filterOverrideMethods(Method[] methods) {
-        Map<String, Method> methodMap = new HashMap<String, Method>();
+        Map<String, Method> methodMap = new HashMap<>();
 
         for (Method m : methods) {
             String name = m.getName();
