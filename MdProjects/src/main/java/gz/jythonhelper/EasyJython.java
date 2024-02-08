@@ -96,7 +96,7 @@ public class EasyJython {
                 System.out.println(clazz);
                 cg.createPyForClass(clazz);
             } catch (ClassNotFoundException e) {
-                System.err.println("Class not found:" + e.getMessage());
+                System.out.println("Class not found:" + e.getMessage());
             } catch (IOException e) {
                 System.err.println("IO Exception:" + e.getMessage());
             }
