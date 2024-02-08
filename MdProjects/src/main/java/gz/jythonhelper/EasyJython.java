@@ -250,7 +250,7 @@ abstract class ClassGenerator {
         }
     }
 
-    File createDirectory(Class clazz) {
+    File createDirectory(Class<?> clazz) {
         String packageName = clazz.getPackage().getName();
         System.out.println("create package directory:" + packageName);
 
@@ -303,7 +303,7 @@ class PyClassGenerator extends ClassGenerator {
         super(outputDir);
     }
 
-    public void createPyForClass(Class clazz) throws IOException {
+    public void createPyForClass(Class<?> clazz) throws IOException {
         File directory = createDirectory(clazz);
         String classContent = generateClassAsPyClass(clazz);
         File initPy = new File(directory, INIT_PY);
@@ -351,7 +351,7 @@ class PyClassGenerator extends ClassGenerator {
         fileWriter.close();
     }
 
-    private String generateClassAsPyClass(Class clazz) {
+    private String generateClassAsPyClass(Class<?> clazz) {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format(CLASS_TPL, clazz.getSimpleName()));
         sb.append(LINE_SEPARATOR);
