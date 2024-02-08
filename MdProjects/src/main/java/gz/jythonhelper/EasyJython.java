@@ -25,6 +25,8 @@ public class EasyJython {
 
     public static final String[] PREDEFINED_CLASSES = {};
 
+    private static final String USER_HOME = System.getProperty("user.home");
+
     ClassGenerator cg;
     private ClassLoader classLoader;
 
@@ -69,6 +71,18 @@ public class EasyJython {
         return list.toArray(new String[list.size()]);
     }
 
+    private static String stripUserDir(String file) {
+        String strippedFile;
+
+        if (file.startsWith(USER_HOME)) {
+            strippedFile = "%home%" + file.substring(USER_HOME.length());
+        } else {
+            strippedFile = file;
+        }
+
+        return strippedFile;
+    } // end stripUserDir(String)
+
     public void generatePys(String... pyFiles) {
         Set<String> classList = new TreeSet<>();
         classList.addAll(Arrays.asList(PREDEFINED_CLASSES));
@@ -78,7 +92,7 @@ public class EasyJython {
                 System.out.println("File:--->" + file.getName());
                 classList.addAll(getClassListFromPy(file));
             } else {
-                System.out.println("Directory:--->" + file.getAbsolutePath());
+                System.out.println("Directory:--->" + stripUserDir(file.getAbsolutePath()));
                 File[] files = file.listFiles(new FilenameFilter() {
                     @Override
                     public boolean accept(File dir, String name) {
