@@ -55,7 +55,7 @@ public class EasyJython {
                 e.printStackTrace();
             }
         }
-        classLoader = new URLClassLoader(urls.toArray(new URL[urls.size()]));
+        classLoader = new URLClassLoader(urls.toArray(new URL[0]));
     }
 
     private static String stripUserDir(String file) {
@@ -289,7 +289,7 @@ abstract class ClassGenerator {
                 }
             }
         }
-        return methodMap.values().toArray(new Method[methodMap.keySet().size()]);
+        return methodMap.values().toArray(new Method[0]);
     }
 
     public abstract void createPyForClass(Class<?> clazz) throws IOException;
