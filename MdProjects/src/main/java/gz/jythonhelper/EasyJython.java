@@ -171,7 +171,7 @@ abstract class ClassGenerator {
     public static final Set<String> IGNORED_METHODS = new HashSet<>(Arrays.asList(
        "wait", "toString", "hashCode", "notify", "notifyAll", "getClass", "yield"));
 
-    private String outputDir;
+    private final String outputDir;
     public static final String INIT_TEMPLATE = """
        # encoding: utf-8
        # module %s
@@ -221,13 +221,13 @@ abstract class ClassGenerator {
         return sb.toString();
     }
 
-    void writePyHeader(FileWriter fw, String name, URL resourceURL) {
-        String source = "";
-        if (resourceURL != null) {
-            source = resourceURL.toString();
-        }
+    void writePyHeader(FileWriter fw, String name, @SuppressWarnings("unused") URL resourceURL) {
+//        String source = "";
+//        if (resourceURL != null) {
+//            source = resourceURL.toString();
+//        }
         try {
-            fw.write(String.format(INIT_TEMPLATE, name, source));
+            fw.write(String.format(INIT_TEMPLATE, name /*, source*/));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -261,7 +261,9 @@ abstract class ClassGenerator {
         for (String dirName : split) {
             File tmpDir = new File(currentDir, dirName);
             if (!tmpDir.exists()) {
-                tmpDir.mkdir();
+                if (!tmpDir.mkdir()) {
+                    System.out.println("Failed to create directory " + tmpDir);
+                }
             }
             ensureInitPy(tmpDir);
             currentDir = tmpDir;
@@ -417,12 +419,16 @@ class PyClassGenerator extends ClassGenerator {
             } else {
                 typeName = type.getSimpleName();
             }
-            sb.append(typeName + (i > 0 ? i : "") + "=None");
+            sb.append(typeName);
+            if (i > 0) {
+                sb.append(i);
+            }
+            sb.append("=None");
             if (i < parameterTypes.length - 1) {
                 sb.append(", ");
             }
         }
 
-        return prefix + String.format(DEF_TPL, m.getName(), sb.toString());
+        return prefix + String.format(DEF_TPL, m.getName(), sb);
     }
 }
