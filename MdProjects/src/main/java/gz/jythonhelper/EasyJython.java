@@ -45,8 +45,10 @@ public class EasyJython {
                 if (file.isDirectory()) {
                     File[] files = file.listFiles(
                        pathname -> pathname.isFile() && pathname.getName().toLowerCase().endsWith(".jar"));
-                    for (File f : files) {
-                        urls.add(f.toURI().toURL());
+                    if (files != null) {
+                        for (File f : files) {
+                            urls.add(f.toURI().toURL());
+                        }
                     }
                 } else {
                     urls.add(file.toURI().toURL());
