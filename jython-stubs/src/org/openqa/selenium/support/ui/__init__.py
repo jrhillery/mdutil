@@ -7,10 +7,6 @@ class ExpectedConditions:
         pass
 
     @staticmethod
-    def and(ExpectedCondition=None):
-        pass
-
-    @staticmethod
     def attributeContains(By=None, String1=None, String2=None):
         pass
 
@@ -74,10 +70,6 @@ class ExpectedConditions:
         pass
 
     @staticmethod
-    def not(ExpectedCondition=None):
-        pass
-
-    @staticmethod
     def numberOfElementsToBe(By=None, Integer1=None):
         pass
 
@@ -91,10 +83,6 @@ class ExpectedConditions:
 
     @staticmethod
     def numberOfWindowsToBe(int=None):
-        pass
-
-    @staticmethod
-    def or(ExpectedCondition=None):
         pass
 
     @staticmethod
