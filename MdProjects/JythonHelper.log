@@ -41,7 +41,6 @@ from com.moneydance.apps.md.controller import FeatureModuleContext
 from java.lang import AutoCloseable, InterruptedException, Runnable, System, Thread, Throwable
 from java.util.concurrent import CancellationException, ExecutionException
 from javax.swing import SwingUtilities, SwingWorker
-from javax.swing.SwingWorker.StateValue import DONE
 from org.python.core import imp
 from typing import List
 from FwLookupConsole import FwLookupConsole
@@ -71,7 +70,6 @@ from datetime import date
 from decimal import Decimal, ROUND_HALF_EVEN
 from com.infinitekind.moneydance.model import Account, AccountBook, CurrencySnapshot
 from com.infinitekind.moneydance.model import CurrencyTable, CurrencyType
-from com.infinitekind.moneydance.model.Account.AccountType import ASSET
 from com.leastlogic.moneydance.util import SnapshotList, MdUtil
 from com.leastlogic.swing.util import HTMLPane
 from typing import Dict, Iterable, Set
@@ -137,8 +135,6 @@ create package directory:com.infinitekind.moneydance.model
 Generating:com.infinitekind.moneydance.model.Account
 class com.infinitekind.moneydance.model.Account
 create package directory:com.infinitekind.moneydance.model
-Generating:com.infinitekind.moneydance.model.Account.AccountType.ASSET
-Class not found:com.infinitekind.moneydance.model.Account.AccountType.ASSET
 Generating:com.infinitekind.moneydance.model.AccountBook
 class com.infinitekind.moneydance.model.AccountBook
 create package directory:com.infinitekind.moneydance.model
@@ -255,8 +251,6 @@ create package directory:javax.swing
 Generating:javax.swing.SwingWorker
 class javax.swing.SwingWorker
 create package directory:javax.swing
-Generating:javax.swing.SwingWorker.StateValue.DONE
-Class not found:javax.swing.SwingWorker.StateValue.DONE
 Generating:javax.swing.WindowConstants
 interface javax.swing.WindowConstants
 create package directory:javax.swing
