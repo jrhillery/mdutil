@@ -39,6 +39,9 @@ class By:
     def tagName(String=None):
         pass
 
+    def toString(self, ):
+        pass
+
     @staticmethod
     def xpath(String=None):
         pass
@@ -104,6 +107,9 @@ class WebDriverException:
         pass
 
     def setStackTrace(self, StackTraceElement=None):
+        pass
+
+    def toString(self, ):
         pass
 
 class WebElement:

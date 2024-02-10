@@ -49,6 +49,9 @@ class MdUtil:
     def roundPrice(double=None):
         pass
 
+    def toString(self, ):
+        pass
+
     @staticmethod
     def validateCurrentUserRate(CurrencyType=None, CurrencySnapshot1=None):
         pass
@@ -65,5 +68,8 @@ class SnapshotList:
         pass
 
     def getSnapshotForDate(self, int=None):
+        pass
+
+    def toString(self, ):
         pass
 

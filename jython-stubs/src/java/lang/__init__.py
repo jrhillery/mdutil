@@ -40,6 +40,9 @@ class InterruptedException:
     def setStackTrace(self, StackTraceElement=None):
         pass
 
+    def toString(self, ):
+        pass
+
 class Runnable:
 
     def run(self, ):
@@ -150,6 +153,9 @@ class System:
 
     @staticmethod
     def setSecurityManager(SecurityManager=None):
+        pass
+
+    def toString(self, ):
         pass
 
 class Thread:
@@ -297,6 +303,9 @@ class Thread:
     def threadId(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
 class Throwable:
 
     def addSuppressed(self, Throwable=None):
@@ -330,5 +339,8 @@ class Throwable:
         pass
 
     def setStackTrace(self, StackTraceElement=None):
+        pass
+
+    def toString(self, ):
         pass
 

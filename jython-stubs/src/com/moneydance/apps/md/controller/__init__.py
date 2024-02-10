@@ -48,6 +48,9 @@ class FeatureModule:
     def isBundled(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def unload(self, ):
         pass
 

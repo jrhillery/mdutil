@@ -196,6 +196,9 @@ class ChromeDriver:
     def switchTo(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def unpin(self, ScriptKey=None):
         pass
 
@@ -252,6 +255,9 @@ class ChromeDriverService:
         pass
 
     def stop(self, ):
+        pass
+
+    def toString(self, ):
         pass
 
 class ChromeOptions:
@@ -352,5 +358,8 @@ class ChromeOptions:
         pass
 
     def toJson(self, ):
+        pass
+
+    def toString(self, ):
         pass
 

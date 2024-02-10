@@ -149,6 +149,9 @@ class ExpectedConditions:
     def titleIs(String=None):
         pass
 
+    def toString(self, ):
+        pass
+
     @staticmethod
     def urlContains(String=None):
         pass
@@ -193,6 +196,9 @@ class WebDriverWait:
         pass
 
     def pollingEvery(self, Duration=None):
+        pass
+
+    def toString(self, ):
         pass
 
     def until(self, Function=None):

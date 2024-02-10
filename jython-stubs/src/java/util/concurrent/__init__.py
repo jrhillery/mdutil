@@ -35,6 +35,9 @@ class CancellationException:
     def setStackTrace(self, StackTraceElement=None):
         pass
 
+    def toString(self, ):
+        pass
+
 class ExecutionException:
 
     def addSuppressed(self, Throwable=None):
@@ -68,5 +71,8 @@ class ExecutionException:
         pass
 
     def setStackTrace(self, StackTraceElement=None):
+        pass
+
+    def toString(self, ):
         pass
 

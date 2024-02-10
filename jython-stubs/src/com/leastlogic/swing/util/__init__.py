@@ -1054,6 +1054,9 @@ class HTMLPane:
     def size(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def transferFocus(self, ):
         pass
 

@@ -125,6 +125,9 @@ class File:
     def toPath(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def toURI(self, ):
         pass
 

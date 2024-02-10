@@ -53,6 +53,9 @@ class ActionEvent:
     def setSource(self, Object=None):
         pass
 
+    def toString(self, ):
+        pass
+
 class WindowEvent:
     ACTION_EVENT_MASK = None
     ADJUSTMENT_EVENT_MASK = None
@@ -121,5 +124,8 @@ class WindowEvent:
         pass
 
     def setSource(self, Object=None):
+        pass
+
+    def toString(self, ):
         pass
 

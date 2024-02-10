@@ -95,3 +95,6 @@ class imp:
     def readCodeData(String=None, InputStream1=None, boolean2=None, long3=None):
         pass
 
+    def toString(self, ):
+        pass
+

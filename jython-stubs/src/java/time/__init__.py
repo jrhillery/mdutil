@@ -166,6 +166,9 @@ class Duration:
     def toSecondsPart(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def truncatedTo(self, TemporalUnit=None):
         pass
 

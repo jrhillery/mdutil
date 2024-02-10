@@ -169,7 +169,7 @@ abstract class ClassGenerator {
     public static final String LINE_SEPARATOR = "\n";
     public static final Set<String> IGNORED_FIELDS = new HashSet<>(List.of("in"));
     public static final Set<String> IGNORED_METHODS = new HashSet<>(Arrays.asList(
-       "wait", "toString", "hashCode", "notify", "notifyAll", "getClass", "yield"));
+       "wait", "hashCode", "notify", "notifyAll", "getClass", "yield"));
 
     private final String outputDir;
     public static final String INIT_TEMPLATE = """

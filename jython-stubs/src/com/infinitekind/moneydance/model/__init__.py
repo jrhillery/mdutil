@@ -324,6 +324,9 @@ class AbstractTxn:
     def syncItem(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def wasDownloaded(self, ):
         pass
 
@@ -1196,6 +1199,9 @@ class Account:
     def syncItem(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
 class AccountBook:
     DROPBOX_SYNC_UUID = None
 
@@ -1436,6 +1442,9 @@ class AccountBook:
     def stripNonFilenameSafeCharacters(String=None):
         pass
 
+    def toString(self, ):
+        pass
+
     def unregisterAttachmentForDeletion(self, String=None):
         pass
 
@@ -1671,6 +1680,9 @@ class CurrencySnapshot:
     def syncItem(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
 class CurrencyTable:
 
     def addCurrencyListener(self, CurrencyListener=None):
@@ -1764,6 +1776,9 @@ class CurrencyTable:
         pass
 
     def spliterator(self, ):
+        pass
+
+    def toString(self, ):
         pass
 
 class CurrencyType:
@@ -2134,6 +2149,9 @@ class CurrencyType:
         pass
 
     def syncItem(self, ):
+        pass
+
+    def toString(self, ):
         pass
 
     def unadjustValueForSplitsInt(self, int=None, long1=None, int2=None):
@@ -2516,6 +2534,9 @@ class ParentTxn:
     def toMultilineString(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def wasDownloaded(self, ):
         pass
 
@@ -2819,6 +2840,9 @@ class Reminder:
     def syncItem(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
 class ReminderSet:
 
     def addReminder(self, Reminder=None):
@@ -2852,5 +2876,8 @@ class ReminderSet:
         pass
 
     def removeReminderListener(self, ReminderListener=None):
+        pass
+
+    def toString(self, ):
         pass
 

@@ -24,3 +24,6 @@ class EmptyBorder:
     def paintBorder(self, Component=None, Graphics1=None, int2=None, int3=None, int4=None, int5=None):
         pass
 
+    def toString(self, ):
+        pass
+

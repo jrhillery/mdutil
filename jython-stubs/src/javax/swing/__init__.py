@@ -79,6 +79,9 @@ class GroupLayout:
     def setVerticalGroup(self, Group=None):
         pass
 
+    def toString(self, ):
+        pass
+
 class JButton:
     ABORT = None
     ALLBITS = None
@@ -1115,6 +1118,9 @@ class JButton:
     def size(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def transferFocus(self, ):
         pass
 
@@ -1998,6 +2004,9 @@ class JFrame:
     def toFront(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def transferFocus(self, ):
         pass
 
@@ -2808,6 +2817,9 @@ class JPanel:
         pass
 
     def size(self, ):
+        pass
+
+    def toString(self, ):
         pass
 
     def transferFocus(self, ):
@@ -3727,6 +3739,9 @@ class JScrollPane:
     def size(self, ):
         pass
 
+    def toString(self, ):
+        pass
+
     def transferFocus(self, ):
         pass
 
@@ -3768,6 +3783,9 @@ class LayoutStyle:
 
     @staticmethod
     def setInstance(LayoutStyle=None):
+        pass
+
+    def toString(self, ):
         pass
 
 class SwingUtilities:
@@ -3958,6 +3976,9 @@ class SwingUtilities:
     def replaceUIInputMap(JComponent=None, int1=None, InputMap2=None):
         pass
 
+    def toString(self, ):
+        pass
+
     @staticmethod
     def updateComponentTreeUI(Component=None):
         pass
@@ -4014,6 +4035,9 @@ class SwingWorker:
         pass
 
     def state(self, ):
+        pass
+
+    def toString(self, ):
         pass
 
 class WindowConstants:

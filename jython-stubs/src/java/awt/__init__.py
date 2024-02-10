@@ -37,6 +37,9 @@ class AWTEvent:
     def setSource(self, Object=None):
         pass
 
+    def toString(self, ):
+        pass
+
 class Dimension:
     height = None
     width = None
@@ -57,5 +60,8 @@ class Dimension:
         pass
 
     def setSize(self, double=None, double1=None):
+        pass
+
+    def toString(self, ):
         pass
 
