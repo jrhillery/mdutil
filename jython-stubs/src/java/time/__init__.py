@@ -22,10 +22,6 @@ class Duration:
     def equals(self, Object=None):
         pass
 
-    @staticmethod
-    def from(TemporalAmount=None):
-        pass
-
     def get(self, TemporalUnit=None):
         pass
 
