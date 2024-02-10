@@ -136,9 +136,6 @@ class ChromeDriver:
     def pin(self, String=None):
         pass
 
-    def print(self, PrintOptions=None):
-        pass
-
     def quit(self, ):
         pass
 
@@ -292,9 +289,6 @@ class ChromeOptions:
         pass
 
     def getPlatformName(self, ):
-        pass
-
-    def is(self, String=None):
         pass
 
     def merge(self, Capabilities=None):

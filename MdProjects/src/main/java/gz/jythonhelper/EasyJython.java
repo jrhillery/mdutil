@@ -170,7 +170,7 @@ abstract class ClassGenerator {
     public static final Set<String> IGNORED_FIELDS = new HashSet<>(List.of("in"));
     public static final Set<String> IGNORED_METHODS = new HashSet<>(Arrays.asList(
        "wait", "hashCode", "notify", "notifyAll", "getClass", "yield",
-       "and", "or", "not"));
+       "and", "or", "not", "is", "print"));
 
     private final String outputDir;
     public static final String INIT_TEMPLATE = """

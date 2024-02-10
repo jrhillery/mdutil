@@ -793,9 +793,6 @@ class JButton:
     def prepareImage(self, Image=None, int1=None, int2=None, ImageObserver3=None):
         pass
 
-    def print(self, Graphics=None):
-        pass
-
     def printAll(self, Graphics=None):
         pass
 
@@ -1760,9 +1757,6 @@ class JFrame:
     def prepareImage(self, Image=None, int1=None, int2=None, ImageObserver3=None):
         pass
 
-    def print(self, Graphics=None):
-        pass
-
     def printAll(self, Graphics=None):
         pass
 
@@ -2585,9 +2579,6 @@ class JPanel:
         pass
 
     def prepareImage(self, Image=None, int1=None, int2=None, ImageObserver3=None):
-        pass
-
-    def print(self, Graphics=None):
         pass
 
     def printAll(self, Graphics=None):
@@ -3466,9 +3457,6 @@ class JScrollPane:
         pass
 
     def prepareImage(self, Image=None, int1=None, int2=None, ImageObserver3=None):
-        pass
-
-    def print(self, Graphics=None):
         pass
 
     def printAll(self, Graphics=None):

@@ -719,9 +719,6 @@ class HTMLPane:
     def prepareImage(self, Image=None, int1=None, int2=None, ImageObserver3=None):
         pass
 
-    def print(self, MessageFormat=None, MessageFormat1=None, boolean2=None, PrintService3=None, PrintRequestAttributeSet4=None, boolean5=None):
-        pass
-
     def printAll(self, Graphics=None):
         pass
 
