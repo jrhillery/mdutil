@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class CancellationException:
+class CancellationException(Exception):
 
     def addSuppressed(self, Throwable=None):
         pass
@@ -38,7 +38,7 @@ class CancellationException:
     def toString(self, ):
         pass
 
-class ExecutionException:
+class ExecutionException(Exception):
 
     def addSuppressed(self, Throwable=None):
         pass

@@ -5,7 +5,7 @@ class AutoCloseable:
     def close(self, ):
         pass
 
-class InterruptedException:
+class InterruptedException(Exception):
 
     def addSuppressed(self, Throwable=None):
         pass
@@ -569,7 +569,7 @@ class Thread:
     def toString(self, ):
         pass
 
-class Throwable:
+class Throwable(Exception):
 
     def addSuppressed(self, Throwable=None):
         pass

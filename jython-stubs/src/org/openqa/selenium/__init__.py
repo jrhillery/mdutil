@@ -457,7 +457,7 @@ class By:
     def xpath(String=None):
         pass
 
-class WebDriverException:
+class WebDriverException(Exception):
     DRIVER_INFO = None
     SESSION_ID = None
 

@@ -385,7 +385,7 @@ class PyClassGenerator extends ClassGenerator {
 
     private String generateClassAsPyClass(Class<?> clazz, Class<?> parentClazz) {
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format(CLASS_TPL, clazz.getSimpleName()));
+        sb.append(generatePyClassDeclaration(clazz));
         sb.append(LINE_SEPARATOR);
         Field[] fields = new Field[0];
         try {
@@ -443,6 +443,16 @@ class PyClassGenerator extends ClassGenerator {
         }
         return sb.toString();
     }
+
+    private static String generatePyClassDeclaration(Class<?> clazz) {
+        StringBuilder sb = new StringBuilder(clazz.getSimpleName());
+
+        if (Throwable.class.isAssignableFrom(clazz)) {
+            // avoid warning: Exception doesn't inherit from base 'Exception' class
+            sb.append("(Exception)");
+        }
+        return String.format(CLASS_TPL, sb);
+    } // end generatePyClassDeclaration(Class<?>)
 
     private String generateMethodForPyClass(Method m) {
         Class<?>[] parameterTypes = m.getParameterTypes();
