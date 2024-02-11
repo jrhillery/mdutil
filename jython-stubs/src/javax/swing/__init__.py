@@ -1,16 +1,16 @@
 # encoding: utf-8
 # module __init__.py
-class GroupLayout:
+class GroupLayout(object):
     DEFAULT_SIZE = None
     PREFERRED_SIZE = None
 
-    class Alignment:
+    class Alignment(object):
         BASELINE = None
         CENTER = None
         LEADING = None
         TRAILING = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -83,7 +83,7 @@ class GroupLayout:
         def values():
             pass
 
-    class Group:
+    class Group(object):
     
         def addComponent(self, Component=None, int1=None, int2=None, int3=None):
             pass
@@ -103,7 +103,7 @@ class GroupLayout:
         def toString(self, ):
             pass
 
-    class ParallelGroup:
+    class ParallelGroup(object):
     
         def addComponent(self, Component=None, Alignment1=None, int2=None, int3=None, int4=None):
             pass
@@ -123,7 +123,7 @@ class GroupLayout:
         def toString(self, ):
             pass
 
-    class SequentialGroup:
+    class SequentialGroup(object):
     
         def addComponent(self, boolean=None, Component1=None, int2=None, int3=None, int4=None):
             pass
@@ -230,7 +230,7 @@ class GroupLayout:
     def toString(self, ):
         pass
 
-class JButton:
+class JButton(object):
     ABORT = None
     ALLBITS = None
     BORDER_PAINTED_CHANGED_PROPERTY = None
@@ -288,7 +288,7 @@ class JButton:
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
 
-    class AccessibleJComponent:
+    class AccessibleJComponent(object):
         ACCESSIBLE_ACTION_PROPERTY = None
         ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
         ACCESSIBLE_CARET_PROPERTY = None
@@ -483,13 +483,13 @@ class JButton:
         def toString(self, ):
             pass
 
-    class BaselineResizeBehavior:
+    class BaselineResizeBehavior(object):
         CENTER_OFFSET = None
         CONSTANT_ASCENT = None
         CONSTANT_DESCENT = None
         OTHER = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -1567,7 +1567,7 @@ class JButton:
     def validate(self, ):
         pass
 
-class JFrame:
+class JFrame(object):
     ABORT = None
     ALLBITS = None
     BOTTOM_ALIGNMENT = None
@@ -1605,13 +1605,13 @@ class JFrame:
     WIDTH = None
     W_RESIZE_CURSOR = None
 
-    class BaselineResizeBehavior:
+    class BaselineResizeBehavior(object):
         CENTER_OFFSET = None
         CONSTANT_ASCENT = None
         CONSTANT_DESCENT = None
         OTHER = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -1684,12 +1684,12 @@ class JFrame:
         def values():
             pass
 
-    class Type:
+    class Type(object):
         NORMAL = None
         POPUP = None
         UTILITY = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -2604,7 +2604,7 @@ class JFrame:
     def validate(self, ):
         pass
 
-class JPanel:
+class JPanel(object):
     ABORT = None
     ALLBITS = None
     BOTTOM_ALIGNMENT = None
@@ -2624,7 +2624,7 @@ class JPanel:
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
 
-    class AccessibleJComponent:
+    class AccessibleJComponent(object):
         ACCESSIBLE_ACTION_PROPERTY = None
         ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
         ACCESSIBLE_CARET_PROPERTY = None
@@ -2819,13 +2819,13 @@ class JPanel:
         def toString(self, ):
             pass
 
-    class BaselineResizeBehavior:
+    class BaselineResizeBehavior(object):
         CENTER_OFFSET = None
         CONSTANT_ASCENT = None
         CONSTANT_DESCENT = None
         OTHER = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -3699,7 +3699,7 @@ class JPanel:
     def validate(self, ):
         pass
 
-class JScrollPane:
+class JScrollPane(object):
     ABORT = None
     ALLBITS = None
     BOTTOM_ALIGNMENT = None
@@ -3740,7 +3740,7 @@ class JScrollPane:
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
 
-    class AccessibleJComponent:
+    class AccessibleJComponent(object):
         ACCESSIBLE_ACTION_PROPERTY = None
         ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
         ACCESSIBLE_CARET_PROPERTY = None
@@ -3935,13 +3935,13 @@ class JScrollPane:
         def toString(self, ):
             pass
 
-    class BaselineResizeBehavior:
+    class BaselineResizeBehavior(object):
         CENTER_OFFSET = None
         CONSTANT_ASCENT = None
         CONSTANT_DESCENT = None
         OTHER = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -4893,14 +4893,14 @@ class JScrollPane:
     def validate(self, ):
         pass
 
-class LayoutStyle:
+class LayoutStyle(object):
 
-    class ComponentPlacement:
+    class ComponentPlacement(object):
         INDENT = None
         RELATED = None
         UNRELATED = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -4996,7 +4996,7 @@ class LayoutStyle:
     def toString(self, ):
         pass
 
-class SwingUtilities:
+class SwingUtilities(object):
     BOTTOM = None
     CENTER = None
     EAST = None
@@ -5198,14 +5198,14 @@ class SwingUtilities:
     def windowForComponent(Component=None):
         pass
 
-class SwingWorker:
+class SwingWorker(object):
 
-    class StateValue:
+    class StateValue(object):
         DONE = None
         PENDING = None
         STARTED = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -5332,7 +5332,7 @@ class SwingWorker:
     def toString(self, ):
         pass
 
-class WindowConstants:
+class WindowConstants(object):
     DISPOSE_ON_CLOSE = None
     DO_NOTHING_ON_CLOSE = None
     EXIT_ON_CLOSE = None

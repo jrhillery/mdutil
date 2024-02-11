@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class AbstractTxn:
+class AbstractTxn(object):
     BANK_TRANSACTION_TYPE = None
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
@@ -39,12 +39,12 @@ class AbstractTxn:
     TRANSFER_TYPE_MISCINCEXP = None
     TRANSFER_TYPE_SHORTCOVER = None
 
-    class ClearedStatus:
+    class ClearedStatus(object):
         CLEARED = None
         RECONCILING = None
         UNRECONCILED = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -419,7 +419,7 @@ class AbstractTxn:
     def wasDownloaded(self, ):
         pass
 
-class Account:
+class Account(object):
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
     ITEM_TYPE_KEY = None
@@ -435,7 +435,7 @@ class Account:
     SPLIT_ACCOUNT_ID = None
     SYNCABLE_TYPE_VALUE = None
 
-    class AccountType:
+    class AccountType(object):
         ASSET = None
         BANK = None
         CREDIT_CARD = None
@@ -447,7 +447,7 @@ class Account:
         ROOT = None
         SECURITY = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -540,14 +540,14 @@ class Account:
         def values():
             pass
 
-    class BalanceType:
+    class BalanceType(object):
         CLEARED = None
         CONFIRMED = None
         CURRENT = None
         NORMAL = None
         UNCONFIRMED = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -620,14 +620,14 @@ class Account:
         def values():
             pass
 
-    class DebtPaymentSpec:
+    class DebtPaymentSpec(object):
         CLEARED_BALANCE = None
         CURRENT_BALANCE = None
         FIXED = None
         PERCENTAGE_OF_CLEARED_BALANCE = None
         PERCENTAGE_OF_CURRENT_BALANCE = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -1566,7 +1566,7 @@ class Account:
     def toString(self, ):
         pass
 
-class AccountBook:
+class AccountBook(object):
     DROPBOX_SYNC_UUID = None
 
     @staticmethod
@@ -1815,7 +1815,7 @@ class AccountBook:
     def unregisterAttachmentForDeletion(self, String=None):
         pass
 
-class CurrencySnapshot:
+class CurrencySnapshot(object):
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
     ITEM_TYPE_KEY = None
@@ -2053,7 +2053,7 @@ class CurrencySnapshot:
     def toString(self, ):
         pass
 
-class CurrencyTable:
+class CurrencyTable(object):
 
     def addCurrencyListener(self, CurrencyListener=None):
         pass
@@ -2154,7 +2154,7 @@ class CurrencyTable:
     def toString(self, ):
         pass
 
-class CurrencyType:
+class CurrencyType(object):
     CURRTYPE_CURRENCY = None
     CURRTYPE_SECURITY = None
     ITEM_KEY_ID = None
@@ -2165,11 +2165,11 @@ class CurrencyType:
     TAG_RELATIVE_CURR_UUID = None
     TAG_RELATIVE_TO_CURR = None
 
-    class Type:
+    class Type(object):
         CURRENCY = None
         SECURITY = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -2624,7 +2624,7 @@ class CurrencyType:
     def unadjustValueForSplitsInt(self, int=None, long1=None, int2=None):
         pass
 
-class ParentTxn:
+class ParentTxn(object):
     BANK_TRANSACTION_TYPE = None
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
@@ -2664,12 +2664,12 @@ class ParentTxn:
     TRANSFER_TYPE_MISCINCEXP = None
     TRANSFER_TYPE_SHORTCOVER = None
 
-    class ClearedStatus:
+    class ClearedStatus(object):
         CLEARED = None
         RECONCILING = None
         UNRECONCILED = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -3096,7 +3096,7 @@ class ParentTxn:
     def wasDownloaded(self, ):
         pass
 
-class Reminder:
+class Reminder(object):
     BASIC_REMINDER_TYPE = None
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
@@ -3123,11 +3123,11 @@ class Reminder:
     WEEKLY_EVERY_SECOND = None
     WEEKLY_EVERY_THIRD = None
 
-    class Type:
+    class Type(object):
         NOTE = None
         TRANSACTION = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -3486,7 +3486,7 @@ class Reminder:
     def toString(self, ):
         pass
 
-class ReminderSet:
+class ReminderSet(object):
 
     def addReminder(self, Reminder=None):
         pass

@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class ExpectedConditions:
+class ExpectedConditions(object):
 
     @staticmethod
     def alertIsPresent():
@@ -175,7 +175,7 @@ class ExpectedConditions:
     def visibilityOfNestedElementsLocatedBy(By=None, By1=None):
         pass
 
-class WebDriverWait:
+class WebDriverWait(object):
 
     def equals(self, Object=None):
         pass

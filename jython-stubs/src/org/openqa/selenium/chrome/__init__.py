@@ -1,14 +1,14 @@
 # encoding: utf-8
 # module __init__.py
-class ChromeDriver:
+class ChromeDriver(object):
     IS_CHROMIUM_BROWSER = None
 
-    class When:
+    class When(object):
         AFTER = None
         BEFORE = None
         EXCEPTION = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -280,7 +280,7 @@ class ChromeDriver:
     def unpin(self, ScriptKey=None):
         pass
 
-class ChromeDriverService:
+class ChromeDriverService(object):
     CHROME_DRIVER_ALLOWED_IPS_PROPERTY = None
     CHROME_DRIVER_APPEND_LOG_PROPERTY = None
     CHROME_DRIVER_DISABLE_BUILD_CHECK = None
@@ -295,7 +295,7 @@ class ChromeDriverService:
     LOG_STDERR = None
     LOG_STDOUT = None
 
-    class Builder:
+    class Builder(object):
     
         def build(self, ):
             pass
@@ -400,7 +400,7 @@ class ChromeDriverService:
     def toString(self, ):
         pass
 
-class ChromeOptions:
+class ChromeOptions(object):
     CAPABILITY = None
     LOGGING_PREFS = None
 

@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class EmptyBorder:
+class EmptyBorder(object):
 
     def equals(self, Object=None):
         pass

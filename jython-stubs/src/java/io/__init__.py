@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class File:
+class File(object):
     pathSeparator = None
     pathSeparatorChar = None
     separator = None

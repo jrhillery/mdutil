@@ -1,10 +1,10 @@
 # encoding: utf-8
 # module __init__.py
-class imp:
+class imp(object):
     DEFAULT_LEVEL = None
     NO_MTIME = None
 
-    class CodeData:
+    class CodeData(object):
     
         def equals(self, Object=None):
             pass

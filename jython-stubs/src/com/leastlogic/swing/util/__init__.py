@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class HTMLPane:
+class HTMLPane(object):
     ABORT = None
     ALLBITS = None
     BOTTOM_ALIGNMENT = None
@@ -24,7 +24,7 @@ class HTMLPane:
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
 
-    class AccessibleJComponent:
+    class AccessibleJComponent(object):
         ACCESSIBLE_ACTION_PROPERTY = None
         ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
         ACCESSIBLE_CARET_PROPERTY = None
@@ -219,7 +219,7 @@ class HTMLPane:
         def toString(self, ):
             pass
 
-    class AccessibleJTextComponent:
+    class AccessibleJTextComponent(object):
         ACCESSIBLE_ACTION_PROPERTY = None
         ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
         ACCESSIBLE_CARET_PROPERTY = None
@@ -517,13 +517,13 @@ class HTMLPane:
         def toString(self, ):
             pass
 
-    class BaselineResizeBehavior:
+    class BaselineResizeBehavior(object):
         CENTER_OFFSET = None
         CONSTANT_ASCENT = None
         CONSTANT_DESCENT = None
         OTHER = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -596,7 +596,7 @@ class HTMLPane:
         def values():
             pass
 
-    class DropLocation:
+    class DropLocation(object):
     
         def equals(self, Object=None):
             pass
@@ -616,7 +616,7 @@ class HTMLPane:
         def toString(self, ):
             pass
 
-    class KeyBinding:
+    class KeyBinding(object):
         actionName = None
         key = None
     

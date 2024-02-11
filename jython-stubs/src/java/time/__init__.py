@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class Duration:
+class Duration(object):
     ZERO = None
 
     def abs(self, ):

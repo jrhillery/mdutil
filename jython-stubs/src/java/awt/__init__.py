@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class AWTEvent:
+class AWTEvent(object):
     ACTION_EVENT_MASK = None
     ADJUSTMENT_EVENT_MASK = None
     COMPONENT_EVENT_MASK = None
@@ -43,7 +43,7 @@ class AWTEvent:
     def toString(self, ):
         pass
 
-class Dimension:
+class Dimension(object):
     height = None
     width = None
 

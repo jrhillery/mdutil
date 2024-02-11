@@ -1,8 +1,8 @@
 # encoding: utf-8
 # module __init__.py
-class By:
+class By(object):
 
-    class ByClassName:
+    class ByClassName(object):
     
         @staticmethod
         def className(String=None):
@@ -54,7 +54,7 @@ class By:
         def xpath(String=None):
             pass
 
-    class ByCssSelector:
+    class ByCssSelector(object):
     
         @staticmethod
         def className(String=None):
@@ -106,7 +106,7 @@ class By:
         def xpath(String=None):
             pass
 
-    class ById:
+    class ById(object):
     
         @staticmethod
         def className(String=None):
@@ -158,7 +158,7 @@ class By:
         def xpath(String=None):
             pass
 
-    class ByLinkText:
+    class ByLinkText(object):
     
         @staticmethod
         def className(String=None):
@@ -210,7 +210,7 @@ class By:
         def xpath(String=None):
             pass
 
-    class ByName:
+    class ByName(object):
     
         @staticmethod
         def className(String=None):
@@ -262,7 +262,7 @@ class By:
         def xpath(String=None):
             pass
 
-    class ByPartialLinkText:
+    class ByPartialLinkText(object):
     
         @staticmethod
         def className(String=None):
@@ -314,7 +314,7 @@ class By:
         def xpath(String=None):
             pass
 
-    class ByTagName:
+    class ByTagName(object):
     
         @staticmethod
         def className(String=None):
@@ -366,7 +366,7 @@ class By:
         def xpath(String=None):
             pass
 
-    class ByXPath:
+    class ByXPath(object):
     
         @staticmethod
         def className(String=None):
@@ -418,9 +418,9 @@ class By:
         def xpath(String=None):
             pass
 
-    class Remotable:
+    class Remotable(object):
     
-        class Parameters:
+        class Parameters(object):
         
             def equals(self, Object=None):
                 pass
@@ -556,7 +556,7 @@ class WebDriverException(Exception):
     def toString(self, ):
         pass
 
-class WebElement:
+class WebElement(object):
 
     def clear(self, ):
         pass

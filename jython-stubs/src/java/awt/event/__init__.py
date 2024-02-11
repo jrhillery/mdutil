@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class ActionEvent:
+class ActionEvent(object):
     ACTION_EVENT_MASK = None
     ACTION_FIRST = None
     ACTION_LAST = None
@@ -59,7 +59,7 @@ class ActionEvent:
     def toString(self, ):
         pass
 
-class WindowEvent:
+class WindowEvent(object):
     ACTION_EVENT_MASK = None
     ADJUSTMENT_EVENT_MASK = None
     COMPONENT_EVENT_MASK = None

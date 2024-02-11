@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module __init__.py
-class AutoCloseable:
+class AutoCloseable(object):
 
     def close(self, ):
         pass
@@ -46,18 +46,18 @@ class InterruptedException(Exception):
     def toString(self, ):
         pass
 
-class Runnable:
+class Runnable(object):
 
     def run(self, ):
         pass
 
-class System:
+class System(object):
     err = None
     out = None
 
-    class Logger:
+    class Logger(object):
     
-        class Level:
+        class Level(object):
             ALL = None
             DEBUG = None
             ERROR = None
@@ -66,7 +66,7 @@ class System:
             TRACE = None
             WARNING = None
         
-            class EnumDesc:
+            class EnumDesc(object):
             
                 def bootstrapArgs(self, ):
                     pass
@@ -154,7 +154,7 @@ class System:
         def log(self, Level=None, ResourceBundle1=None, String2=None, Object3=None):
             pass
 
-    class LoggerFinder:
+    class LoggerFinder(object):
     
         def equals(self, Object=None):
             pass
@@ -284,14 +284,14 @@ class System:
     def toString(self, ):
         pass
 
-class Thread:
+class Thread(object):
     MAX_PRIORITY = None
     MIN_PRIORITY = None
     NORM_PRIORITY = None
 
-    class Builder:
+    class Builder(object):
     
-        class OfPlatform:
+        class OfPlatform(object):
         
             def daemon(self, boolean=None):
                 pass
@@ -323,7 +323,7 @@ class Thread:
             def unstarted(self, Runnable=None):
                 pass
     
-        class OfVirtual:
+        class OfVirtual(object):
         
             def factory(self, ):
                 pass
@@ -361,7 +361,7 @@ class Thread:
         def unstarted(self, Runnable=None):
             pass
 
-    class State:
+    class State(object):
         BLOCKED = None
         NEW = None
         RUNNABLE = None
@@ -369,7 +369,7 @@ class Thread:
         TIMED_WAITING = None
         WAITING = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -442,7 +442,7 @@ class Thread:
         def values():
             pass
 
-    class UncaughtExceptionHandler:
+    class UncaughtExceptionHandler(object):
     
         def uncaughtException(self, Thread=None, Throwable1=None):
             pass

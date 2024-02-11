@@ -161,7 +161,7 @@ public class EasyJython {
 abstract class ClassGenerator {
     public static final String INIT_PY = "__init__.py";
     public static final String DEF_TPL = "def %s(%s):";
-    public static final String CLASS_TPL = "class %s:";
+    public static final String CLASS_TPL = "class %s(%s):";
     public static final String PASS = "pass";
     private static final Object INDENT = "    ";
     public static final String STATIC_METHOD = "@staticmethod";
@@ -445,13 +445,16 @@ class PyClassGenerator extends ClassGenerator {
     }
 
     private static String generatePyClassDeclaration(Class<?> clazz) {
-        StringBuilder sb = new StringBuilder(clazz.getSimpleName());
+        String base;
 
         if (Throwable.class.isAssignableFrom(clazz)) {
             // avoid warning: Exception doesn't inherit from base 'Exception' class
-            sb.append("(Exception)");
+            base = "Exception";
+        } else {
+            // avoid warning: Old-style class contains call for super method
+            base = "object";
         }
-        return String.format(CLASS_TPL, sb);
+        return String.format(CLASS_TPL, clazz.getSimpleName(), base);
     } // end generatePyClassDeclaration(Class<?>)
 
     private String generateMethodForPyClass(Method m) {

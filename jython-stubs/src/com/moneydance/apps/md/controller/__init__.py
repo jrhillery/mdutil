@@ -1,16 +1,16 @@
 # encoding: utf-8
 # module __init__.py
-class FeatureModule:
+class FeatureModule(object):
     MONEYBOT_INVOKE_TARGET = None
 
-    class ActionType:
+    class ActionType(object):
         ACCOUNT_CONTEXT = None
         MENU = None
         MONEYBOT = None
         OTHER = None
         TXN_CONTEXT = None
     
-        class EnumDesc:
+        class EnumDesc(object):
         
             def bootstrapArgs(self, ):
                 pass
@@ -141,7 +141,7 @@ class FeatureModule:
     def unload(self, ):
         pass
 
-class FeatureModuleContext:
+class FeatureModuleContext(object):
 
     def getBuild(self, ):
         pass
