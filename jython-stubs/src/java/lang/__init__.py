@@ -52,6 +52,117 @@ class System:
     err = None
     out = None
 
+    class Logger:
+    
+        class Level:
+            ALL = None
+            DEBUG = None
+            ERROR = None
+            INFO = None
+            OFF = None
+            TRACE = None
+            WARNING = None
+        
+            class EnumDesc:
+            
+                def bootstrapArgs(self, ):
+                    pass
+            
+                def bootstrapArgsList(self, ):
+                    pass
+            
+                def bootstrapMethod(self, ):
+                    pass
+            
+                def constantName(self, ):
+                    pass
+            
+                def constantType(self, ):
+                    pass
+            
+                def equals(self, Object=None):
+                    pass
+            
+                @staticmethod
+                def of(ClassDesc=None, String1=None):
+                    pass
+            
+                @staticmethod
+                def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                    pass
+            
+                @staticmethod
+                def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                    pass
+            
+                def resolveConstantDesc(self, Lookup=None):
+                    pass
+            
+                def toString(self, ):
+                    pass
+        
+            def compareTo(self, Enum=None):
+                pass
+        
+            def describeConstable(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            def getDeclaringClass(self, ):
+                pass
+        
+            def getName(self, ):
+                pass
+        
+            def getSeverity(self, ):
+                pass
+        
+            def name(self, ):
+                pass
+        
+            def ordinal(self, ):
+                pass
+        
+            def toString(self, ):
+                pass
+        
+            @staticmethod
+            def valueOf(Class=None, String1=None):
+                pass
+        
+            @staticmethod
+            def values():
+                pass
+    
+        def getName(self, ):
+            pass
+    
+        def isLoggable(self, Level=None):
+            pass
+    
+        def log(self, Level=None, ResourceBundle1=None, String2=None, Object3=None):
+            pass
+
+    class LoggerFinder:
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getLocalizedLogger(self, String=None, ResourceBundle1=None, Module2=None):
+            pass
+    
+        def getLogger(self, String=None, Module1=None):
+            pass
+    
+        @staticmethod
+        def getLoggerFinder():
+            pass
+    
+        def toString(self, ):
+            pass
+
     @staticmethod
     def arraycopy(Object=None, int1=None, Object2=None, int3=None, int4=None):
         pass
@@ -162,6 +273,158 @@ class Thread:
     MAX_PRIORITY = None
     MIN_PRIORITY = None
     NORM_PRIORITY = None
+
+    class Builder:
+    
+        class OfPlatform:
+        
+            def daemon(self, boolean=None):
+                pass
+        
+            def factory(self, ):
+                pass
+        
+            def group(self, ThreadGroup=None):
+                pass
+        
+            def inheritInheritableThreadLocals(self, boolean=None):
+                pass
+        
+            def name(self, String=None, long1=None):
+                pass
+        
+            def priority(self, int=None):
+                pass
+        
+            def stackSize(self, long=None):
+                pass
+        
+            def start(self, Runnable=None):
+                pass
+        
+            def uncaughtExceptionHandler(self, UncaughtExceptionHandler=None):
+                pass
+        
+            def unstarted(self, Runnable=None):
+                pass
+    
+        class OfVirtual:
+        
+            def factory(self, ):
+                pass
+        
+            def inheritInheritableThreadLocals(self, boolean=None):
+                pass
+        
+            def name(self, String=None, long1=None):
+                pass
+        
+            def start(self, Runnable=None):
+                pass
+        
+            def uncaughtExceptionHandler(self, UncaughtExceptionHandler=None):
+                pass
+        
+            def unstarted(self, Runnable=None):
+                pass
+    
+        def factory(self, ):
+            pass
+    
+        def inheritInheritableThreadLocals(self, boolean=None):
+            pass
+    
+        def name(self, String=None, long1=None):
+            pass
+    
+        def start(self, Runnable=None):
+            pass
+    
+        def uncaughtExceptionHandler(self, UncaughtExceptionHandler=None):
+            pass
+    
+        def unstarted(self, Runnable=None):
+            pass
+
+    class State:
+        BLOCKED = None
+        NEW = None
+        RUNNABLE = None
+        TERMINATED = None
+        TIMED_WAITING = None
+        WAITING = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
+    class UncaughtExceptionHandler:
+    
+        def uncaughtException(self, Thread=None, Throwable1=None):
+            pass
 
     @staticmethod
     def activeCount():

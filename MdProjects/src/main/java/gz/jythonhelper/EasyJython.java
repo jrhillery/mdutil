@@ -310,7 +310,7 @@ class PyClassGenerator extends ClassGenerator {
 
     public void createPyForClass(Class<?> clazz) throws IOException {
         File directory = createDirectory(clazz);
-        String classContent = generateClassAsPyClass(clazz);
+        String classContent = generateClassAsPyClass(clazz, null);
         File initPy = new File(directory, INIT_PY);
         Map<String, StringBuilder> classStringMap = readClassesFromInitPy(initPy);
         classStringMap.put(clazz.getSimpleName(), new StringBuilder(classContent));
@@ -356,7 +356,7 @@ class PyClassGenerator extends ClassGenerator {
         fileWriter.close();
     }
 
-    private String generateClassAsPyClass(Class<?> clazz) {
+    private String generateClassAsPyClass(Class<?> clazz, Class<?> parentClazz) {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format(CLASS_TPL, clazz.getSimpleName()));
         sb.append(LINE_SEPARATOR);
@@ -378,6 +378,22 @@ class PyClassGenerator extends ClassGenerator {
             }
         }
         sb.append(LINE_SEPARATOR);
+        Class<?>[] classes = new Class[0];
+        try {
+            classes = clazz.getClasses();
+        } catch (Exception e) {
+            e.printStackTrace(System.err);
+        }
+        if (classes.length > 0 && parentClazz != null && parentClazz.isAssignableFrom(clazz)) {
+            System.out.println("Found recursively nested class definition: " + clazz);
+        } else {
+            Arrays.sort(classes, Comparator.comparing(Class::getName));
+
+            for (Class<?> innerClazz : classes) {
+                sb.append(indents(generateClassAsPyClass(innerClazz, clazz)));
+                sb.append(LINE_SEPARATOR);
+            }
+        }
         Method[] methods = new Method[0];
         try {
             methods = clazz.getMethods();

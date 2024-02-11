@@ -3,6 +3,84 @@
 class FeatureModule:
     MONEYBOT_INVOKE_TARGET = None
 
+    class ActionType:
+        ACCOUNT_CONTEXT = None
+        MENU = None
+        MONEYBOT = None
+        OTHER = None
+        TXN_CONTEXT = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        @staticmethod
+        def fromString(String=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
     def cleanup(self, ):
         pass
 

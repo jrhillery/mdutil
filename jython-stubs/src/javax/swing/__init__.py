@@ -4,6 +4,136 @@ class GroupLayout:
     DEFAULT_SIZE = None
     PREFERRED_SIZE = None
 
+    class Alignment:
+        BASELINE = None
+        CENTER = None
+        LEADING = None
+        TRAILING = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
+    class Group:
+    
+        def addComponent(self, Component=None, int1=None, int2=None, int3=None):
+            pass
+    
+        def addGap(self, int=None, int1=None, int2=None):
+            pass
+    
+        def addGroup(self, Group=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def toString(self, ):
+            pass
+
+    class ParallelGroup:
+    
+        def addComponent(self, Component=None, Alignment1=None, int2=None, int3=None, int4=None):
+            pass
+    
+        def addGap(self, int=None, int1=None, int2=None):
+            pass
+    
+        def addGroup(self, Alignment=None, Group1=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def toString(self, ):
+            pass
+
+    class SequentialGroup:
+    
+        def addComponent(self, boolean=None, Component1=None, int2=None, int3=None, int4=None):
+            pass
+    
+        def addContainerGap(self, int=None, int1=None):
+            pass
+    
+        def addGap(self, int=None, int1=None, int2=None):
+            pass
+    
+        def addGroup(self, boolean=None, Group1=None):
+            pass
+    
+        def addPreferredGap(self, JComponent=None, JComponent1=None, ComponentPlacement2=None, int3=None, int4=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def toString(self, ):
+            pass
+
     def addLayoutComponent(self, Component=None, Object1=None):
         pass
 
@@ -139,6 +269,271 @@ class JButton:
     WHEN_FOCUSED = None
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
+
+    class BaselineResizeBehavior:
+        CENTER_OFFSET = None
+        CONSTANT_ASCENT = None
+        CONSTANT_DESCENT = None
+        OTHER = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
+    class AccessibleJComponent:
+        ACCESSIBLE_ACTION_PROPERTY = None
+        ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
+        ACCESSIBLE_CARET_PROPERTY = None
+        ACCESSIBLE_CHILD_PROPERTY = None
+        ACCESSIBLE_COMPONENT_BOUNDS_CHANGED = None
+        ACCESSIBLE_DESCRIPTION_PROPERTY = None
+        ACCESSIBLE_HYPERTEXT_OFFSET = None
+        ACCESSIBLE_INVALIDATE_CHILDREN = None
+        ACCESSIBLE_NAME_PROPERTY = None
+        ACCESSIBLE_SELECTION_PROPERTY = None
+        ACCESSIBLE_STATE_PROPERTY = None
+        ACCESSIBLE_TABLE_CAPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_MODEL_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_SUMMARY_CHANGED = None
+        ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED = None
+        ACCESSIBLE_TEXT_PROPERTY = None
+        ACCESSIBLE_VALUE_PROPERTY = None
+        ACCESSIBLE_VISIBLE_DATA_PROPERTY = None
+    
+        def addFocusListener(self, FocusListener=None):
+            pass
+    
+        def addPropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def contains(self, Point=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def firePropertyChange(self, String=None, Object1=None, Object2=None):
+            pass
+    
+        def getAccessibleAction(self, ):
+            pass
+    
+        def getAccessibleAt(self, Point=None):
+            pass
+    
+        def getAccessibleChild(self, int=None):
+            pass
+    
+        def getAccessibleChildrenCount(self, ):
+            pass
+    
+        def getAccessibleComponent(self, ):
+            pass
+    
+        def getAccessibleDescription(self, ):
+            pass
+    
+        def getAccessibleEditableText(self, ):
+            pass
+    
+        def getAccessibleIcon(self, ):
+            pass
+    
+        def getAccessibleIndexInParent(self, ):
+            pass
+    
+        def getAccessibleKeyBinding(self, ):
+            pass
+    
+        def getAccessibleName(self, ):
+            pass
+    
+        def getAccessibleParent(self, ):
+            pass
+    
+        def getAccessibleRelationSet(self, ):
+            pass
+    
+        def getAccessibleRole(self, ):
+            pass
+    
+        def getAccessibleSelection(self, ):
+            pass
+    
+        def getAccessibleStateSet(self, ):
+            pass
+    
+        def getAccessibleTable(self, ):
+            pass
+    
+        def getAccessibleText(self, ):
+            pass
+    
+        def getAccessibleValue(self, ):
+            pass
+    
+        def getBackground(self, ):
+            pass
+    
+        def getBounds(self, ):
+            pass
+    
+        def getCursor(self, ):
+            pass
+    
+        def getFont(self, ):
+            pass
+    
+        def getFontMetrics(self, Font=None):
+            pass
+    
+        def getForeground(self, ):
+            pass
+    
+        def getLocale(self, ):
+            pass
+    
+        def getLocation(self, ):
+            pass
+    
+        def getLocationOnScreen(self, ):
+            pass
+    
+        def getSize(self, ):
+            pass
+    
+        def getTitledBorderText(self, ):
+            pass
+    
+        def getToolTipText(self, ):
+            pass
+    
+        def isEnabled(self, ):
+            pass
+    
+        def isFocusTraversable(self, ):
+            pass
+    
+        def isShowing(self, ):
+            pass
+    
+        def isVisible(self, ):
+            pass
+    
+        def removeFocusListener(self, FocusListener=None):
+            pass
+    
+        def removePropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def requestFocus(self, ):
+            pass
+    
+        def setAccessibleDescription(self, String=None):
+            pass
+    
+        def setAccessibleName(self, String=None):
+            pass
+    
+        def setAccessibleParent(self, Accessible=None):
+            pass
+    
+        def setBackground(self, Color=None):
+            pass
+    
+        def setBounds(self, Rectangle=None):
+            pass
+    
+        def setCursor(self, Cursor=None):
+            pass
+    
+        def setEnabled(self, boolean=None):
+            pass
+    
+        def setFont(self, Font=None):
+            pass
+    
+        def setForeground(self, Color=None):
+            pass
+    
+        def setLocation(self, Point=None):
+            pass
+    
+        def setSize(self, Dimension=None):
+            pass
+    
+        def setVisible(self, boolean=None):
+            pass
+    
+        def toString(self, ):
+            pass
 
     def action(self, Event=None, Object1=None):
         pass
@@ -1180,6 +1575,151 @@ class JFrame:
     WIDTH = None
     W_RESIZE_CURSOR = None
 
+    class BaselineResizeBehavior:
+        CENTER_OFFSET = None
+        CONSTANT_ASCENT = None
+        CONSTANT_DESCENT = None
+        OTHER = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
+    class Type:
+        NORMAL = None
+        POPUP = None
+        UTILITY = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
     def action(self, Event=None, Object1=None):
         pass
 
@@ -2039,6 +2579,271 @@ class JPanel:
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
 
+    class BaselineResizeBehavior:
+        CENTER_OFFSET = None
+        CONSTANT_ASCENT = None
+        CONSTANT_DESCENT = None
+        OTHER = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
+    class AccessibleJComponent:
+        ACCESSIBLE_ACTION_PROPERTY = None
+        ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
+        ACCESSIBLE_CARET_PROPERTY = None
+        ACCESSIBLE_CHILD_PROPERTY = None
+        ACCESSIBLE_COMPONENT_BOUNDS_CHANGED = None
+        ACCESSIBLE_DESCRIPTION_PROPERTY = None
+        ACCESSIBLE_HYPERTEXT_OFFSET = None
+        ACCESSIBLE_INVALIDATE_CHILDREN = None
+        ACCESSIBLE_NAME_PROPERTY = None
+        ACCESSIBLE_SELECTION_PROPERTY = None
+        ACCESSIBLE_STATE_PROPERTY = None
+        ACCESSIBLE_TABLE_CAPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_MODEL_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_SUMMARY_CHANGED = None
+        ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED = None
+        ACCESSIBLE_TEXT_PROPERTY = None
+        ACCESSIBLE_VALUE_PROPERTY = None
+        ACCESSIBLE_VISIBLE_DATA_PROPERTY = None
+    
+        def addFocusListener(self, FocusListener=None):
+            pass
+    
+        def addPropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def contains(self, Point=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def firePropertyChange(self, String=None, Object1=None, Object2=None):
+            pass
+    
+        def getAccessibleAction(self, ):
+            pass
+    
+        def getAccessibleAt(self, Point=None):
+            pass
+    
+        def getAccessibleChild(self, int=None):
+            pass
+    
+        def getAccessibleChildrenCount(self, ):
+            pass
+    
+        def getAccessibleComponent(self, ):
+            pass
+    
+        def getAccessibleDescription(self, ):
+            pass
+    
+        def getAccessibleEditableText(self, ):
+            pass
+    
+        def getAccessibleIcon(self, ):
+            pass
+    
+        def getAccessibleIndexInParent(self, ):
+            pass
+    
+        def getAccessibleKeyBinding(self, ):
+            pass
+    
+        def getAccessibleName(self, ):
+            pass
+    
+        def getAccessibleParent(self, ):
+            pass
+    
+        def getAccessibleRelationSet(self, ):
+            pass
+    
+        def getAccessibleRole(self, ):
+            pass
+    
+        def getAccessibleSelection(self, ):
+            pass
+    
+        def getAccessibleStateSet(self, ):
+            pass
+    
+        def getAccessibleTable(self, ):
+            pass
+    
+        def getAccessibleText(self, ):
+            pass
+    
+        def getAccessibleValue(self, ):
+            pass
+    
+        def getBackground(self, ):
+            pass
+    
+        def getBounds(self, ):
+            pass
+    
+        def getCursor(self, ):
+            pass
+    
+        def getFont(self, ):
+            pass
+    
+        def getFontMetrics(self, Font=None):
+            pass
+    
+        def getForeground(self, ):
+            pass
+    
+        def getLocale(self, ):
+            pass
+    
+        def getLocation(self, ):
+            pass
+    
+        def getLocationOnScreen(self, ):
+            pass
+    
+        def getSize(self, ):
+            pass
+    
+        def getTitledBorderText(self, ):
+            pass
+    
+        def getToolTipText(self, ):
+            pass
+    
+        def isEnabled(self, ):
+            pass
+    
+        def isFocusTraversable(self, ):
+            pass
+    
+        def isShowing(self, ):
+            pass
+    
+        def isVisible(self, ):
+            pass
+    
+        def removeFocusListener(self, FocusListener=None):
+            pass
+    
+        def removePropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def requestFocus(self, ):
+            pass
+    
+        def setAccessibleDescription(self, String=None):
+            pass
+    
+        def setAccessibleName(self, String=None):
+            pass
+    
+        def setAccessibleParent(self, Accessible=None):
+            pass
+    
+        def setBackground(self, Color=None):
+            pass
+    
+        def setBounds(self, Rectangle=None):
+            pass
+    
+        def setCursor(self, Cursor=None):
+            pass
+    
+        def setEnabled(self, boolean=None):
+            pass
+    
+        def setFont(self, Font=None):
+            pass
+    
+        def setForeground(self, Color=None):
+            pass
+    
+        def setLocation(self, Point=None):
+            pass
+    
+        def setSize(self, Dimension=None):
+            pass
+    
+        def setVisible(self, boolean=None):
+            pass
+    
+        def toString(self, ):
+            pass
+
     def action(self, Event=None, Object1=None):
         pass
 
@@ -2877,6 +3682,271 @@ class JScrollPane:
     WHEN_FOCUSED = None
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
+
+    class BaselineResizeBehavior:
+        CENTER_OFFSET = None
+        CONSTANT_ASCENT = None
+        CONSTANT_DESCENT = None
+        OTHER = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
+    class AccessibleJComponent:
+        ACCESSIBLE_ACTION_PROPERTY = None
+        ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
+        ACCESSIBLE_CARET_PROPERTY = None
+        ACCESSIBLE_CHILD_PROPERTY = None
+        ACCESSIBLE_COMPONENT_BOUNDS_CHANGED = None
+        ACCESSIBLE_DESCRIPTION_PROPERTY = None
+        ACCESSIBLE_HYPERTEXT_OFFSET = None
+        ACCESSIBLE_INVALIDATE_CHILDREN = None
+        ACCESSIBLE_NAME_PROPERTY = None
+        ACCESSIBLE_SELECTION_PROPERTY = None
+        ACCESSIBLE_STATE_PROPERTY = None
+        ACCESSIBLE_TABLE_CAPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_MODEL_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_SUMMARY_CHANGED = None
+        ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED = None
+        ACCESSIBLE_TEXT_PROPERTY = None
+        ACCESSIBLE_VALUE_PROPERTY = None
+        ACCESSIBLE_VISIBLE_DATA_PROPERTY = None
+    
+        def addFocusListener(self, FocusListener=None):
+            pass
+    
+        def addPropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def contains(self, Point=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def firePropertyChange(self, String=None, Object1=None, Object2=None):
+            pass
+    
+        def getAccessibleAction(self, ):
+            pass
+    
+        def getAccessibleAt(self, Point=None):
+            pass
+    
+        def getAccessibleChild(self, int=None):
+            pass
+    
+        def getAccessibleChildrenCount(self, ):
+            pass
+    
+        def getAccessibleComponent(self, ):
+            pass
+    
+        def getAccessibleDescription(self, ):
+            pass
+    
+        def getAccessibleEditableText(self, ):
+            pass
+    
+        def getAccessibleIcon(self, ):
+            pass
+    
+        def getAccessibleIndexInParent(self, ):
+            pass
+    
+        def getAccessibleKeyBinding(self, ):
+            pass
+    
+        def getAccessibleName(self, ):
+            pass
+    
+        def getAccessibleParent(self, ):
+            pass
+    
+        def getAccessibleRelationSet(self, ):
+            pass
+    
+        def getAccessibleRole(self, ):
+            pass
+    
+        def getAccessibleSelection(self, ):
+            pass
+    
+        def getAccessibleStateSet(self, ):
+            pass
+    
+        def getAccessibleTable(self, ):
+            pass
+    
+        def getAccessibleText(self, ):
+            pass
+    
+        def getAccessibleValue(self, ):
+            pass
+    
+        def getBackground(self, ):
+            pass
+    
+        def getBounds(self, ):
+            pass
+    
+        def getCursor(self, ):
+            pass
+    
+        def getFont(self, ):
+            pass
+    
+        def getFontMetrics(self, Font=None):
+            pass
+    
+        def getForeground(self, ):
+            pass
+    
+        def getLocale(self, ):
+            pass
+    
+        def getLocation(self, ):
+            pass
+    
+        def getLocationOnScreen(self, ):
+            pass
+    
+        def getSize(self, ):
+            pass
+    
+        def getTitledBorderText(self, ):
+            pass
+    
+        def getToolTipText(self, ):
+            pass
+    
+        def isEnabled(self, ):
+            pass
+    
+        def isFocusTraversable(self, ):
+            pass
+    
+        def isShowing(self, ):
+            pass
+    
+        def isVisible(self, ):
+            pass
+    
+        def removeFocusListener(self, FocusListener=None):
+            pass
+    
+        def removePropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def requestFocus(self, ):
+            pass
+    
+        def setAccessibleDescription(self, String=None):
+            pass
+    
+        def setAccessibleName(self, String=None):
+            pass
+    
+        def setAccessibleParent(self, Accessible=None):
+            pass
+    
+        def setBackground(self, Color=None):
+            pass
+    
+        def setBounds(self, Rectangle=None):
+            pass
+    
+        def setCursor(self, Cursor=None):
+            pass
+    
+        def setEnabled(self, boolean=None):
+            pass
+    
+        def setFont(self, Font=None):
+            pass
+    
+        def setForeground(self, Color=None):
+            pass
+    
+        def setLocation(self, Point=None):
+            pass
+    
+        def setSize(self, Dimension=None):
+            pass
+    
+        def setVisible(self, boolean=None):
+            pass
+    
+        def toString(self, ):
+            pass
 
     def action(self, Event=None, Object1=None):
         pass
@@ -3756,6 +4826,78 @@ class JScrollPane:
 
 class LayoutStyle:
 
+    class ComponentPlacement:
+        INDENT = None
+        RELATED = None
+        UNRELATED = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
     def equals(self, Object=None):
         pass
 
@@ -3976,6 +5118,78 @@ class SwingUtilities:
         pass
 
 class SwingWorker:
+
+    class StateValue:
+        DONE = None
+        PENDING = None
+        STARTED = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
 
     def addPropertyChangeListener(self, PropertyChangeListener=None):
         pass

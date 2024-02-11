@@ -2,6 +2,417 @@
 # module __init__.py
 class By:
 
+    class ByClassName:
+    
+        @staticmethod
+        def className(String=None):
+            pass
+    
+        @staticmethod
+        def cssSelector(String=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def findElement(self, SearchContext=None):
+            pass
+    
+        def findElements(self, SearchContext=None):
+            pass
+    
+        def getRemoteParameters(self, ):
+            pass
+    
+        @staticmethod
+        def id(String=None):
+            pass
+    
+        @staticmethod
+        def linkText(String=None):
+            pass
+    
+        @staticmethod
+        def name(String=None):
+            pass
+    
+        @staticmethod
+        def partialLinkText(String=None):
+            pass
+    
+        @staticmethod
+        def tagName(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def xpath(String=None):
+            pass
+
+    class ByCssSelector:
+    
+        @staticmethod
+        def className(String=None):
+            pass
+    
+        @staticmethod
+        def cssSelector(String=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def findElement(self, SearchContext=None):
+            pass
+    
+        def findElements(self, SearchContext=None):
+            pass
+    
+        def getRemoteParameters(self, ):
+            pass
+    
+        @staticmethod
+        def id(String=None):
+            pass
+    
+        @staticmethod
+        def linkText(String=None):
+            pass
+    
+        @staticmethod
+        def name(String=None):
+            pass
+    
+        @staticmethod
+        def partialLinkText(String=None):
+            pass
+    
+        @staticmethod
+        def tagName(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def xpath(String=None):
+            pass
+
+    class ById:
+    
+        @staticmethod
+        def className(String=None):
+            pass
+    
+        @staticmethod
+        def cssSelector(String=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def findElement(self, SearchContext=None):
+            pass
+    
+        def findElements(self, SearchContext=None):
+            pass
+    
+        def getRemoteParameters(self, ):
+            pass
+    
+        @staticmethod
+        def id(String=None):
+            pass
+    
+        @staticmethod
+        def linkText(String=None):
+            pass
+    
+        @staticmethod
+        def name(String=None):
+            pass
+    
+        @staticmethod
+        def partialLinkText(String=None):
+            pass
+    
+        @staticmethod
+        def tagName(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def xpath(String=None):
+            pass
+
+    class ByLinkText:
+    
+        @staticmethod
+        def className(String=None):
+            pass
+    
+        @staticmethod
+        def cssSelector(String=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def findElement(self, SearchContext=None):
+            pass
+    
+        def findElements(self, SearchContext=None):
+            pass
+    
+        def getRemoteParameters(self, ):
+            pass
+    
+        @staticmethod
+        def id(String=None):
+            pass
+    
+        @staticmethod
+        def linkText(String=None):
+            pass
+    
+        @staticmethod
+        def name(String=None):
+            pass
+    
+        @staticmethod
+        def partialLinkText(String=None):
+            pass
+    
+        @staticmethod
+        def tagName(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def xpath(String=None):
+            pass
+
+    class ByName:
+    
+        @staticmethod
+        def className(String=None):
+            pass
+    
+        @staticmethod
+        def cssSelector(String=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def findElement(self, SearchContext=None):
+            pass
+    
+        def findElements(self, SearchContext=None):
+            pass
+    
+        def getRemoteParameters(self, ):
+            pass
+    
+        @staticmethod
+        def id(String=None):
+            pass
+    
+        @staticmethod
+        def linkText(String=None):
+            pass
+    
+        @staticmethod
+        def name(String=None):
+            pass
+    
+        @staticmethod
+        def partialLinkText(String=None):
+            pass
+    
+        @staticmethod
+        def tagName(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def xpath(String=None):
+            pass
+
+    class ByPartialLinkText:
+    
+        @staticmethod
+        def className(String=None):
+            pass
+    
+        @staticmethod
+        def cssSelector(String=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def findElement(self, SearchContext=None):
+            pass
+    
+        def findElements(self, SearchContext=None):
+            pass
+    
+        def getRemoteParameters(self, ):
+            pass
+    
+        @staticmethod
+        def id(String=None):
+            pass
+    
+        @staticmethod
+        def linkText(String=None):
+            pass
+    
+        @staticmethod
+        def name(String=None):
+            pass
+    
+        @staticmethod
+        def partialLinkText(String=None):
+            pass
+    
+        @staticmethod
+        def tagName(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def xpath(String=None):
+            pass
+
+    class ByTagName:
+    
+        @staticmethod
+        def className(String=None):
+            pass
+    
+        @staticmethod
+        def cssSelector(String=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def findElement(self, SearchContext=None):
+            pass
+    
+        def findElements(self, SearchContext=None):
+            pass
+    
+        def getRemoteParameters(self, ):
+            pass
+    
+        @staticmethod
+        def id(String=None):
+            pass
+    
+        @staticmethod
+        def linkText(String=None):
+            pass
+    
+        @staticmethod
+        def name(String=None):
+            pass
+    
+        @staticmethod
+        def partialLinkText(String=None):
+            pass
+    
+        @staticmethod
+        def tagName(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def xpath(String=None):
+            pass
+
+    class ByXPath:
+    
+        @staticmethod
+        def className(String=None):
+            pass
+    
+        @staticmethod
+        def cssSelector(String=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def findElement(self, SearchContext=None):
+            pass
+    
+        def findElements(self, SearchContext=None):
+            pass
+    
+        def getRemoteParameters(self, ):
+            pass
+    
+        @staticmethod
+        def id(String=None):
+            pass
+    
+        @staticmethod
+        def linkText(String=None):
+            pass
+    
+        @staticmethod
+        def name(String=None):
+            pass
+    
+        @staticmethod
+        def partialLinkText(String=None):
+            pass
+    
+        @staticmethod
+        def tagName(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def xpath(String=None):
+            pass
+
+    class Remotable:
+    
+        class Parameters:
+        
+            def equals(self, Object=None):
+                pass
+        
+            def toString(self, ):
+                pass
+        
+            def using(self, ):
+                pass
+        
+            def value(self, ):
+                pass
+    
+        def getRemoteParameters(self, ):
+            pass
+
     @staticmethod
     def className(String=None):
         pass

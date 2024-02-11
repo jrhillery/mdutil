@@ -39,6 +39,86 @@ class AbstractTxn:
     TRANSFER_TYPE_MISCINCEXP = None
     TRANSFER_TYPE_SHORTCOVER = None
 
+    class ClearedStatus:
+        CLEARED = None
+        RECONCILING = None
+        UNRECONCILED = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        @staticmethod
+        def statusForByte(byte=None):
+            pass
+    
+        @staticmethod
+        def statusForString(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
     def addParameters(self, Map=None):
         pass
 
@@ -345,6 +425,260 @@ class Account:
     SECURITY_SUBTYPES_ITEM_TYPE = None
     SPLIT_ACCOUNT_ID = None
     SYNCABLE_TYPE_VALUE = None
+
+    class AccountType:
+        ASSET = None
+        BANK = None
+        CREDIT_CARD = None
+        EXPENSE = None
+        INCOME = None
+        INVESTMENT = None
+        LIABILITY = None
+        LOAN = None
+        ROOT = None
+        SECURITY = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def code(self, ):
+            pass
+    
+        def compareCodeTo(self, AccountType=None):
+            pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def filter(self, ):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def syncID(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def typeForCode(int=None):
+            pass
+    
+        @staticmethod
+        def typeForSyncID(String=None):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
+    class BalanceType:
+        CLEARED = None
+        CONFIRMED = None
+        CURRENT = None
+        NORMAL = None
+        UNCONFIRMED = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
+    class DebtPaymentSpec:
+        CLEARED_BALANCE = None
+        CURRENT_BALANCE = None
+        FIXED = None
+        PERCENTAGE_OF_CLEARED_BALANCE = None
+        PERCENTAGE_OF_CURRENT_BALANCE = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def getIDString(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueForString(String=None):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
 
     def addParameters(self, Map=None):
         pass
@@ -1792,6 +2126,91 @@ class CurrencyType:
     TAG_RELATIVE_CURR_UUID = None
     TAG_RELATIVE_TO_CURR = None
 
+    class Type:
+        CURRENCY = None
+        SECURITY = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def code(self, ):
+            pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def getSyncID(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def typeForCode(int=None):
+            pass
+    
+        @staticmethod
+        def typeForSyncID(String=None):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
     def addParameters(self, Map=None):
         pass
 
@@ -2197,6 +2616,86 @@ class ParentTxn:
     TRANSFER_TYPE_MISCINCEXP = None
     TRANSFER_TYPE_SHORTCOVER = None
 
+    class ClearedStatus:
+        CLEARED = None
+        RECONCILING = None
+        UNRECONCILED = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        @staticmethod
+        def statusForByte(byte=None):
+            pass
+    
+        @staticmethod
+        def statusForString(String=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
     def addParameters(self, Map=None):
         pass
 
@@ -2566,6 +3065,84 @@ class Reminder:
     WEEKLY_EVERY_LAST = None
     WEEKLY_EVERY_SECOND = None
     WEEKLY_EVERY_THIRD = None
+
+    class Type:
+        NOTE = None
+        TRANSACTION = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def code(self, ):
+            pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def typeForCode(int=None):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
 
     def addParameters(self, Map=None):
         pass

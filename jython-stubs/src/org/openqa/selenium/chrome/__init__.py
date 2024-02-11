@@ -3,6 +3,78 @@
 class ChromeDriver:
     IS_CHROMIUM_BROWSER = None
 
+    class When:
+        AFTER = None
+        BEFORE = None
+        EXCEPTION = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
     def addVirtualAuthenticator(self, VirtualAuthenticatorOptions=None):
         pass
 
@@ -213,6 +285,97 @@ class ChromeDriverService:
     LOG_NULL = None
     LOG_STDERR = None
     LOG_STDOUT = None
+
+    class Builder:
+    
+        def build(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def score(self, Capabilities=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        def usingAnyFreePort(self, ):
+            pass
+    
+        def usingDriverExecutable(self, File=None):
+            pass
+    
+        def usingPort(self, int=None):
+            pass
+    
+        def withAllowedListIps(self, String=None):
+            pass
+    
+        def withAppendLog(self, boolean=None):
+            pass
+    
+        def withBuildCheckDisabled(self, boolean=None):
+            pass
+    
+        def withEnvironment(self, Map=None):
+            pass
+    
+        def withLogFile(self, File=None):
+            pass
+    
+        def withLogLevel(self, ChromiumDriverLogLevel=None):
+            pass
+    
+        def withLogOutput(self, OutputStream=None):
+            pass
+    
+        def withReadableTimestamp(self, Boolean=None):
+            pass
+    
+        def withSilent(self, boolean=None):
+            pass
+    
+        def withTimeout(self, Duration=None):
+            pass
+    
+        def withVerbose(self, boolean=None):
+            pass
+
+    class Builder:
+    
+        def build(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def score(self, Capabilities=None):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        def usingAnyFreePort(self, ):
+            pass
+    
+        def usingDriverExecutable(self, File=None):
+            pass
+    
+        def usingPort(self, int=None):
+            pass
+    
+        def withEnvironment(self, Map=None):
+            pass
+    
+        def withLogFile(self, File=None):
+            pass
+    
+        def withLogOutput(self, OutputStream=None):
+            pass
+    
+        def withTimeout(self, Duration=None):
+            pass
 
     def close(self, ):
         pass

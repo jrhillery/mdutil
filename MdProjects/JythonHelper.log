@@ -265,6 +265,14 @@ Class not found:logging.config.dictConfig
 Generating:org.openqa.selenium.By
 class org.openqa.selenium.By
 create package directory:org.openqa.selenium
+Found recursively nested class definition: class org.openqa.selenium.By$ByClassName
+Found recursively nested class definition: class org.openqa.selenium.By$ByCssSelector
+Found recursively nested class definition: class org.openqa.selenium.By$ById
+Found recursively nested class definition: class org.openqa.selenium.By$ByLinkText
+Found recursively nested class definition: class org.openqa.selenium.By$ByName
+Found recursively nested class definition: class org.openqa.selenium.By$ByPartialLinkText
+Found recursively nested class definition: class org.openqa.selenium.By$ByTagName
+Found recursively nested class definition: class org.openqa.selenium.By$ByXPath
 Generating:org.openqa.selenium.WebDriverException
 class org.openqa.selenium.WebDriverException
 create package directory:org.openqa.selenium

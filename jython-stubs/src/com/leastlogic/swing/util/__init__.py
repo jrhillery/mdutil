@@ -24,6 +24,593 @@ class HTMLPane:
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
 
+    class BaselineResizeBehavior:
+        CENTER_OFFSET = None
+        CONSTANT_ASCENT = None
+        CONSTANT_DESCENT = None
+        OTHER = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
+            pass
+
+    class AccessibleJComponent:
+        ACCESSIBLE_ACTION_PROPERTY = None
+        ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
+        ACCESSIBLE_CARET_PROPERTY = None
+        ACCESSIBLE_CHILD_PROPERTY = None
+        ACCESSIBLE_COMPONENT_BOUNDS_CHANGED = None
+        ACCESSIBLE_DESCRIPTION_PROPERTY = None
+        ACCESSIBLE_HYPERTEXT_OFFSET = None
+        ACCESSIBLE_INVALIDATE_CHILDREN = None
+        ACCESSIBLE_NAME_PROPERTY = None
+        ACCESSIBLE_SELECTION_PROPERTY = None
+        ACCESSIBLE_STATE_PROPERTY = None
+        ACCESSIBLE_TABLE_CAPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_MODEL_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_SUMMARY_CHANGED = None
+        ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED = None
+        ACCESSIBLE_TEXT_PROPERTY = None
+        ACCESSIBLE_VALUE_PROPERTY = None
+        ACCESSIBLE_VISIBLE_DATA_PROPERTY = None
+    
+        def addFocusListener(self, FocusListener=None):
+            pass
+    
+        def addPropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def contains(self, Point=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def firePropertyChange(self, String=None, Object1=None, Object2=None):
+            pass
+    
+        def getAccessibleAction(self, ):
+            pass
+    
+        def getAccessibleAt(self, Point=None):
+            pass
+    
+        def getAccessibleChild(self, int=None):
+            pass
+    
+        def getAccessibleChildrenCount(self, ):
+            pass
+    
+        def getAccessibleComponent(self, ):
+            pass
+    
+        def getAccessibleDescription(self, ):
+            pass
+    
+        def getAccessibleEditableText(self, ):
+            pass
+    
+        def getAccessibleIcon(self, ):
+            pass
+    
+        def getAccessibleIndexInParent(self, ):
+            pass
+    
+        def getAccessibleKeyBinding(self, ):
+            pass
+    
+        def getAccessibleName(self, ):
+            pass
+    
+        def getAccessibleParent(self, ):
+            pass
+    
+        def getAccessibleRelationSet(self, ):
+            pass
+    
+        def getAccessibleRole(self, ):
+            pass
+    
+        def getAccessibleSelection(self, ):
+            pass
+    
+        def getAccessibleStateSet(self, ):
+            pass
+    
+        def getAccessibleTable(self, ):
+            pass
+    
+        def getAccessibleText(self, ):
+            pass
+    
+        def getAccessibleValue(self, ):
+            pass
+    
+        def getBackground(self, ):
+            pass
+    
+        def getBounds(self, ):
+            pass
+    
+        def getCursor(self, ):
+            pass
+    
+        def getFont(self, ):
+            pass
+    
+        def getFontMetrics(self, Font=None):
+            pass
+    
+        def getForeground(self, ):
+            pass
+    
+        def getLocale(self, ):
+            pass
+    
+        def getLocation(self, ):
+            pass
+    
+        def getLocationOnScreen(self, ):
+            pass
+    
+        def getSize(self, ):
+            pass
+    
+        def getTitledBorderText(self, ):
+            pass
+    
+        def getToolTipText(self, ):
+            pass
+    
+        def isEnabled(self, ):
+            pass
+    
+        def isFocusTraversable(self, ):
+            pass
+    
+        def isShowing(self, ):
+            pass
+    
+        def isVisible(self, ):
+            pass
+    
+        def removeFocusListener(self, FocusListener=None):
+            pass
+    
+        def removePropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def requestFocus(self, ):
+            pass
+    
+        def setAccessibleDescription(self, String=None):
+            pass
+    
+        def setAccessibleName(self, String=None):
+            pass
+    
+        def setAccessibleParent(self, Accessible=None):
+            pass
+    
+        def setBackground(self, Color=None):
+            pass
+    
+        def setBounds(self, Rectangle=None):
+            pass
+    
+        def setCursor(self, Cursor=None):
+            pass
+    
+        def setEnabled(self, boolean=None):
+            pass
+    
+        def setFont(self, Font=None):
+            pass
+    
+        def setForeground(self, Color=None):
+            pass
+    
+        def setLocation(self, Point=None):
+            pass
+    
+        def setSize(self, Dimension=None):
+            pass
+    
+        def setVisible(self, boolean=None):
+            pass
+    
+        def toString(self, ):
+            pass
+
+    class AccessibleJTextComponent:
+        ACCESSIBLE_ACTION_PROPERTY = None
+        ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
+        ACCESSIBLE_CARET_PROPERTY = None
+        ACCESSIBLE_CHILD_PROPERTY = None
+        ACCESSIBLE_COMPONENT_BOUNDS_CHANGED = None
+        ACCESSIBLE_DESCRIPTION_PROPERTY = None
+        ACCESSIBLE_HYPERTEXT_OFFSET = None
+        ACCESSIBLE_INVALIDATE_CHILDREN = None
+        ACCESSIBLE_NAME_PROPERTY = None
+        ACCESSIBLE_SELECTION_PROPERTY = None
+        ACCESSIBLE_STATE_PROPERTY = None
+        ACCESSIBLE_TABLE_CAPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_COLUMN_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_MODEL_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_DESCRIPTION_CHANGED = None
+        ACCESSIBLE_TABLE_ROW_HEADER_CHANGED = None
+        ACCESSIBLE_TABLE_SUMMARY_CHANGED = None
+        ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED = None
+        ACCESSIBLE_TEXT_PROPERTY = None
+        ACCESSIBLE_VALUE_PROPERTY = None
+        ACCESSIBLE_VISIBLE_DATA_PROPERTY = None
+        ATTRIBUTE_RUN = None
+        CHARACTER = None
+        CLICK = None
+        DECREMENT = None
+        INCREMENT = None
+        LINE = None
+        SENTENCE = None
+        TOGGLE_EXPAND = None
+        TOGGLE_POPUP = None
+        WORD = None
+    
+        def addFocusListener(self, FocusListener=None):
+            pass
+    
+        def addPropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def caretUpdate(self, CaretEvent=None):
+            pass
+    
+        def changedUpdate(self, DocumentEvent=None):
+            pass
+    
+        def contains(self, Point=None):
+            pass
+    
+        def cut(self, int=None, int1=None):
+            pass
+    
+        def delete(self, int=None, int1=None):
+            pass
+    
+        def doAccessibleAction(self, int=None):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def firePropertyChange(self, String=None, Object1=None, Object2=None):
+            pass
+    
+        def getAccessibleAction(self, ):
+            pass
+    
+        def getAccessibleActionCount(self, ):
+            pass
+    
+        def getAccessibleActionDescription(self, int=None):
+            pass
+    
+        def getAccessibleAt(self, Point=None):
+            pass
+    
+        def getAccessibleChild(self, int=None):
+            pass
+    
+        def getAccessibleChildrenCount(self, ):
+            pass
+    
+        def getAccessibleComponent(self, ):
+            pass
+    
+        def getAccessibleDescription(self, ):
+            pass
+    
+        def getAccessibleEditableText(self, ):
+            pass
+    
+        def getAccessibleIcon(self, ):
+            pass
+    
+        def getAccessibleIndexInParent(self, ):
+            pass
+    
+        def getAccessibleKeyBinding(self, ):
+            pass
+    
+        def getAccessibleName(self, ):
+            pass
+    
+        def getAccessibleParent(self, ):
+            pass
+    
+        def getAccessibleRelationSet(self, ):
+            pass
+    
+        def getAccessibleRole(self, ):
+            pass
+    
+        def getAccessibleSelection(self, ):
+            pass
+    
+        def getAccessibleStateSet(self, ):
+            pass
+    
+        def getAccessibleTable(self, ):
+            pass
+    
+        def getAccessibleText(self, ):
+            pass
+    
+        def getAccessibleValue(self, ):
+            pass
+    
+        def getAfterIndex(self, int=None, int1=None):
+            pass
+    
+        def getAtIndex(self, int=None, int1=None):
+            pass
+    
+        def getBackground(self, ):
+            pass
+    
+        def getBeforeIndex(self, int=None, int1=None):
+            pass
+    
+        def getBounds(self, ):
+            pass
+    
+        def getCaretPosition(self, ):
+            pass
+    
+        def getCharCount(self, ):
+            pass
+    
+        def getCharacterAttribute(self, int=None):
+            pass
+    
+        def getCharacterBounds(self, int=None):
+            pass
+    
+        def getCursor(self, ):
+            pass
+    
+        def getFont(self, ):
+            pass
+    
+        def getFontMetrics(self, Font=None):
+            pass
+    
+        def getForeground(self, ):
+            pass
+    
+        def getIndexAtPoint(self, Point=None):
+            pass
+    
+        def getLocale(self, ):
+            pass
+    
+        def getLocation(self, ):
+            pass
+    
+        def getLocationOnScreen(self, ):
+            pass
+    
+        def getSelectedText(self, ):
+            pass
+    
+        def getSelectionEnd(self, ):
+            pass
+    
+        def getSelectionStart(self, ):
+            pass
+    
+        def getSize(self, ):
+            pass
+    
+        def getTextBounds(self, int=None, int1=None):
+            pass
+    
+        def getTextRange(self, int=None, int1=None):
+            pass
+    
+        def getTextSequenceAfter(self, int=None, int1=None):
+            pass
+    
+        def getTextSequenceAt(self, int=None, int1=None):
+            pass
+    
+        def getTextSequenceBefore(self, int=None, int1=None):
+            pass
+    
+        def getTitledBorderText(self, ):
+            pass
+    
+        def getToolTipText(self, ):
+            pass
+    
+        def insertTextAtIndex(self, int=None, String1=None):
+            pass
+    
+        def insertUpdate(self, DocumentEvent=None):
+            pass
+    
+        def isEnabled(self, ):
+            pass
+    
+        def isFocusTraversable(self, ):
+            pass
+    
+        def isShowing(self, ):
+            pass
+    
+        def isVisible(self, ):
+            pass
+    
+        def paste(self, int=None):
+            pass
+    
+        def removeFocusListener(self, FocusListener=None):
+            pass
+    
+        def removePropertyChangeListener(self, PropertyChangeListener=None):
+            pass
+    
+        def removeUpdate(self, DocumentEvent=None):
+            pass
+    
+        def replaceText(self, int=None, int1=None, String2=None):
+            pass
+    
+        def requestFocus(self, ):
+            pass
+    
+        def selectText(self, int=None, int1=None):
+            pass
+    
+        def setAccessibleDescription(self, String=None):
+            pass
+    
+        def setAccessibleName(self, String=None):
+            pass
+    
+        def setAccessibleParent(self, Accessible=None):
+            pass
+    
+        def setAttributes(self, int=None, int1=None, AttributeSet2=None):
+            pass
+    
+        def setBackground(self, Color=None):
+            pass
+    
+        def setBounds(self, Rectangle=None):
+            pass
+    
+        def setCursor(self, Cursor=None):
+            pass
+    
+        def setEnabled(self, boolean=None):
+            pass
+    
+        def setFont(self, Font=None):
+            pass
+    
+        def setForeground(self, Color=None):
+            pass
+    
+        def setLocation(self, Point=None):
+            pass
+    
+        def setSize(self, Dimension=None):
+            pass
+    
+        def setTextContents(self, String=None):
+            pass
+    
+        def setVisible(self, boolean=None):
+            pass
+    
+        def toString(self, ):
+            pass
+
+    class DropLocation:
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getBias(self, ):
+            pass
+    
+        def getDropPoint(self, ):
+            pass
+    
+        def getIndex(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+
+    class KeyBinding:
+        actionName = None
+        key = None
+    
+        def equals(self, Object=None):
+            pass
+    
+        def toString(self, ):
+            pass
+
     def action(self, Event=None, Object1=None):
         pass
 

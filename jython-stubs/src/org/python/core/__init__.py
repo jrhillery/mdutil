@@ -4,6 +4,23 @@ class imp:
     DEFAULT_LEVEL = None
     NO_MTIME = None
 
+    class CodeData:
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getBytes(self, ):
+            pass
+    
+        def getFilename(self, ):
+            pass
+    
+        def getMTime(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+
     @staticmethod
     def addModule(String=None):
         pass
