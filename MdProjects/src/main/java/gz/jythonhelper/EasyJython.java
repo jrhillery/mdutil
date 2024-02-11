@@ -273,7 +273,7 @@ abstract class ClassGenerator {
     }
 
     Method[] filterOverrideMethods(Method[] methods) {
-        Map<String, Method> methodMap = new HashMap<>();
+        Map<String, Method> methodMap = new TreeMap<>();
 
         for (Method m : methods) {
             String name = m.getName();
@@ -428,7 +428,6 @@ class PyClassGenerator extends ClassGenerator {
             e.printStackTrace();
         }
         methods = filterOverrideMethods(methods);
-        Arrays.sort(methods, Comparator.comparing(Method::getName));
 
         for (Method m : methods) {
             int modifiers = m.getModifiers();
