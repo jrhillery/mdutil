@@ -64,6 +64,9 @@ class AbstractTxn:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -89,6 +92,9 @@ class AbstractTxn:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -176,6 +182,9 @@ class AbstractTxn:
         pass
 
     def getCheckNumber(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getClearedStatus(self, ):
@@ -458,6 +467,9 @@ class Account:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -492,6 +504,9 @@ class Account:
             pass
     
         def filter(self, ):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -552,6 +567,9 @@ class Account:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -577,6 +595,9 @@ class Account:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -626,6 +647,9 @@ class Account:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -651,6 +675,9 @@ class Account:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -818,6 +845,9 @@ class Account:
         pass
 
     def getCheckNumTags(self, String=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getClearedBalance(self, ):
@@ -1596,6 +1626,9 @@ class AccountBook:
     def getCheckpointsFolder(self, ):
         pass
 
+    def getClass(self, ):
+        pass
+
     def getCurrencies(self, ):
         pass
 
@@ -1833,6 +1866,9 @@ class CurrencySnapshot:
     def getBooleanParameter(self, String=None, boolean1=None):
         pass
 
+    def getClass(self, ):
+        pass
+
     def getCurrencyParameter(self, String=None, String1=None, String2=None, CurrencyType3=None):
         pass
 
@@ -2056,6 +2092,9 @@ class CurrencyTable:
     def getBook(self, ):
         pass
 
+    def getClass(self, ):
+        pass
+
     def getCurrencyByID(self, int=None):
         pass
 
@@ -2150,6 +2189,9 @@ class CurrencyType:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -2178,6 +2220,9 @@ class CurrencyType:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -2293,6 +2338,9 @@ class CurrencyType:
         pass
 
     def getBooleanParameter(self, String=None, boolean1=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getCurrencyParameter(self, String=None, String1=None, String2=None, CurrencyType3=None):
@@ -2641,6 +2689,9 @@ class ParentTxn:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -2666,6 +2717,9 @@ class ParentTxn:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -2759,6 +2813,9 @@ class ParentTxn:
         pass
 
     def getCheckNumber(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getClearedStatus(self, ):
@@ -3090,6 +3147,9 @@ class Reminder:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -3118,6 +3178,9 @@ class Reminder:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -3186,6 +3249,9 @@ class Reminder:
         pass
 
     def getBooleanParameter(self, String=None, boolean1=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getCurrencyParameter(self, String=None, String1=None, String2=None, CurrencyType3=None):
@@ -3438,6 +3504,9 @@ class ReminderSet:
         pass
 
     def getAllReminders(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getEventsInDay(self, Calendar=None):

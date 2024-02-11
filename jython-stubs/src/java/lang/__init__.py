@@ -19,6 +19,9 @@ class InterruptedException(Exception):
     def getCause(self, ):
         pass
 
+    def getClass(self, ):
+        pass
+
     def getLocalizedMessage(self, ):
         pass
 
@@ -83,6 +86,9 @@ class System:
                 def equals(self, Object=None):
                     pass
             
+                def getClass(self, ):
+                    pass
+            
                 @staticmethod
                 def of(ClassDesc=None, String1=None):
                     pass
@@ -108,6 +114,9 @@ class System:
                 pass
         
             def equals(self, Object=None):
+                pass
+        
+            def getClass(self, ):
                 pass
         
             def getDeclaringClass(self, ):
@@ -150,6 +159,9 @@ class System:
         def equals(self, Object=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getLocalizedLogger(self, String=None, ResourceBundle1=None, Module2=None):
             pass
     
@@ -188,6 +200,9 @@ class System:
 
     @staticmethod
     def gc():
+        pass
+
+    def getClass(self, ):
         pass
 
     @staticmethod
@@ -374,6 +389,9 @@ class Thread:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -399,6 +417,9 @@ class Thread:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -453,6 +474,9 @@ class Thread:
 
     @staticmethod
     def getAllStackTraces():
+        pass
+
+    def getClass(self, ):
         pass
 
     def getContextClassLoader(self, ):
@@ -581,6 +605,9 @@ class Throwable(Exception):
         pass
 
     def getCause(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getLocalizedMessage(self, ):

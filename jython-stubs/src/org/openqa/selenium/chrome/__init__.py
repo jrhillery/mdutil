@@ -28,6 +28,9 @@ class ChromeDriver:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -53,6 +56,9 @@ class ChromeDriver:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -125,6 +131,9 @@ class ChromeDriver:
         pass
 
     def getCastSinks(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getCommandExecutor(self, ):
@@ -294,6 +303,9 @@ class ChromeDriverService:
         def equals(self, Object=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def score(self, Capabilities=None):
             pass
     
@@ -350,6 +362,9 @@ class ChromeDriverService:
         pass
 
     def equals(self, Object=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getDefaultDriverOptions(self, ):
@@ -414,6 +429,9 @@ class ChromeOptions:
         pass
 
     def getCapabilityNames(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getPlatformName(self, ):

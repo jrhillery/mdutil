@@ -49,6 +49,9 @@ class File:
     def getCanonicalPath(self, ):
         pass
 
+    def getClass(self, ):
+        pass
+
     def getFreeSpace(self, ):
         pass
 

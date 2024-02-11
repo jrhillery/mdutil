@@ -30,6 +30,9 @@ class GroupLayout:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -55,6 +58,9 @@ class GroupLayout:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -91,6 +97,9 @@ class GroupLayout:
         def equals(self, Object=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def toString(self, ):
             pass
 
@@ -106,6 +115,9 @@ class GroupLayout:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def toString(self, ):
@@ -131,6 +143,9 @@ class GroupLayout:
         def equals(self, Object=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def toString(self, ):
             pass
 
@@ -153,6 +168,9 @@ class GroupLayout:
         pass
 
     def getAutoCreateGaps(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getHonorsVisibility(self, ):
@@ -372,6 +390,9 @@ class JButton:
         def getBounds(self, ):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getCursor(self, ):
             pass
     
@@ -488,6 +509,9 @@ class JButton:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -513,6 +537,9 @@ class JButton:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -698,6 +725,9 @@ class JButton:
         pass
 
     def getChangeListeners(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getClientProperty(self, Object=None):
@@ -1601,6 +1631,9 @@ class JFrame:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -1626,6 +1659,9 @@ class JFrame:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -1673,6 +1709,9 @@ class JFrame:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -1698,6 +1737,9 @@ class JFrame:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -1853,6 +1895,9 @@ class JFrame:
         pass
 
     def getBufferStrategy(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getColorModel(self, ):
@@ -2681,6 +2726,9 @@ class JPanel:
         def getBounds(self, ):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getCursor(self, ):
             pass
     
@@ -2797,6 +2845,9 @@ class JPanel:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -2822,6 +2873,9 @@ class JPanel:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -2983,6 +3037,9 @@ class JPanel:
         pass
 
     def getBounds(self, Rectangle=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getClientProperty(self, Object=None):
@@ -3785,6 +3842,9 @@ class JScrollPane:
         def getBounds(self, ):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getCursor(self, ):
             pass
     
@@ -3901,6 +3961,9 @@ class JScrollPane:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -3926,6 +3989,9 @@ class JScrollPane:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -4093,6 +4159,9 @@ class JScrollPane:
         pass
 
     def getBounds(self, Rectangle=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getClientProperty(self, Object=None):
@@ -4851,6 +4920,9 @@ class LayoutStyle:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -4878,6 +4950,9 @@ class LayoutStyle:
         def equals(self, Object=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getDeclaringClass(self, ):
             pass
     
@@ -4899,6 +4974,9 @@ class LayoutStyle:
             pass
 
     def equals(self, Object=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getContainerGap(self, JComponent=None, int1=None, Container2=None):
@@ -5012,6 +5090,9 @@ class SwingUtilities:
 
     @staticmethod
     def getAncestorOfClass(Class=None, Component1=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     @staticmethod
@@ -5144,6 +5225,9 @@ class SwingWorker:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -5169,6 +5253,9 @@ class SwingWorker:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -5210,6 +5297,9 @@ class SwingWorker:
         pass
 
     def get(self, long=None, TimeUnit1=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getProgress(self, ):

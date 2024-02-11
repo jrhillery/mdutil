@@ -25,6 +25,9 @@ class MdUtil:
     def getBalancesAsOfDates(AccountBook=None, Account1=None, int2=None):
         pass
 
+    def getClass(self, ):
+        pass
+
     @staticmethod
     def getCurrentBalance(Account=None):
         pass
@@ -59,6 +62,9 @@ class MdUtil:
 class SnapshotList:
 
     def equals(self, Object=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getLatestSnapshot(self, ):

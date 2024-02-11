@@ -30,6 +30,9 @@ class FeatureModule:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -61,6 +64,9 @@ class FeatureModule:
         def fromString(String=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getDeclaringClass(self, ):
             pass
     
@@ -88,6 +94,9 @@ class FeatureModule:
         pass
 
     def getBuild(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getDescription(self, ):

@@ -12,6 +12,9 @@ class imp:
         def getBytes(self, ):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getFilename(self, ):
             pass
     
@@ -54,6 +57,9 @@ class imp:
 
     @staticmethod
     def getAPIVersion():
+        pass
+
+    def getClass(self, ):
         pass
 
     @staticmethod

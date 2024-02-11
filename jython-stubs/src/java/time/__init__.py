@@ -25,6 +25,9 @@ class Duration:
     def get(self, TemporalUnit=None):
         pass
 
+    def getClass(self, ):
+        pass
+
     def getNano(self, ):
         pass
 

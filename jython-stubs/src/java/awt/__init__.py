@@ -25,6 +25,9 @@ class AWTEvent:
     def equals(self, Object=None):
         pass
 
+    def getClass(self, ):
+        pass
+
     def getID(self, ):
         pass
 
@@ -48,6 +51,9 @@ class Dimension:
         pass
 
     def equals(self, Object=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getHeight(self, ):

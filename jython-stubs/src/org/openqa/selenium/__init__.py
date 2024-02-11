@@ -21,6 +21,9 @@ class By:
         def findElements(self, SearchContext=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getRemoteParameters(self, ):
             pass
     
@@ -68,6 +71,9 @@ class By:
             pass
     
         def findElements(self, SearchContext=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getRemoteParameters(self, ):
@@ -119,6 +125,9 @@ class By:
         def findElements(self, SearchContext=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getRemoteParameters(self, ):
             pass
     
@@ -166,6 +175,9 @@ class By:
             pass
     
         def findElements(self, SearchContext=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getRemoteParameters(self, ):
@@ -217,6 +229,9 @@ class By:
         def findElements(self, SearchContext=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getRemoteParameters(self, ):
             pass
     
@@ -264,6 +279,9 @@ class By:
             pass
     
         def findElements(self, SearchContext=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getRemoteParameters(self, ):
@@ -315,6 +333,9 @@ class By:
         def findElements(self, SearchContext=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getRemoteParameters(self, ):
             pass
     
@@ -364,6 +385,9 @@ class By:
         def findElements(self, SearchContext=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getRemoteParameters(self, ):
             pass
     
@@ -401,6 +425,9 @@ class By:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             def toString(self, ):
                 pass
         
@@ -428,6 +455,9 @@ class By:
         pass
 
     def findElements(self, SearchContext=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     @staticmethod
@@ -480,6 +510,9 @@ class WebDriverException(Exception):
         pass
 
     def getCause(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     @staticmethod

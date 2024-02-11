@@ -126,6 +126,9 @@ class HTMLPane:
         def getBounds(self, ):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getCursor(self, ):
             pass
     
@@ -370,6 +373,9 @@ class HTMLPane:
         def getCharacterBounds(self, int=None):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getCursor(self, ):
             pass
     
@@ -537,6 +543,9 @@ class HTMLPane:
             def equals(self, Object=None):
                 pass
         
+            def getClass(self, ):
+                pass
+        
             @staticmethod
             def of(ClassDesc=None, String1=None):
                 pass
@@ -562,6 +571,9 @@ class HTMLPane:
             pass
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def getDeclaringClass(self, ):
@@ -592,6 +604,9 @@ class HTMLPane:
         def getBias(self, ):
             pass
     
+        def getClass(self, ):
+            pass
+    
         def getDropPoint(self, ):
             pass
     
@@ -606,6 +621,9 @@ class HTMLPane:
         key = None
     
         def equals(self, Object=None):
+            pass
+    
+        def getClass(self, ):
             pass
     
         def toString(self, ):
@@ -794,6 +812,9 @@ class HTMLPane:
         pass
 
     def getCaretPosition(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getClientProperty(self, Object=None):

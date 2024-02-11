@@ -14,6 +14,9 @@ class CancellationException(Exception):
     def getCause(self, ):
         pass
 
+    def getClass(self, ):
+        pass
+
     def getLocalizedMessage(self, ):
         pass
 
@@ -50,6 +53,9 @@ class ExecutionException(Exception):
         pass
 
     def getCause(self, ):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getLocalizedMessage(self, ):

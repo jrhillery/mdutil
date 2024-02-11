@@ -45,6 +45,9 @@ class ExpectedConditions:
     def frameToBeAvailableAndSwitchToIt(int=None):
         pass
 
+    def getClass(self, ):
+        pass
+
     @staticmethod
     def invisibilityOf(WebElement=None):
         pass
@@ -175,6 +178,9 @@ class ExpectedConditions:
 class WebDriverWait:
 
     def equals(self, Object=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def ignoreAll(self, Collection=None):

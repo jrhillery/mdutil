@@ -35,6 +35,9 @@ class ActionEvent:
     def getActionCommand(self, ):
         pass
 
+    def getClass(self, ):
+        pass
+
     def getID(self, ):
         pass
 
@@ -97,6 +100,9 @@ class WindowEvent:
     WINDOW_STATE_EVENT_MASK = None
 
     def equals(self, Object=None):
+        pass
+
+    def getClass(self, ):
         pass
 
     def getComponent(self, ):
