@@ -342,41 +342,6 @@ class ChromeDriverService:
         def withVerbose(self, boolean=None):
             pass
 
-    class Builder:
-    
-        def build(self, ):
-            pass
-    
-        def equals(self, Object=None):
-            pass
-    
-        def score(self, Capabilities=None):
-            pass
-    
-        def toString(self, ):
-            pass
-    
-        def usingAnyFreePort(self, ):
-            pass
-    
-        def usingDriverExecutable(self, File=None):
-            pass
-    
-        def usingPort(self, int=None):
-            pass
-    
-        def withEnvironment(self, Map=None):
-            pass
-    
-        def withLogFile(self, File=None):
-            pass
-    
-        def withLogOutput(self, OutputStream=None):
-            pass
-    
-        def withTimeout(self, Duration=None):
-            pass
-
     def close(self, ):
         pass
 

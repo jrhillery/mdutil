@@ -270,79 +270,6 @@ class JButton:
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
 
-    class BaselineResizeBehavior:
-        CENTER_OFFSET = None
-        CONSTANT_ASCENT = None
-        CONSTANT_DESCENT = None
-        OTHER = None
-    
-        class EnumDesc:
-        
-            def bootstrapArgs(self, ):
-                pass
-        
-            def bootstrapArgsList(self, ):
-                pass
-        
-            def bootstrapMethod(self, ):
-                pass
-        
-            def constantName(self, ):
-                pass
-        
-            def constantType(self, ):
-                pass
-        
-            def equals(self, Object=None):
-                pass
-        
-            @staticmethod
-            def of(ClassDesc=None, String1=None):
-                pass
-        
-            @staticmethod
-            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
-                pass
-        
-            @staticmethod
-            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
-                pass
-        
-            def resolveConstantDesc(self, Lookup=None):
-                pass
-        
-            def toString(self, ):
-                pass
-    
-        def compareTo(self, Enum=None):
-            pass
-    
-        def describeConstable(self, ):
-            pass
-    
-        def equals(self, Object=None):
-            pass
-    
-        def getDeclaringClass(self, ):
-            pass
-    
-        def name(self, ):
-            pass
-    
-        def ordinal(self, ):
-            pass
-    
-        def toString(self, ):
-            pass
-    
-        @staticmethod
-        def valueOf(Class=None, String1=None):
-            pass
-    
-        @staticmethod
-        def values():
-            pass
-
     class AccessibleJComponent:
         ACCESSIBLE_ACTION_PROPERTY = None
         ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
@@ -533,6 +460,79 @@ class JButton:
             pass
     
         def toString(self, ):
+            pass
+
+    class BaselineResizeBehavior:
+        CENTER_OFFSET = None
+        CONSTANT_ASCENT = None
+        CONSTANT_DESCENT = None
+        OTHER = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
             pass
 
     def action(self, Event=None, Object1=None):
@@ -2579,79 +2579,6 @@ class JPanel:
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
 
-    class BaselineResizeBehavior:
-        CENTER_OFFSET = None
-        CONSTANT_ASCENT = None
-        CONSTANT_DESCENT = None
-        OTHER = None
-    
-        class EnumDesc:
-        
-            def bootstrapArgs(self, ):
-                pass
-        
-            def bootstrapArgsList(self, ):
-                pass
-        
-            def bootstrapMethod(self, ):
-                pass
-        
-            def constantName(self, ):
-                pass
-        
-            def constantType(self, ):
-                pass
-        
-            def equals(self, Object=None):
-                pass
-        
-            @staticmethod
-            def of(ClassDesc=None, String1=None):
-                pass
-        
-            @staticmethod
-            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
-                pass
-        
-            @staticmethod
-            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
-                pass
-        
-            def resolveConstantDesc(self, Lookup=None):
-                pass
-        
-            def toString(self, ):
-                pass
-    
-        def compareTo(self, Enum=None):
-            pass
-    
-        def describeConstable(self, ):
-            pass
-    
-        def equals(self, Object=None):
-            pass
-    
-        def getDeclaringClass(self, ):
-            pass
-    
-        def name(self, ):
-            pass
-    
-        def ordinal(self, ):
-            pass
-    
-        def toString(self, ):
-            pass
-    
-        @staticmethod
-        def valueOf(Class=None, String1=None):
-            pass
-    
-        @staticmethod
-        def values():
-            pass
-
     class AccessibleJComponent:
         ACCESSIBLE_ACTION_PROPERTY = None
         ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
@@ -2842,6 +2769,79 @@ class JPanel:
             pass
     
         def toString(self, ):
+            pass
+
+    class BaselineResizeBehavior:
+        CENTER_OFFSET = None
+        CONSTANT_ASCENT = None
+        CONSTANT_DESCENT = None
+        OTHER = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
             pass
 
     def action(self, Event=None, Object1=None):
@@ -3683,79 +3683,6 @@ class JScrollPane:
     WHEN_IN_FOCUSED_WINDOW = None
     WIDTH = None
 
-    class BaselineResizeBehavior:
-        CENTER_OFFSET = None
-        CONSTANT_ASCENT = None
-        CONSTANT_DESCENT = None
-        OTHER = None
-    
-        class EnumDesc:
-        
-            def bootstrapArgs(self, ):
-                pass
-        
-            def bootstrapArgsList(self, ):
-                pass
-        
-            def bootstrapMethod(self, ):
-                pass
-        
-            def constantName(self, ):
-                pass
-        
-            def constantType(self, ):
-                pass
-        
-            def equals(self, Object=None):
-                pass
-        
-            @staticmethod
-            def of(ClassDesc=None, String1=None):
-                pass
-        
-            @staticmethod
-            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
-                pass
-        
-            @staticmethod
-            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
-                pass
-        
-            def resolveConstantDesc(self, Lookup=None):
-                pass
-        
-            def toString(self, ):
-                pass
-    
-        def compareTo(self, Enum=None):
-            pass
-    
-        def describeConstable(self, ):
-            pass
-    
-        def equals(self, Object=None):
-            pass
-    
-        def getDeclaringClass(self, ):
-            pass
-    
-        def name(self, ):
-            pass
-    
-        def ordinal(self, ):
-            pass
-    
-        def toString(self, ):
-            pass
-    
-        @staticmethod
-        def valueOf(Class=None, String1=None):
-            pass
-    
-        @staticmethod
-        def values():
-            pass
-
     class AccessibleJComponent:
         ACCESSIBLE_ACTION_PROPERTY = None
         ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY = None
@@ -3946,6 +3873,79 @@ class JScrollPane:
             pass
     
         def toString(self, ):
+            pass
+
+    class BaselineResizeBehavior:
+        CENTER_OFFSET = None
+        CONSTANT_ASCENT = None
+        CONSTANT_DESCENT = None
+        OTHER = None
+    
+        class EnumDesc:
+        
+            def bootstrapArgs(self, ):
+                pass
+        
+            def bootstrapArgsList(self, ):
+                pass
+        
+            def bootstrapMethod(self, ):
+                pass
+        
+            def constantName(self, ):
+                pass
+        
+            def constantType(self, ):
+                pass
+        
+            def equals(self, Object=None):
+                pass
+        
+            @staticmethod
+            def of(ClassDesc=None, String1=None):
+                pass
+        
+            @staticmethod
+            def ofCanonical(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            @staticmethod
+            def ofNamed(DirectMethodHandleDesc=None, String1=None, ClassDesc2=None, ConstantDesc3=None):
+                pass
+        
+            def resolveConstantDesc(self, Lookup=None):
+                pass
+        
+            def toString(self, ):
+                pass
+    
+        def compareTo(self, Enum=None):
+            pass
+    
+        def describeConstable(self, ):
+            pass
+    
+        def equals(self, Object=None):
+            pass
+    
+        def getDeclaringClass(self, ):
+            pass
+    
+        def name(self, ):
+            pass
+    
+        def ordinal(self, ):
+            pass
+    
+        def toString(self, ):
+            pass
+    
+        @staticmethod
+        def valueOf(Class=None, String1=None):
+            pass
+    
+        @staticmethod
+        def values():
             pass
 
     def action(self, Event=None, Object1=None):

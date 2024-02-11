@@ -297,6 +297,33 @@ abstract class ClassGenerator {
         return methodMap.values().toArray(new Method[0]);
     }
 
+    Class<?>[] filterDuplicateClasses(Class<?>[] classes, Class<?> parentClazz) {
+        String pkgName = parentClazz.getPackageName();
+        Map<String, Class<?>> classMap = new TreeMap<>();
+
+        for (Class<?> c : classes) {
+            String name = c.getSimpleName();
+            Class<?> existingClass = classMap.get(name);
+
+            if (existingClass == null) {
+                classMap.put(name, c);
+            } else {
+                String newPkgName = c.getPackageName();
+                Class<?> ignoredClass;
+
+                if (newPkgName.equals(pkgName)) {
+                    classMap.put(name, c);
+                    ignoredClass = existingClass;
+                } else {
+                    ignoredClass = c;
+                }
+                System.out.println("Ignoring duplicate nested class "
+                   + ignoredClass.toGenericString());
+            }
+        }
+        return classMap.values().toArray(new Class[0]);
+    }
+
     public abstract void createPyForClass(Class<?> clazz) throws IOException;
 }
 
@@ -387,7 +414,7 @@ class PyClassGenerator extends ClassGenerator {
         if (classes.length > 0 && parentClazz != null && parentClazz.isAssignableFrom(clazz)) {
             System.out.println("Found recursively nested class definition: " + clazz);
         } else {
-            Arrays.sort(classes, Comparator.comparing(Class::getName));
+            classes = filterDuplicateClasses(classes, clazz);
 
             for (Class<?> innerClazz : classes) {
                 sb.append(indents(generateClassAsPyClass(innerClazz, clazz)));

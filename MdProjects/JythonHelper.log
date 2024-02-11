@@ -285,6 +285,7 @@ create package directory:org.openqa.selenium.chrome
 Generating:org.openqa.selenium.chrome.ChromeDriverService
 class org.openqa.selenium.chrome.ChromeDriverService
 create package directory:org.openqa.selenium.chrome
+Ignoring duplicate nested class public abstract static class org.openqa.selenium.remote.service.DriverService$Builder<DS extends org.openqa.selenium.remote.service.DriverService,B extends org.openqa.selenium.remote.service.DriverService$Builder<?, ?>>
 Generating:org.openqa.selenium.chrome.ChromeOptions
 class org.openqa.selenium.chrome.ChromeOptions
 create package directory:org.openqa.selenium.chrome
