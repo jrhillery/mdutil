@@ -64,7 +64,7 @@ public class EasyJython {
         String strippedFile;
 
         if (file.startsWith(USER_HOME)) {
-            strippedFile = "%home%" + file.substring(USER_HOME.length());
+            strippedFile = "~" + file.substring(USER_HOME.length());
         } else {
             strippedFile = file;
         }

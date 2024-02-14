@@ -1,25 +1,25 @@
-Directory:--->%home%\Documents\Prog\gitreps\mdutil\jython-stubs\src
-Directory:--->%home%\Documents\Prog\gitreps\mdutil\swing-util\src\main\java
-Directory:--->%home%\Documents\Prog\gitreps\mdutil\md-util\src
+Directory:--->~\Documents\Prog\gitreps\mdutil\jython-stubs\src
+Directory:--->~\Documents\Prog\gitreps\mdutil\swing-util\src\main\java
+Directory:--->~\Documents\Prog\gitreps\mdutil\md-util\src
 --->Configure.py
 from logging.config import dictConfig
 from java.lang import System
-Directory:--->%home%\Documents\Prog\gitreps\mdutil\md-util\src\main\java
-Directory:--->%home%\Documents\Prog\gitreps\modify\more-decimal\src\main\java
-Directory:--->%home%\Documents\Prog\gitreps\modify\more-decimal\src\main\resources
-Directory:--->%home%\Documents\Prog\gitreps\mdscripts\src
+Directory:--->~\Documents\Prog\gitreps\mdutil\md-util\src\main\java
+Directory:--->~\Documents\Prog\gitreps\modify\more-decimal\src\main\java
+Directory:--->~\Documents\Prog\gitreps\modify\more-decimal\src\main\resources
+Directory:--->~\Documents\Prog\gitreps\mdscripts\src
 --->PlannedSpending.py
 from datetime import date, timedelta
 from decimal import Decimal
 from com.infinitekind.moneydance.model import AbstractTxn, Account, AccountBook, ParentTxn, Reminder, ReminderSet
 from typing import Dict, List
 from Configure import Configure
-Directory:--->%home%\Documents\Prog\gitreps\mdscripts\src\main\java
-Directory:--->%home%\Documents\Prog\gitreps\mdimport\import-util\src\main\java
-Directory:--->%home%\Documents\Prog\gitreps\mdimport\import-util\src\main\resources
-Directory:--->%home%\Documents\Prog\gitreps\mdimport\yq-import\src\main\java
-Directory:--->%home%\Documents\Prog\gitreps\mdimport\yq-import\src\main\resources
-Directory:--->%home%\Documents\Prog\gitreps\fwlookup\src
+Directory:--->~\Documents\Prog\gitreps\mdscripts\src\main\java
+Directory:--->~\Documents\Prog\gitreps\mdimport\import-util\src\main\java
+Directory:--->~\Documents\Prog\gitreps\mdimport\import-util\src\main\resources
+Directory:--->~\Documents\Prog\gitreps\mdimport\yq-import\src\main\java
+Directory:--->~\Documents\Prog\gitreps\mdimport\yq-import\src\main\resources
+Directory:--->~\Documents\Prog\gitreps\fwlookup\src
 --->Currency.py
 from collections import deque
 from decimal import Decimal, ROUND_HALF_EVEN
@@ -95,15 +95,15 @@ from typing import Optional
 from abc import ABCMeta, abstractmethod
 --->WindowInterface.py
 from abc import ABCMeta, abstractmethod
-Directory:--->%home%\Documents\Prog\gitreps\fwlookup\src\main\java
-Directory:--->%home%\Documents\Prog\gitreps\fwlookup\src\main\resources
-Directory:--->%home%\Documents\Prog\gitreps\mdimport\fw-import\src\main\java
-Directory:--->%home%\Documents\Prog\gitreps\mdimport\fw-import\src\main\resources
-Directory:--->%home%\Documents\Prog\gitreps\mdutil\MdProjects\src\main\java
-Directory:--->%home%\Documents\git\bootstrap-connector\src\main\java
-Directory:--->%home%\Documents\git\bootstrap-connector\target\generated-sources\annotations
-Directory:--->%home%\Documents\Prog\gitreps\nwsync\nw-sync\src\main\java
-Directory:--->%home%\Documents\Prog\gitreps\nwsync\nw-sync\src\main\resources
+Directory:--->~\Documents\Prog\gitreps\fwlookup\src\main\java
+Directory:--->~\Documents\Prog\gitreps\fwlookup\src\main\resources
+Directory:--->~\Documents\Prog\gitreps\mdimport\fw-import\src\main\java
+Directory:--->~\Documents\Prog\gitreps\mdimport\fw-import\src\main\resources
+Directory:--->~\Documents\Prog\gitreps\mdutil\MdProjects\src\main\java
+Directory:--->~\Documents\git\bootstrap-connector\src\main\java
+Directory:--->~\Documents\git\bootstrap-connector\target\generated-sources\annotations
+Directory:--->~\Documents\Prog\gitreps\nwsync\nw-sync\src\main\java
+Directory:--->~\Documents\Prog\gitreps\nwsync\nw-sync\src\main\resources
 Generating:Configure.Configure
 Class not found:Configure.Configure
 Generating:Currency.Currency
