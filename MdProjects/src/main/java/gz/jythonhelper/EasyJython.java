@@ -25,8 +25,7 @@ public class EasyJython {
 
     public static final String[] PREDEFINED_CLASSES = {};
 
-    private static final String USER_HOME = System.getProperty("user.home");
-    private static final String USER_HOME_SLASH = USER_HOME.replace('\\', '/');
+    public static final String USER_HOME = System.getProperty("user.home");
 
     ClassGenerator cg;
     private ClassLoader classLoader;
@@ -61,11 +60,6 @@ public class EasyJython {
         classLoader = new URLClassLoader(urls.toArray(new URL[0]));
     }
 
-    public static String stripUserDir(String file) {
-
-       return file.replace(USER_HOME, "~").replace(USER_HOME_SLASH, "~");
-    } // end stripUserDir(String)
-
     public void generatePys(String... pyFiles) {
        Set<String> classList = new TreeSet<>(Arrays.asList(PREDEFINED_CLASSES));
         for (String f : pyFiles) {
@@ -74,7 +68,7 @@ public class EasyJython {
                 System.out.println("File:--->" + file.getName());
                 classList.addAll(getClassListFromPy(file));
             } else {
-                System.out.println("Directory:--->" + stripUserDir(file.getAbsolutePath()));
+                System.out.println("Directory:--->" + file.getAbsolutePath().replace(USER_HOME, "~"));
                 File[] files = file.listFiles((dir, name) -> name.endsWith(".py"));
                 if (files != null) {
                     for (File child : files) {
@@ -167,6 +161,7 @@ abstract class ClassGenerator {
        "wait", "hashCode", "notify", "notifyAll", "yield",
        "and", "from", "is", "not", "or", "print"));
 
+    public static final String USER_HOME_SLASH = EasyJython.USER_HOME.replace('\\', '/');
     private final String outputDir;
     public static final String INIT_TEMPLATE = """
        # encoding: utf-8
@@ -369,7 +364,8 @@ class PyClassGenerator extends ClassGenerator {
             resourceURL = classLoader.getResource(clazz.getName().replace('.', '/') + ".class");
         }
         if (resourceURL != null) {
-            sb.append(indent(String.format(SOURCE_TPL, EasyJython.stripUserDir(resourceURL.toString()))));
+            sb.append(indent(String.format(SOURCE_TPL,
+               resourceURL.toString().replace(USER_HOME_SLASH, "~"))));
         }
         Field[] fields = new Field[0];
         try {
