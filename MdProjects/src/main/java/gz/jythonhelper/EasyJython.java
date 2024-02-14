@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
  */
 public class EasyJython {
 
-    public static final Pattern PATTERN_FROM_IMPORT = Pattern.compile("\\s*from\\s*(\\S+)\\s*import\\s+(\\w[\\w,\\p{Blank}]*)");
+    public static final Pattern PATTERN_FROM_IMPORT = Pattern.compile("\\s*from\\s*(\\S+)\\s*import\\s+(\\w[\\w, \\t]*)");
 
     public static final Pattern PATTERN_IMPORT = Pattern.compile("\\s*import\\s*(\\S+)");
 
@@ -54,7 +54,7 @@ public class EasyJython {
                     urls.add(file.toURI().toURL());
                 }
             } catch (MalformedURLException e) {
-                e.printStackTrace();
+                e.printStackTrace(System.err);
             }
         }
         classLoader = new URLClassLoader(urls.toArray(new URL[0]));
@@ -152,7 +152,7 @@ public class EasyJython {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(System.err);
         }
         return classes;
     }
@@ -230,15 +230,12 @@ abstract class ClassGenerator {
         try {
             fw.write(String.format(INIT_TEMPLATE, name /*, source*/));
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(System.err);
         }
     }
 
     void ensureInitPy(File dir) {
         File initFile = new File(dir, INIT_PY);
-//        if (initFile.exists() && initFile.lastModified() < startTime) {
-//            initFile.delete();
-//        }
         if (!initFile.exists()) {
             try {
                 boolean newFile = initFile.createNewFile();
@@ -248,7 +245,7 @@ abstract class ClassGenerator {
                     fw.close();
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                e.printStackTrace(System.err);
             }
         }
     }
@@ -391,7 +388,7 @@ class PyClassGenerator extends ClassGenerator {
         try {
             fields = clazz.getFields();
         } catch (SecurityException e) {
-            e.printStackTrace();
+            e.printStackTrace(System.err);
         }
         Arrays.sort(fields, Comparator.comparing(Field::getName));
 
@@ -425,7 +422,7 @@ class PyClassGenerator extends ClassGenerator {
         try {
             methods = clazz.getMethods();
         } catch (SecurityException e) {
-            e.printStackTrace();
+            e.printStackTrace(System.err);
         }
         methods = filterOverrideMethods(methods);
 
