@@ -26,6 +26,7 @@ public class EasyJython {
     public static final String[] PREDEFINED_CLASSES = {};
 
     private static final String USER_HOME = System.getProperty("user.home");
+    private static final String USER_HOME_SLASH = USER_HOME.replace('\\', '/');
 
     ClassGenerator cg;
     private ClassLoader classLoader;
@@ -60,16 +61,9 @@ public class EasyJython {
         classLoader = new URLClassLoader(urls.toArray(new URL[0]));
     }
 
-    private static String stripUserDir(String file) {
-        String strippedFile;
+    public static String stripUserDir(String file) {
 
-        if (file.startsWith(USER_HOME)) {
-            strippedFile = "~" + file.substring(USER_HOME.length());
-        } else {
-            strippedFile = file;
-        }
-
-        return strippedFile;
+       return file.replace(USER_HOME, "~").replace(USER_HOME_SLASH, "~");
     } // end stripUserDir(String)
 
     public void generatePys(String... pyFiles) {
@@ -167,6 +161,7 @@ abstract class ClassGenerator {
     public static final String STATIC_METHOD = "@staticmethod";
 
     public static final String LINE_SEPARATOR = "\n";
+    public static final String SOURCE_TPL = "# source:%s" + LINE_SEPARATOR;
     public static final Set<String> IGNORED_FIELDS = new HashSet<>(List.of("in"));
     public static final Set<String> IGNORED_METHODS = new HashSet<>(Arrays.asList(
        "wait", "hashCode", "notify", "notifyAll", "yield",
@@ -179,7 +174,6 @@ abstract class ClassGenerator {
        """;
 //       # from (built-in)
 //       # by generator 999.999
-//       # source:%s
 
     protected ClassGenerator(String outputDir) {
         this.outputDir = outputDir;
@@ -217,13 +211,9 @@ abstract class ClassGenerator {
         return sb.toString();
     }
 
-    void writePyHeader(FileWriter fw, String name, @SuppressWarnings("unused") URL resourceURL) {
-//        String source = "";
-//        if (resourceURL != null) {
-//            source = resourceURL.toString();
-//        }
+    void writePyHeader(FileWriter fw, String name) {
         try {
-            fw.write(String.format(INIT_TEMPLATE, name /*, source*/));
+            fw.write(String.format(INIT_TEMPLATE, name));
         } catch (IOException e) {
             e.printStackTrace(System.err);
         }
@@ -236,7 +226,7 @@ abstract class ClassGenerator {
                 boolean newFile = initFile.createNewFile();
                 if (newFile) {
                     FileWriter fw = new FileWriter(initFile);
-                    writePyHeader(fw, initFile.getName(), null);
+                    writePyHeader(fw, initFile.getName());
                     fw.close();
                 }
             } catch (IOException e) {
@@ -333,13 +323,7 @@ class PyClassGenerator extends ClassGenerator {
         File initPy = new File(directory, INIT_PY);
         Map<String, StringBuilder> classStringMap = readClassesFromInitPy(initPy);
         classStringMap.put(clazz.getSimpleName(), new StringBuilder(classContent));
-        String name = clazz.getName().replace('.', '/') + ".class";
-        ClassLoader classLoader = clazz.getClassLoader();
-        URL resourceURL = null;
-        if (classLoader != null) {
-            resourceURL = classLoader.getResource(name);
-        }
-        writeClassesFromInitPy(classStringMap, initPy, resourceURL);
+        writeClassesFromInitPy(classStringMap, initPy);
     }
 
     private Map<String, StringBuilder> readClassesFromInitPy(File initFile) throws IOException {
@@ -366,9 +350,9 @@ class PyClassGenerator extends ClassGenerator {
         return maps;
     }
 
-    private void writeClassesFromInitPy(Map<String, StringBuilder> classStringMap, File initPy, URL resourceURL) throws IOException {
+    private void writeClassesFromInitPy(Map<String, StringBuilder> classStringMap, File initPy) throws IOException {
         FileWriter fileWriter = new FileWriter(initPy);
-        writePyHeader(fileWriter, initPy.getName(), resourceURL);
+        writePyHeader(fileWriter, initPy.getName());
         for (StringBuilder classContent : classStringMap.values()) {
             fileWriter.write(classContent.toString());
         }
@@ -379,6 +363,14 @@ class PyClassGenerator extends ClassGenerator {
         StringBuilder sb = new StringBuilder();
         sb.append(generatePyClassDeclaration(clazz));
         sb.append(LINE_SEPARATOR);
+        ClassLoader classLoader = clazz.getClassLoader();
+        URL resourceURL = null;
+        if (classLoader != null) {
+            resourceURL = classLoader.getResource(clazz.getName().replace('.', '/') + ".class");
+        }
+        if (resourceURL != null) {
+            sb.append(indent(String.format(SOURCE_TPL, EasyJython.stripUserDir(resourceURL.toString()))));
+        }
         Field[] fields = new Field[0];
         try {
             fields = clazz.getFields();

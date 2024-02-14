@@ -1,10 +1,12 @@
 # encoding: utf-8
 # module __init__.py
 class imp(object):
+    # source:jar:file:/C:/jython2.7.2/jython.jar!/org/python/core/imp.class
     DEFAULT_LEVEL = None
     NO_MTIME = None
 
     class CodeData(object):
+        # source:jar:file:/C:/jython2.7.2/jython.jar!/org/python/core/imp$CodeData.class
     
         def equals(self, Object=None):
             pass

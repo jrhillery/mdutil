@@ -1,6 +1,7 @@
 # encoding: utf-8
 # module __init__.py
 class HTMLPane(object):
+    # source:file:/~/Documents/Prog/gitreps/mdutil/swing-util/bin/com/leastlogic/swing/util/HTMLPane.class
     ABORT = None
     ALLBITS = None
     BOTTOM_ALIGNMENT = None

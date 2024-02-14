@@ -1,6 +1,7 @@
 # encoding: utf-8
 # module __init__.py
 class AbstractTxn(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/AbstractTxn.class
     BANK_TRANSACTION_TYPE = None
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
@@ -40,6 +41,7 @@ class AbstractTxn(object):
     TRANSFER_TYPE_SHORTCOVER = None
 
     class ClearedStatus(object):
+        # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/AbstractTxn$ClearedStatus.class
         CLEARED = None
         RECONCILING = None
         UNRECONCILED = None
@@ -420,6 +422,7 @@ class AbstractTxn(object):
         pass
 
 class Account(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/Account.class
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
     ITEM_TYPE_KEY = None
@@ -436,6 +439,7 @@ class Account(object):
     SYNCABLE_TYPE_VALUE = None
 
     class AccountType(object):
+        # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/Account$AccountType.class
         ASSET = None
         BANK = None
         CREDIT_CARD = None
@@ -541,6 +545,7 @@ class Account(object):
             pass
 
     class BalanceType(object):
+        # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/Account$BalanceType.class
         CLEARED = None
         CONFIRMED = None
         CURRENT = None
@@ -621,6 +626,7 @@ class Account(object):
             pass
 
     class DebtPaymentSpec(object):
+        # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/Account$DebtPaymentSpec.class
         CLEARED_BALANCE = None
         CURRENT_BALANCE = None
         FIXED = None
@@ -1567,6 +1573,7 @@ class Account(object):
         pass
 
 class AccountBook(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/AccountBook.class
     DROPBOX_SYNC_UUID = None
 
     @staticmethod
@@ -1816,6 +1823,7 @@ class AccountBook(object):
         pass
 
 class CurrencySnapshot(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/CurrencySnapshot.class
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
     ITEM_TYPE_KEY = None
@@ -2054,6 +2062,7 @@ class CurrencySnapshot(object):
         pass
 
 class CurrencyTable(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/CurrencyTable.class
 
     def addCurrencyListener(self, CurrencyListener=None):
         pass
@@ -2155,6 +2164,7 @@ class CurrencyTable(object):
         pass
 
 class CurrencyType(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/CurrencyType.class
     CURRTYPE_CURRENCY = None
     CURRTYPE_SECURITY = None
     ITEM_KEY_ID = None
@@ -2166,6 +2176,7 @@ class CurrencyType(object):
     TAG_RELATIVE_TO_CURR = None
 
     class Type(object):
+        # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/CurrencyType$Type.class
         CURRENCY = None
         SECURITY = None
     
@@ -2625,6 +2636,7 @@ class CurrencyType(object):
         pass
 
 class ParentTxn(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/ParentTxn.class
     BANK_TRANSACTION_TYPE = None
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
@@ -2665,6 +2677,7 @@ class ParentTxn(object):
     TRANSFER_TYPE_SHORTCOVER = None
 
     class ClearedStatus(object):
+        # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/AbstractTxn$ClearedStatus.class
         CLEARED = None
         RECONCILING = None
         UNRECONCILED = None
@@ -3097,6 +3110,7 @@ class ParentTxn(object):
         pass
 
 class Reminder(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/Reminder.class
     BASIC_REMINDER_TYPE = None
     ITEM_KEY_ID = None
     ITEM_KEY_TIMESTAMP = None
@@ -3124,6 +3138,7 @@ class Reminder(object):
     WEEKLY_EVERY_THIRD = None
 
     class Type(object):
+        # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/Reminder$Type.class
         NOTE = None
         TRANSACTION = None
     
@@ -3487,6 +3502,7 @@ class Reminder(object):
         pass
 
 class ReminderSet(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/ReminderSet.class
 
     def addReminder(self, Reminder=None):
         pass

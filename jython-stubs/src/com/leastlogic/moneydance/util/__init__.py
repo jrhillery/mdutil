@@ -1,6 +1,7 @@
 # encoding: utf-8
 # module __init__.py
 class MdUtil(object):
+    # source:file:/~/Documents/Prog/gitreps/mdutil/md-util/bin/com/leastlogic/moneydance/util/MdUtil.class
 
     @staticmethod
     def convDateIntToLocal(int=None):
@@ -60,6 +61,7 @@ class MdUtil(object):
         pass
 
 class SnapshotList(object):
+    # source:file:/~/Documents/Prog/gitreps/mdutil/md-util/bin/com/leastlogic/moneydance/util/SnapshotList.class
 
     def equals(self, Object=None):
         pass

@@ -1,9 +1,11 @@
 # encoding: utf-8
 # module __init__.py
 class FeatureModule(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/moneydance/apps/md/controller/FeatureModule.class
     MONEYBOT_INVOKE_TARGET = None
 
     class ActionType(object):
+        # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/moneydance/apps/md/controller/FeatureModule$ActionType.class
         ACCOUNT_CONTEXT = None
         MENU = None
         MONEYBOT = None
@@ -142,6 +144,7 @@ class FeatureModule(object):
         pass
 
 class FeatureModuleContext(object):
+    # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/moneydance/apps/md/controller/FeatureModuleContext.class
 
     def getBuild(self, ):
         pass
