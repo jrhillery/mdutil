@@ -163,7 +163,7 @@ abstract class ClassGenerator {
     public static final String DEF_TPL = "def %s(%s):";
     public static final String CLASS_TPL = "class %s(%s):";
     public static final String PASS = "pass";
-    private static final Object INDENT = "    ";
+    private static final String INDENT = "    ";
     public static final String STATIC_METHOD = "@staticmethod";
 
     public static final String LINE_SEPARATOR = "\n";
@@ -200,12 +200,7 @@ abstract class ClassGenerator {
     }
 
     String indent(String line, int level) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < level; i++) {
-            sb.append(INDENT);
-        }
-        sb.append(line);
-        return sb.toString();
+       return INDENT.repeat(Math.max(0, level)) + line;
     }
 
     String makeAField(Field f) {
