@@ -147,15 +147,15 @@ public class EasyJython {
 }
 
 abstract class ClassGenerator {
+    public static final String LINE_SEPARATOR = "\n";
     public static final String INIT_PY = "__init__.py";
     public static final String DEF_TPL = "def %s(%s):";
-    public static final String CLASS_TPL = "class %s(%s):";
+    public static final String CLASS_TPL = "class %s(%s):" + LINE_SEPARATOR;
+    public static final String SOURCE_TPL = "# source:%s" + LINE_SEPARATOR;
     public static final String PASS = "pass";
     private static final String INDENT = "    ";
-    public static final String STATIC_METHOD = "@staticmethod";
+    public static final String STATIC_METHOD = "@staticmethod" + LINE_SEPARATOR;
 
-    public static final String LINE_SEPARATOR = "\n";
-    public static final String SOURCE_TPL = "# source:%s" + LINE_SEPARATOR;
     public static final Set<String> IGNORED_FIELDS = new HashSet<>(List.of("in"));
     public static final Set<String> IGNORED_METHODS = new HashSet<>(Arrays.asList(
        "wait", "hashCode", "notify", "notifyAll", "yield",
@@ -173,16 +173,6 @@ abstract class ClassGenerator {
     protected ClassGenerator(String outputDir) {
         this.outputDir = outputDir;
     }
-
-    String indents(String line, int i) {
-        String[] split = line.split(LINE_SEPARATOR);
-        StringBuilder sb = new StringBuilder();
-        for (String s : split) {
-            sb.append(indent(s, i));
-        }
-        return sb.toString();
-    }
-
 
     String indent(String line) {
         return indent(line, 1);
@@ -357,7 +347,6 @@ class PyClassGenerator extends ClassGenerator {
     private String generateClassAsPyClass(Class<?> clazz, Class<?> parentClazz) {
         StringBuilder sb = new StringBuilder();
         sb.append(generatePyClassDeclaration(clazz));
-        sb.append(LINE_SEPARATOR);
         ClassLoader classLoader = clazz.getClassLoader();
         URL resourceURL = null;
         if (classLoader != null) {
@@ -415,7 +404,7 @@ class PyClassGenerator extends ClassGenerator {
                 String name = m.getName();
                 if (!IGNORED_METHODS.contains(name)) {
                     sb.append(indents(generateMethodForPyClass(m)));
-                    sb.append(indents(PASS, 2));
+                    sb.append(indent(PASS, 2));
                     sb.append(LINE_SEPARATOR);
                     sb.append(LINE_SEPARATOR);
                 }
@@ -443,7 +432,7 @@ class PyClassGenerator extends ClassGenerator {
         int modifiers = m.getModifiers();
         String prefix = "";
         if (Modifier.isStatic(modifiers)) {
-            prefix = STATIC_METHOD + LINE_SEPARATOR;
+            prefix = STATIC_METHOD;
         } else {
             sb.append("self, ");
         }
