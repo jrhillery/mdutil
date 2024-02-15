@@ -239,7 +239,7 @@ abstract class ClassGenerator {
         return currentDir;
     }
 
-    Method[] filterOverrideMethods(Method[] methods) {
+    Collection<Method> filterOverrideMethods(Method[] methods) {
         Map<String, Method> methodMap = new TreeMap<>();
 
         for (Method m : methods) {
@@ -261,10 +261,10 @@ abstract class ClassGenerator {
                 }
             }
         }
-        return methodMap.values().toArray(new Method[0]);
+        return methodMap.values();
     }
 
-    Class<?>[] filterDuplicateClasses(Class<?>[] classes, Class<?> parentClazz) {
+    Collection<Class<?>> filterDuplicateClasses(Class<?>[] classes, Class<?> parentClazz) {
         String pkgName = parentClazz.getPackageName();
         Map<String, Class<?>> classMap = new TreeMap<>();
 
@@ -288,7 +288,7 @@ abstract class ClassGenerator {
                    + ignoredClass.toGenericString());
             }
         }
-        return classMap.values().toArray(new Class[0]);
+        return classMap.values();
     }
 
     public abstract void createPyForClass(Class<?> clazz) throws IOException;
@@ -383,9 +383,9 @@ class PyClassGenerator extends ClassGenerator {
         if (classes.length > 0 && parentClazz != null && parentClazz.isAssignableFrom(clazz)) {
             System.out.println("Found recursively nested class definition: " + clazz);
         } else {
-            classes = filterDuplicateClasses(classes, clazz);
+            Collection<Class<?>> uniqueClasses = filterDuplicateClasses(classes, clazz);
 
-            for (Class<?> innerClazz : classes) {
+            for (Class<?> innerClazz : uniqueClasses) {
                 sb.append(indents(generateClassAsPyClass(innerClazz, clazz)));
                 sb.append(LINE_SEPARATOR);
             }
@@ -396,9 +396,9 @@ class PyClassGenerator extends ClassGenerator {
         } catch (SecurityException e) {
             e.printStackTrace(System.err);
         }
-        methods = filterOverrideMethods(methods);
+        Collection<Method> uniqueMethods = filterOverrideMethods(methods);
 
-        for (Method m : methods) {
+        for (Method m : uniqueMethods) {
             int modifiers = m.getModifiers();
             if (Modifier.isPublic(modifiers)) {
                 String name = m.getName();
