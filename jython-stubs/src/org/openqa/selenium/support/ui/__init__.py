@@ -1,7 +1,7 @@
 # encoding: utf-8
 # module __init__.py
 class ExpectedConditions(object):
-    # source:jar:file:/~/Documents/Prog/selenium-java-4.16.1/selenium-support-4.16.1.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class
+    # source:jar:file:/~/Documents/Prog/selenium-java-4.18.1/selenium-support-4.18.1.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class
 
     @staticmethod
     def alertIsPresent():
@@ -177,7 +177,7 @@ class ExpectedConditions(object):
         pass
 
 class WebDriverWait(object):
-    # source:jar:file:/~/Documents/Prog/selenium-java-4.16.1/selenium-support-4.16.1.jar!/org/openqa/selenium/support/ui/WebDriverWait.class
+    # source:jar:file:/~/Documents/Prog/selenium-java-4.18.1/selenium-support-4.18.1.jar!/org/openqa/selenium/support/ui/WebDriverWait.class
 
     def equals(self, Object=None):
         pass

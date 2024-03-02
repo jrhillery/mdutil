@@ -32,7 +32,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="selenium-java-4.16.1" level="application" />
+    <orderEntry type="library" name="selenium-java-4.18.1" level="application" />
     <orderEntry type="module" module-name="md-util" />
     <orderEntry type="module" module-name="swing-util" />
   </component>
