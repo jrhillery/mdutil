@@ -44,7 +44,7 @@ public class HTMLPane extends JEditorPane {
 		HTMLDocument doc = (HTMLDocument) getDocument();
 		StyleSheet ss = doc.getStyleSheet();
 		ss.addRule("p { margin-top: 0; white-space: nowrap; }");
-		ss.addRule("p { font-family: Tahoma, Geneva, sans-serif; font-size: 12pt; }");
+		ss.addRule("p { font-family: Tahoma, Geneva, sans-serif; font-size: 13pt; }");
 		ss.addRule('.' + CL_INCREASE + " { color: rgb(0,217,0); }");
 		ss.addRule('.' + CL_DECREASE + " { color: red; }");
 
