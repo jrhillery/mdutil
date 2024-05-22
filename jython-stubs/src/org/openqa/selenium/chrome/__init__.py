@@ -1,11 +1,11 @@
 # encoding: utf-8
 # module __init__.py
 class ChromeDriver(object):
-    # source:jar:file:/~/Documents/Prog/selenium-java-4.19.1/selenium-chrome-driver-4.19.1.jar!/org/openqa/selenium/chrome/ChromeDriver.class
+    # source:jar:file:/~/Documents/Prog/selenium-java-4.21.0/selenium-chrome-driver-4.21.0.jar!/org/openqa/selenium/chrome/ChromeDriver.class
     IS_CHROMIUM_BROWSER = None
 
     class When(object):
-        # source:jar:file:/~/Documents/Prog/selenium-java-4.19.1/selenium-remote-driver-4.19.1.jar!/org/openqa/selenium/remote/RemoteWebDriver$When.class
+        # source:jar:file:/~/Documents/Prog/selenium-java-4.21.0/selenium-remote-driver-4.21.0.jar!/org/openqa/selenium/remote/RemoteWebDriver$When.class
         AFTER = None
         BEFORE = None
         EXCEPTION = None
@@ -283,7 +283,7 @@ class ChromeDriver(object):
         pass
 
 class ChromeDriverService(object):
-    # source:jar:file:/~/Documents/Prog/selenium-java-4.19.1/selenium-chrome-driver-4.19.1.jar!/org/openqa/selenium/chrome/ChromeDriverService.class
+    # source:jar:file:/~/Documents/Prog/selenium-java-4.21.0/selenium-chrome-driver-4.21.0.jar!/org/openqa/selenium/chrome/ChromeDriverService.class
     CHROME_DRIVER_ALLOWED_IPS_PROPERTY = None
     CHROME_DRIVER_APPEND_LOG_PROPERTY = None
     CHROME_DRIVER_DISABLE_BUILD_CHECK = None
@@ -299,7 +299,7 @@ class ChromeDriverService(object):
     LOG_STDOUT = None
 
     class Builder(object):
-        # source:jar:file:/~/Documents/Prog/selenium-java-4.19.1/selenium-chrome-driver-4.19.1.jar!/org/openqa/selenium/chrome/ChromeDriverService$Builder.class
+        # source:jar:file:/~/Documents/Prog/selenium-java-4.21.0/selenium-chrome-driver-4.21.0.jar!/org/openqa/selenium/chrome/ChromeDriverService$Builder.class
     
         def build(self, ):
             pass
@@ -405,7 +405,7 @@ class ChromeDriverService(object):
         pass
 
 class ChromeOptions(object):
-    # source:jar:file:/~/Documents/Prog/selenium-java-4.19.1/selenium-chrome-driver-4.19.1.jar!/org/openqa/selenium/chrome/ChromeOptions.class
+    # source:jar:file:/~/Documents/Prog/selenium-java-4.21.0/selenium-chrome-driver-4.21.0.jar!/org/openqa/selenium/chrome/ChromeOptions.class
     CAPABILITY = None
     LOGGING_PREFS = None
 

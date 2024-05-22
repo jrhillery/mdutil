@@ -29,6 +29,6 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="selenium-java-4.19.1" level="application" />
+    <orderEntry type="library" name="selenium-java-4.21.0" level="application" />
   </component>
 </module>
