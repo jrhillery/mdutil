@@ -10,5 +10,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="poi" level="project" />
     <orderEntry type="module" module-name="md-util" />
+    <orderEntry type="module" module-name="swing-util" />
+    <orderEntry type="module" module-name="import-util" />
+    <orderEntry type="library" name="moneydance-devkit-5.1" level="application" />
   </component>
 </module>
