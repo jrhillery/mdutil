@@ -16,6 +16,7 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
@@ -75,6 +76,25 @@ public class MdUtil {
 
 		return bd.setScale(10, HALF_EVEN);
 	} // end roundPrice(double)
+
+	/**
+	 * Returns a currency format for the specified locale.
+	 *
+	 * @param l Desired locale
+	 * @param value Reference value
+	 * @return A currency number format with the number of fraction digits in value
+	 */
+	public static NumberFormat getCurrencyFormat(Locale l, BigDecimal value) {
+		DecimalFormat formatter = (DecimalFormat) NumberFormat.getCurrencyInstance(l);
+		int valScale = value.scale();
+
+		if (valScale < 2) {
+			valScale = 2; // some quotes omit the trailing zeros
+		}
+		formatter.setMinimumFractionDigits(valScale);
+
+		return formatter;
+	} // end getCurrencyFormat(Locale, BigDecimal)
 
 	/**
 	 * @param dateInt The numeric date value in decimal form YYYYMMDD
@@ -237,15 +257,17 @@ public class MdUtil {
 			System.err.format(locale, "Unable to load message bundle %s. %s%n", baseBundleName, e);
 
 			messageBundle = new ResourceBundle() {
+				@SuppressWarnings("NullableProblems")
 				protected Object handleGetObject(String key) {
 					// just use the key since we have no message bundle
 					return key;
 				}
 
+				@SuppressWarnings("NullableProblems")
 				public Enumeration<String> getKeys() {
 					return new Enumeration<>() {
 						public boolean hasMoreElements() { return false; }
-						public String nextElement() { return null; }
+						public String nextElement() { throw new NoSuchElementException(); }
 					};
 				} // end getKeys()
 			}; // end new ResourceBundle() {...}
