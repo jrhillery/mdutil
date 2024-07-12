@@ -32,6 +32,8 @@ import com.infinitekind.moneydance.model.CurrencyType;
  */
 public class MdUtil {
 
+	public static final String IBOND_TICKER_PREFIX = "IBond";
+
 	/**
 	 * @param security       The Moneydance security
 	 * @param latestSnapshot The last currency snapshot for the supplied security
@@ -299,5 +301,19 @@ public class MdUtil {
 
 		return props;
 	} // end loadProps(String, Class<?>)
+
+	/**
+	 * Check if a ticker symbol matches our prefix for Series I savings
+	 * bond ticker symbols, in the format IBondYYYYMM ignoring case.
+	 *
+	 * @param ticker Ticker symbol to check
+	 * @return true when ticker is a valid I bond ticker symbol
+	 */
+	public static boolean isIBondTickerPrefix(String ticker) {
+
+		return ticker != null
+			&& IBOND_TICKER_PREFIX.regionMatches(true, 0, ticker, 0,
+				IBOND_TICKER_PREFIX.length());
+	} // end isIBondTickerPrefix(String)
 
 } // end class MdUtil
