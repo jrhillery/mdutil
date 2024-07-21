@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="fastexcel">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../fastexcel" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../fastexcel" recursive="false" />
+  </library>
+</component>
