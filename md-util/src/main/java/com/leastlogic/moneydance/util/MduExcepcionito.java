@@ -3,7 +3,7 @@ package com.leastlogic.moneydance.util;
 /**
  * Class to house small exceptions.
  */
-public class MduExcepcionito extends MduException {
+public class MduExcepcionito extends Exception {
 
    /**
     * @param cause     Exception that caused this (null if none)
@@ -11,7 +11,7 @@ public class MduExcepcionito extends MduException {
     * @param params    Optional parameters for the detail message
     */
    public MduExcepcionito(Throwable cause, String formatMsg, Object... params) {
-      super(cause, formatMsg, params);
+      super(String.format(formatMsg, params), cause);
 
    } // end constructor
 
