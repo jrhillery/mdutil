@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 public class JarTool {
    private static final Pattern lParse =
-      Pattern.compile("(.+)\\[class,load] (.+?) source: file:/(.+)$");
+      Pattern.compile("(.+)\\[class,load] (.+?) source: file:/(.+).jar$");
 
    public static void main(String[] args) throws Exception {
       TreeMap<String, TreeSet<String>> sources = new TreeMap<>();
@@ -26,29 +26,30 @@ public class JarTool {
             if (m.find()) {
                String src = m.group(3);
 
-               if (src.startsWith("C:/Users/") && src.endsWith(".jar")) {
-                  TreeSet<String> classSet;
-                  classSet = sources.computeIfAbsent(src, k -> new TreeSet<>());
+               if (src.startsWith("C:/Users/")) {
+                  TreeSet<String> pkgSet;
+                  pkgSet = sources.computeIfAbsent(src, k -> new TreeSet<>());
 
                   String clazz = m.group(2);
-                  classSet.add(clazz);
+                  String pkg = clazz.substring(0, clazz.lastIndexOf('.'));
+                  pkgSet.add(pkg);
                }
             }
          }
       } // end try with resources
       String dir = args.length > 0 ? args[0] : ".";
 
-      sources.forEach((src, classSet) -> {
-         String outFn = Path.of(src).getFileName() + ".lst";
+      sources.forEach((src, pkgSet) -> {
+         String outFn = Path.of(src).getFileName() + ".pkgLst";
          Path outLst = Path.of(dir, outFn);
          System.out.println("Writing to " + outLst);
 
          try (BufferedWriter writer = Files.newBufferedWriter(outLst)) {
 
-            classSet.forEach(clazz -> {
+            pkgSet.forEach(pkg -> {
                try {
-                  writer.write(clazz);
-                  writer.write('\n');
+                  writer.write(pkg.replace('.', '/'));
+                  writer.write("/*\n");
                } catch (Exception e) {
                   throw new RuntimeException(e);
                }
