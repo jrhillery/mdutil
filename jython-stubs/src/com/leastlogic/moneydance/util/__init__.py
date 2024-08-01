@@ -2,6 +2,7 @@
 # module __init__.py
 class MdUtil(object):
     # source:file:/~/Documents/Prog/gitreps/mdutil/md-util/bin/com/leastlogic/moneydance/util/MdUtil.class
+    IBOND_TICKER_PREFIX = None
 
     @staticmethod
     def convDateIntToLocal(int=None):
@@ -30,6 +31,10 @@ class MdUtil(object):
         pass
 
     @staticmethod
+    def getCurrencyFormat(Locale=None, BigDecimal1=None):
+        pass
+
+    @staticmethod
     def getCurrentBalance(Account=None):
         pass
 
@@ -43,6 +48,10 @@ class MdUtil(object):
 
     @staticmethod
     def getSubAccountByName(Account=None, String1=None):
+        pass
+
+    @staticmethod
+    def isIBondTickerPrefix(String=None):
         pass
 
     @staticmethod
