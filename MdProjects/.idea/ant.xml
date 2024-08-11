@@ -16,5 +16,6 @@
     <buildFile url="file://$PROJECT_DIR$/../../ibondvals/ibond-values/build/build.xml">
       <antCommandLine value="-J-Djava.security.manager=allow" />
     </buildFile>
+    <buildFile url="file://$PROJECT_DIR$/../../mdimport/fw-import/build/build.xml" />
   </component>
 </project>
