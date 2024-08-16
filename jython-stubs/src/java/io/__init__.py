@@ -6,6 +6,9 @@ class File(object):
     separator = None
     separatorChar = None
 
+    def __init__(self, File=None, String1=None):
+        pass
+
     def canExecute(self, ):
         pass
 

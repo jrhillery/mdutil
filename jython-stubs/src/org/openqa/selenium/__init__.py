@@ -6,6 +6,9 @@ class By(object):
     class ByClassName(object):
         # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/By$ByClassName.class
     
+        def __init__(self, String=None):
+            pass
+    
         @staticmethod
         def className(String=None):
             pass
@@ -58,6 +61,9 @@ class By(object):
 
     class ByCssSelector(object):
         # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/By$ByCssSelector.class
+    
+        def __init__(self, String=None):
+            pass
     
         @staticmethod
         def className(String=None):
@@ -112,6 +118,9 @@ class By(object):
     class ById(object):
         # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/By$ById.class
     
+        def __init__(self, String=None):
+            pass
+    
         @staticmethod
         def className(String=None):
             pass
@@ -164,6 +173,9 @@ class By(object):
 
     class ByLinkText(object):
         # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/By$ByLinkText.class
+    
+        def __init__(self, String=None):
+            pass
     
         @staticmethod
         def className(String=None):
@@ -218,6 +230,9 @@ class By(object):
     class ByName(object):
         # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/By$ByName.class
     
+        def __init__(self, String=None):
+            pass
+    
         @staticmethod
         def className(String=None):
             pass
@@ -270,6 +285,9 @@ class By(object):
 
     class ByPartialLinkText(object):
         # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/By$ByPartialLinkText.class
+    
+        def __init__(self, String=None):
+            pass
     
         @staticmethod
         def className(String=None):
@@ -324,6 +342,9 @@ class By(object):
     class ByTagName(object):
         # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/By$ByTagName.class
     
+        def __init__(self, String=None):
+            pass
+    
         @staticmethod
         def className(String=None):
             pass
@@ -376,6 +397,9 @@ class By(object):
 
     class ByXPath(object):
         # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/By$ByXPath.class
+    
+        def __init__(self, String=None):
+            pass
     
         @staticmethod
         def className(String=None):
@@ -432,6 +456,9 @@ class By(object):
     
         class Parameters(object):
             # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/By$Remotable$Parameters.class
+        
+            def __init__(self, String=None, Object1=None):
+                pass
         
             def equals(self, Object=None):
                 pass
@@ -502,6 +529,9 @@ class WebDriverException(Exception):
     # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-api-4.23.0.jar!/org/openqa/selenium/WebDriverException.class
     DRIVER_INFO = None
     SESSION_ID = None
+
+    def __init__(self, String=None, Throwable1=None):
+        pass
 
     def addInfo(self, String=None, String1=None):
         pass

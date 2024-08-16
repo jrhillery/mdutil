@@ -179,6 +179,9 @@ class ExpectedConditions(object):
 class WebDriverWait(object):
     # source:jar:file:/~/Documents/Prog/selenium-java-4.23.0/selenium-support-4.23.0.jar!/org/openqa/selenium/support/ui/WebDriverWait.class
 
+    def __init__(self, WebDriver=None, Duration1=None, Duration2=None, Clock3=None, Sleeper4=None):
+        pass
+
     def equals(self, Object=None):
         pass
 

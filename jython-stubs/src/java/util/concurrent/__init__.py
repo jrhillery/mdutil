@@ -2,6 +2,9 @@
 # module __init__.py
 class CancellationException(Exception):
 
+    def __init__(self, String=None):
+        pass
+
     def addSuppressed(self, Throwable=None):
         pass
 
@@ -42,6 +45,9 @@ class CancellationException(Exception):
         pass
 
 class ExecutionException(Exception):
+
+    def __init__(self, String=None, Throwable1=None):
+        pass
 
     def addSuppressed(self, Throwable=None):
         pass

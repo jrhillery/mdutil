@@ -29,6 +29,9 @@ class ActionEvent(object):
     WINDOW_FOCUS_EVENT_MASK = None
     WINDOW_STATE_EVENT_MASK = None
 
+    def __init__(self, Object=None, int1=None, String2=None, long3=None, int4=None):
+        pass
+
     def equals(self, Object=None):
         pass
 
@@ -98,6 +101,9 @@ class WindowEvent(object):
     WINDOW_OPENED = None
     WINDOW_STATE_CHANGED = None
     WINDOW_STATE_EVENT_MASK = None
+
+    def __init__(self, Window=None, int1=None, Window2=None, int3=None, int4=None):
+        pass
 
     def equals(self, Object=None):
         pass

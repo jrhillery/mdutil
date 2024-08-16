@@ -7,6 +7,9 @@ class AutoCloseable(object):
 
 class InterruptedException(Exception):
 
+    def __init__(self, String=None):
+        pass
+
     def addSuppressed(self, Throwable=None):
         pass
 
@@ -447,6 +450,9 @@ class Thread(object):
         def uncaughtException(self, Thread=None, Throwable1=None):
             pass
 
+    def __init__(self, ThreadGroup=None, Runnable1=None, String2=None, long3=None, boolean4=None):
+        pass
+
     @staticmethod
     def activeCount():
         pass
@@ -594,6 +600,9 @@ class Thread(object):
         pass
 
 class Throwable(Exception):
+
+    def __init__(self, String=None, Throwable1=None):
+        pass
 
     def addSuppressed(self, Throwable=None):
         pass

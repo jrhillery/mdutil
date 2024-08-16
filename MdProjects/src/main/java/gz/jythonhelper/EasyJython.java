@@ -1,6 +1,8 @@
 package gz.jythonhelper;
 
 import java.io.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Executable;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -239,12 +241,12 @@ abstract class ClassGenerator {
         return currentDir;
     }
 
-    Collection<Method> filterOverrideMethods(Method[] methods) {
-        Map<String, Method> methodMap = new TreeMap<>();
+    <T extends Executable> Collection<T> filterOverrideMethods(T[] methods) {
+        Map<String, T> methodMap = new TreeMap<>();
 
-        for (Method m : methods) {
+        for (T m : methods) {
             String name = m.getName();
-            Method existingMethod = methodMap.get(name);
+            T existingMethod = methodMap.get(name);
             if (existingMethod == null) {
                 methodMap.put(name, m);
             } else {
@@ -390,6 +392,24 @@ class PyClassGenerator extends ClassGenerator {
                 sb.append(LINE_SEPARATOR);
             }
         }
+        Constructor<?>[] constructors = new Constructor[0];
+        try {
+            constructors = clazz.getConstructors();
+        } catch (SecurityException e) {
+            e.printStackTrace(System.err);
+        }
+        Collection<Constructor<?>> uniqueConstructors = filterOverrideMethods(constructors);
+
+        for (Constructor<?> m: uniqueConstructors) {
+            if (Modifier.isPublic(m.getModifiers())) {
+                if (m.getParameterCount() > 0) {
+                    sb.append(indents(generateMethodForPyClass(m)));
+                    sb.append(indent(PASS, 2));
+                    sb.append(LINE_SEPARATOR);
+                    sb.append(LINE_SEPARATOR);
+                }
+            }
+        }
         Method[] methods = new Method[0];
         try {
             methods = clazz.getMethods();
@@ -426,7 +446,7 @@ class PyClassGenerator extends ClassGenerator {
         return String.format(CLASS_TPL, clazz.getSimpleName(), base);
     } // end generatePyClassDeclaration(Class<?>)
 
-    private String generateMethodForPyClass(Method m) {
+    private String generateMethodForPyClass(Executable m) {
         Class<?>[] parameterTypes = m.getParameterTypes();
         StringBuilder sb = new StringBuilder();
         int modifiers = m.getModifiers();
@@ -453,7 +473,8 @@ class PyClassGenerator extends ClassGenerator {
                 sb.append(", ");
             }
         }
+        String name = (m instanceof Constructor<?>) ? "__init__" : m.getName();
 
-        return prefix + String.format(DEF_TPL, m.getName(), sb);
+        return prefix + String.format(DEF_TPL, name, sb);
     }
 }

@@ -83,6 +83,9 @@ class ChromeDriver(object):
         def values():
             pass
 
+    def __init__(self, ChromeDriverService=None, ChromeOptions1=None, ClientConfig2=None):
+        pass
+
     def addVirtualAuthenticator(self, VirtualAuthenticatorOptions=None):
         pass
 
@@ -360,6 +363,9 @@ class ChromeDriverService(object):
     
         def withVerbose(self, boolean=None):
             pass
+
+    def __init__(self, File=None, int1=None, Duration2=None, List3=None, Map4=None):
+        pass
 
     def close(self, ):
         pass

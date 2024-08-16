@@ -149,6 +149,9 @@ class GroupLayout(object):
         def toString(self, ):
             pass
 
+    def __init__(self, Container=None):
+        pass
+
     def addLayoutComponent(self, Component=None, Object1=None):
         pass
 
@@ -561,6 +564,9 @@ class JButton(object):
         @staticmethod
         def values():
             pass
+
+    def __init__(self, String=None, Icon1=None):
+        pass
 
     def action(self, Event=None, Object1=None):
         pass
@@ -1762,6 +1768,9 @@ class JFrame(object):
         def values():
             pass
 
+    def __init__(self, String=None, GraphicsConfiguration1=None):
+        pass
+
     def action(self, Event=None, Object1=None):
         pass
 
@@ -2898,6 +2907,9 @@ class JPanel(object):
         def values():
             pass
 
+    def __init__(self, LayoutManager=None, boolean1=None):
+        pass
+
     def action(self, Event=None, Object1=None):
         pass
 
@@ -4013,6 +4025,9 @@ class JScrollPane(object):
         @staticmethod
         def values():
             pass
+
+    def __init__(self, Component=None, int1=None, int2=None):
+        pass
 
     def action(self, Event=None, Object1=None):
         pass

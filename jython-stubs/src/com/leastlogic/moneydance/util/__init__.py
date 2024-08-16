@@ -1,5 +1,32 @@
 # encoding: utf-8
 # module __init__.py
+class MdStorageUtil(object):
+    # source:file:/~/Documents/Prog/gitreps/mdutil/md-util/bin/com/leastlogic/moneydance/util/MdStorageUtil.class
+
+    def __init__(self, String=None, Map1=None):
+        pass
+
+    def equals(self, Object=None):
+        pass
+
+    def getClass(self, ):
+        pass
+
+    def persistData(self, Object=None, String1=None):
+        pass
+
+    def persistWindowCoordinates(self, Window=None):
+        pass
+
+    def retrieveData(self, String=None, Class1=None):
+        pass
+
+    def setWindowCoordinates(self, Window=None, int1=None, int2=None):
+        pass
+
+    def toString(self, ):
+        pass
+
 class MdUtil(object):
     # source:file:/~/Documents/Prog/gitreps/mdutil/md-util/bin/com/leastlogic/moneydance/util/MdUtil.class
     IBOND_TICKER_PREFIX = None
@@ -71,6 +98,9 @@ class MdUtil(object):
 
 class SnapshotList(object):
     # source:file:/~/Documents/Prog/gitreps/mdutil/md-util/bin/com/leastlogic/moneydance/util/SnapshotList.class
+
+    def __init__(self, CurrencyType=None):
+        pass
 
     def equals(self, Object=None):
         pass

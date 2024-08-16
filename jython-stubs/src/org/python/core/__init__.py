@@ -8,6 +8,9 @@ class imp(object):
     class CodeData(object):
         # source:jar:file:/C:/jython2.7.2/jython.jar!/org/python/core/imp$CodeData.class
     
+        def __init__(self, byte=None, long1=None, String2=None):
+            pass
+    
         def equals(self, Object=None):
             pass
     

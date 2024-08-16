@@ -127,6 +127,9 @@ class AbstractTxn(object):
         def values():
             pass
 
+    def __init__(self, AccountBook=None):
+        pass
+
     def addParameters(self, Map=None):
         pass
 
@@ -712,6 +715,9 @@ class Account(object):
         @staticmethod
         def values():
             pass
+
+    def __init__(self, AccountBook=None):
+        pass
 
     def addParameters(self, Map=None):
         pass
@@ -1830,6 +1836,9 @@ class CurrencySnapshot(object):
     SECURITY_SUBTYPES_ITEM_TYPE = None
     SYNCABLE_TYPE_VALUE = None
 
+    def __init__(self, AccountBook=None):
+        pass
+
     def addParameters(self, Map=None):
         pass
 
@@ -2064,6 +2073,9 @@ class CurrencySnapshot(object):
 class CurrencyTable(object):
     # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/CurrencyTable.class
 
+    def __init__(self, AccountBook=None):
+        pass
+
     def addCurrencyListener(self, CurrencyListener=None):
         pass
 
@@ -2266,6 +2278,9 @@ class CurrencyType(object):
         @staticmethod
         def values():
             pass
+
+    def __init__(self, CurrencyTable=None):
+        pass
 
     def addParameters(self, Map=None):
         pass
@@ -2763,6 +2778,9 @@ class ParentTxn(object):
         def values():
             pass
 
+    def __init__(self, AccountBook=None):
+        pass
+
     def addParameters(self, Map=None):
         pass
 
@@ -3222,6 +3240,9 @@ class Reminder(object):
         def values():
             pass
 
+    def __init__(self, AccountBook=None):
+        pass
+
     def addParameters(self, Map=None):
         pass
 
@@ -3503,6 +3524,9 @@ class Reminder(object):
 
 class ReminderSet(object):
     # source:jar:file:/~/Documents/Prog/moneydance-devkit-5.1/lib/moneydance-dev.jar!/com/infinitekind/moneydance/model/ReminderSet.class
+
+    def __init__(self, AccountBook=None):
+        pass
 
     def addReminder(self, Reminder=None):
         pass

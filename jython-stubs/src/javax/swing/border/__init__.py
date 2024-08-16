@@ -2,6 +2,9 @@
 # module __init__.py
 class EmptyBorder(object):
 
+    def __init__(self, int=None, int1=None, int2=None, int3=None):
+        pass
+
     def equals(self, Object=None):
         pass
 

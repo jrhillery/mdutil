@@ -254,6 +254,9 @@ class HTMLPane(object):
         TOGGLE_POPUP = None
         WORD = None
     
+        def __init__(self, JTextComponent=None):
+            pass
+    
         def addFocusListener(self, FocusListener=None):
             pass
     
@@ -620,6 +623,9 @@ class HTMLPane(object):
     class KeyBinding(object):
         actionName = None
         key = None
+    
+        def __init__(self, KeyStroke=None, String1=None):
+            pass
     
         def equals(self, Object=None):
             pass

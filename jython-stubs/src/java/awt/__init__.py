@@ -22,6 +22,9 @@ class AWTEvent(object):
     WINDOW_FOCUS_EVENT_MASK = None
     WINDOW_STATE_EVENT_MASK = None
 
+    def __init__(self, Object=None, int1=None):
+        pass
+
     def equals(self, Object=None):
         pass
 
