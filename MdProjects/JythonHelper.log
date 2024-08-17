@@ -29,15 +29,17 @@ from logging.config import dictConfig
 from typing import Optional
 --->FwLookupConsole.py
 from collections import deque
+from typing import Optional
+from StagedInterface import StagedInterface
+from com.leastlogic.moneydance.util import MdStorageUtil
 from com.leastlogic.swing.util import HTMLPane
-from java.awt import AWTEvent, Dimension
+from java.awt import AWTEvent
 from java.awt.event import ActionEvent, WindowEvent
 from java.lang import AutoCloseable, System, Throwable
+from java.util import Map
 from javax.swing import GroupLayout, JButton, JFrame, JPanel
 from javax.swing import JScrollPane, LayoutStyle, WindowConstants
 from javax.swing.border import EmptyBorder
-from typing import Optional
-from StagedInterface import StagedInterface
 --->FwLookupWorker.py
 from threading import Event
 from com.moneydance.apps.md.controller import FeatureModuleContext
@@ -159,6 +161,9 @@ create package directory:com.infinitekind.moneydance.model
 Generating:com.infinitekind.moneydance.model.ReminderSet
 class com.infinitekind.moneydance.model.ReminderSet
 create package directory:com.infinitekind.moneydance.model
+Generating:com.leastlogic.moneydance.util.MdStorageUtil
+class com.leastlogic.moneydance.util.MdStorageUtil
+create package directory:com.leastlogic.moneydance.util
 Generating:com.leastlogic.moneydance.util.MdUtil
 class com.leastlogic.moneydance.util.MdUtil
 create package directory:com.leastlogic.moneydance.util
@@ -191,9 +196,6 @@ Class not found:httplib.HTTPConnection
 Generating:java.awt.AWTEvent
 class java.awt.AWTEvent
 create package directory:java.awt
-Generating:java.awt.Dimension
-class java.awt.Dimension
-create package directory:java.awt
 Generating:java.awt.event.ActionEvent
 class java.awt.event.ActionEvent
 create package directory:java.awt.event
@@ -224,6 +226,9 @@ create package directory:java.lang
 Generating:java.time.Duration
 class java.time.Duration
 create package directory:java.time
+Generating:java.util.Map
+interface java.util.Map
+create package directory:java.util
 Generating:java.util.concurrent.CancellationException
 class java.util.concurrent.CancellationException
 create package directory:java.util.concurrent

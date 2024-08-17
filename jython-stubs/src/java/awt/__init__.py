@@ -46,31 +46,3 @@ class AWTEvent(object):
     def toString(self, ):
         pass
 
-class Dimension(object):
-    height = None
-    width = None
-
-    def clone(self, ):
-        pass
-
-    def equals(self, Object=None):
-        pass
-
-    def getClass(self, ):
-        pass
-
-    def getHeight(self, ):
-        pass
-
-    def getSize(self, ):
-        pass
-
-    def getWidth(self, ):
-        pass
-
-    def setSize(self, double=None, double1=None):
-        pass
-
-    def toString(self, ):
-        pass
-
