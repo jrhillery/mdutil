@@ -28,13 +28,24 @@ public class MdStorageUtil {
    } // end constructor
 
    /**
+    * Form the local storage key for a given file name.
+    *
+    * @param name file name
+    * @return local storage key
+    */
+   private String asKey(String name) {
+
+      return this.folder + '.' + name;
+   } // end asKey(String)
+
+   /**
     * Store persistent data to the specified folder and file name.
     *
     * @param data data object to store
     * @param name file name
     */
    public void persistData(Object data, String name) throws MduException {
-      String key = this.folder + '.' + name;
+      String key = asKey(name);
       String dataStr = this.gson.toJson(data);
 
       if (this.localStorage == null)
@@ -53,7 +64,7 @@ public class MdStorageUtil {
     * @return Specified persisted data object
     */
    public <T> T retrieveData(String name, Class<T> classOfT) throws MduException {
-      String key = this.folder + '.' + name;
+      String key = asKey(name);
 
       if (this.localStorage == null)
          throw new MduException(null, "No local storage present with %s.", key);
@@ -73,7 +84,7 @@ public class MdStorageUtil {
     */
    @SuppressWarnings("unused")
    public void remove(String name) {
-      String key = this.folder + '.' + name;
+      String key = asKey(name);
 
       if (this.localStorage != null) {
          boolean contained = this.localStorage.containsKey(key);
