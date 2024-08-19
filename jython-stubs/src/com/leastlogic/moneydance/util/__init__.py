@@ -15,13 +15,10 @@ class MdStorageUtil(object):
     def persistData(self, Object=None, String1=None):
         pass
 
-    def persistWindowCoordinates(self, Window=None):
+    def remove(self, String=None):
         pass
 
     def retrieveData(self, String=None, Class1=None):
-        pass
-
-    def setWindowCoordinates(self, Window=None, int1=None, int2=None):
         pass
 
     def toString(self, ):
@@ -118,5 +115,14 @@ class SnapshotList(object):
         pass
 
     def toString(self, ):
+        pass
+
+class StagedInterface(object):
+    # source:file:/~/Documents/Prog/gitreps/mdutil/md-util/bin/com/leastlogic/moneydance/util/StagedInterface.class
+
+    def commitChanges(self, ):
+        pass
+
+    def isModified(self, ):
         pass
 

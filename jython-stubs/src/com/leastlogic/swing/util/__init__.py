@@ -1,5 +1,29 @@
 # encoding: utf-8
 # module __init__.py
+class AwtScreenUtil(object):
+    # source:file:/~/Documents/Prog/gitreps/mdutil/swing-util/bin/com/leastlogic/swing/util/AwtScreenUtil.class
+
+    def __init__(self, Window=None):
+        pass
+
+    def equals(self, Object=None):
+        pass
+
+    def fitOnScreen(self, Rectangle=None):
+        pass
+
+    def getClass(self, ):
+        pass
+
+    def persistWindowCoordinates(self, MdStorageUtil=None):
+        pass
+
+    def setWindowCoordinates(self, MdStorageUtil=None, int1=None, int2=None):
+        pass
+
+    def toString(self, ):
+        pass
+
 class HTMLPane(object):
     # source:file:/~/Documents/Prog/gitreps/mdutil/swing-util/bin/com/leastlogic/swing/util/HTMLPane.class
     ABORT = None

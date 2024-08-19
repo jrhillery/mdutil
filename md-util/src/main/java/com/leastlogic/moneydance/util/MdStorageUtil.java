@@ -2,7 +2,6 @@ package com.leastlogic.moneydance.util;
 
 import com.google.gson.Gson;
 
-import java.awt.*;
 import java.util.Map;
 
 /**
@@ -15,8 +14,6 @@ public class MdStorageUtil {
    private final Map<String, String> localStorage;
 
    private final Gson gson = new Gson();
-   private static final String SIZE = "win.size";
-   private static final String LOCATION = "win.location";
 
    /**
     * Sole constructor.
@@ -70,37 +67,24 @@ public class MdStorageUtil {
    } // end retrieveData(String, Class)
 
    /**
-    * Store the size and location of the specified window as persistent values.
+    * Remove persisted data object from the specified folder and file name.
     *
-    * @param win window to use
+    * @param name file name
     */
-   public void persistWindowCoordinates(Window win) {
+   @SuppressWarnings("unused")
+   public void remove(String name) {
+      String key = this.folder + '.' + name;
 
-      try {
-         persistData(win.getSize(), SIZE);
-         persistData(win.getLocation(), LOCATION);
-      } catch (MduException e) {
-         System.err.format("%s%n", e.getLocalizedMessage());
+      if (this.localStorage != null) {
+         boolean contained = this.localStorage.containsKey(key);
+         String dataStr = this.localStorage.remove(key);
+
+         if (contained) {
+            System.err.format("Removed %s (%s) from Moneydance local storage.%n",
+               key, dataStr);
+         }
       }
 
-   } // end persistWindowCoordinates(Window)
-
-   /**
-    * Set the size and location of the specified window to persisted values.
-    *
-    * @param win           window to set
-    * @param defaultWidth  default width to use
-    * @param defaultHeight default height to use
-    */
-   public void setWindowCoordinates(Window win, int defaultWidth, int defaultHeight) {
-      try {
-         win.setSize(retrieveData(SIZE, Dimension.class));
-         win.setLocation(retrieveData(LOCATION, Point.class));
-      } catch (MduException e) {
-         System.err.format("%s%n", e.getLocalizedMessage());
-         win.setSize(defaultWidth, defaultHeight);
-      }
-
-   } // end setWindowCoordinates(Window, int, int)
+   } // end remove(String)
 
 } // end class MdStorageUtil
