@@ -117,12 +117,3 @@ class SnapshotList(object):
     def toString(self, ):
         pass
 
-class StagedInterface(object):
-    # source:file:/~/Documents/Prog/gitreps/mdutil/md-util/bin/com/leastlogic/moneydance/util/StagedInterface.class
-
-    def commitChanges(self, ):
-        pass
-
-    def isModified(self, ):
-        pass
-
