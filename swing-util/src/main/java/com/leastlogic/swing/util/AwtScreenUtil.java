@@ -63,6 +63,12 @@ public class AwtScreenUtil {
       Rectangle screenBounds = getUsableScreenBounds();
 
       if (!screenBounds.contains(windowBounds)) {
+         if (windowBounds.width > screenBounds.width)
+            windowBounds.width = screenBounds.width;
+
+         if (windowBounds.height > screenBounds.height)
+            windowBounds.height = screenBounds.height;
+
          int dx = getExcessDelta(screenBounds.x, windowBounds.x);
          int dy = getExcessDelta(screenBounds.y, windowBounds.y);
 
