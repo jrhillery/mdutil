@@ -6,7 +6,7 @@ import com.leastlogic.moneydance.util.MduException;
 import java.awt.*;
 
 public class AwtScreenUtil {
-   private final Window win;
+   private final Frame win;
 
    private static final String WIN_BOUNDS = "win.bounds";
 
@@ -15,7 +15,7 @@ public class AwtScreenUtil {
     *
     * @param win Window to use
     */
-   public AwtScreenUtil(Window win) {
+   public AwtScreenUtil(Frame win) {
       this.win = win;
 
    } // end constructor
@@ -91,6 +91,10 @@ public class AwtScreenUtil {
    public void persistWindowCoordinates(MdStorageUtil mdStorage) {
 
       try {
+         if ((this.win.getExtendedState() & Frame.MAXIMIZED_BOTH) == Frame.MAXIMIZED_BOTH)
+            // don't want to persist a maximized window's bounds
+            this.win.setExtendedState(Frame.NORMAL);
+
          mdStorage.persistData(this.win.getBounds(), WIN_BOUNDS);
       } catch (MduException e) {
          System.err.format("%s%n", e.getLocalizedMessage());
