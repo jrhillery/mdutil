@@ -44,10 +44,10 @@ public class SnapshotList {
 	 */
 	public CurrencySnapshot getLatestSnapshot() {
 
-		if (this.snapshots.size() == 0)
+		if (this.snapshots.isEmpty())
 			return null;
 		else
-			return this.snapshots.get(this.snapshots.size() - 1);
+			return this.snapshots.getLast();
 	} // end getLatestSnapshot()
 
 	/**
