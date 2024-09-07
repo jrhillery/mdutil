@@ -95,8 +95,9 @@ from FwLookupConsole import FwLookupConsole
 from FwLookupWorker import FwLookupWorker
 --->SecurityHandler.py
 from decimal import Decimal
-from com.infinitekind.moneydance.model import CurrencySnapshot, CurrencyType
 from typing import Optional
+from com.infinitekind.moneydance.model import CurrencyType
+from com.leastlogic.moneydance.util import SnapshotList
 --->StagedInterface.py
 from abc import ABCMeta, abstractmethod
 --->WindowInterface.py

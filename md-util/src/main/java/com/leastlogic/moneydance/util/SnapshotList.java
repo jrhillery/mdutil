@@ -3,6 +3,7 @@
  */
 package com.leastlogic.moneydance.util;
 
+import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
 
@@ -40,17 +41,6 @@ public class SnapshotList {
 	} // end getSnapshots(CurrencyType)
 
 	/**
-	 * @return The last currency snapshot for our security
-	 */
-	public CurrencySnapshot getLatestSnapshot() {
-
-		if (this.snapshots.isEmpty())
-			return null;
-		else
-			return this.snapshots.getLast();
-	} // end getLatestSnapshot()
-
-	/**
 	 * @param dateInt The desired date
 	 * @return The currency snapshot for our security on the specified date
 	 */
@@ -62,7 +52,6 @@ public class SnapshotList {
 
 		// start with the latest snapshot
 		CurrencySnapshot candidate = this.snapshots.get(--index);
-		MdUtil.validateCurrentUserRate(this.security, candidate);
 
 		while (candidate.getDateInt() > dateInt && index > 0) {
 			// examine the prior snapshot
@@ -71,6 +60,15 @@ public class SnapshotList {
 
 		return candidate;
 	} // end getSnapshotForDate(int)
+
+	/**
+	 * @return The last currency snapshot for our security before, or on, today
+	 */
+	public CurrencySnapshot getTodaysSnapshot() {
+		int today = MdUtil.convLocalToDateInt(LocalDate.now());
+
+		return getSnapshotForDate(today);
+	} // end getTodaysSnapshot()
 
 	/**
 	 * @return Our Moneydance security

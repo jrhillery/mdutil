@@ -3,7 +3,7 @@
 class AwtScreenUtil(object):
     # source:file:/~/Documents/Prog/gitreps/mdutil/swing-util/bin/com/leastlogic/swing/util/AwtScreenUtil.class
 
-    def __init__(self, Window=None):
+    def __init__(self, Frame=None):
         pass
 
     def equals(self, Object=None):

@@ -105,13 +105,13 @@ class SnapshotList(object):
     def getClass(self, ):
         pass
 
-    def getLatestSnapshot(self, ):
-        pass
-
     def getSecurity(self, ):
         pass
 
     def getSnapshotForDate(self, int=None):
+        pass
+
+    def getTodaysSnapshot(self, ):
         pass
 
     def toString(self, ):

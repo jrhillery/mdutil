@@ -35,20 +35,20 @@ public class MdUtil {
 	public static final String IBOND_TICKER_PREFIX = "IBond";
 
 	/**
-	 * @param security       The Moneydance security
-	 * @param latestSnapshot The last currency snapshot for the supplied security
-	 * @return The price in latestSnapshot
+	 * @param security        The Moneydance security
+	 * @param currentSnapshot Today's currency snapshot for the supplied security
+	 * @return The price in today's currency snapshot
 	 */
 	public static BigDecimal validateCurrentUserRate(CurrencyType security,
-			CurrencySnapshot latestSnapshot) {
-		if (latestSnapshot == null)
+			CurrencySnapshot currentSnapshot) {
+		if (currentSnapshot == null)
 			return BigDecimal.ONE; // default price to 1 when no snapshot
 
-		BigDecimal price = convRateToPrice(latestSnapshot.getRate());
+		BigDecimal price = convRateToPrice(currentSnapshot.getRate());
 		BigDecimal oldPrice = convRateToPrice(security.getRelativeRate());
 
 		if (price.compareTo(oldPrice) != 0) {
-			security.setRelativeRate(latestSnapshot.getRate());
+			security.setRelativeRate(currentSnapshot.getRate());
 			DecimalFormat priceFmt = (DecimalFormat) NumberFormat.getCurrencyInstance();
 			priceFmt.setMinimumFractionDigits(8);
 
