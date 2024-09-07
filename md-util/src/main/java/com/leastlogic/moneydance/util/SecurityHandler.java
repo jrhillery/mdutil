@@ -18,6 +18,7 @@ public class SecurityHandler {
 	private long newVolume = 0;
 	private double newHighPrice = 0;
 	private double newLowPrice = 0;
+	private boolean newCurrentPrice = true;
 
 	/**
 	 * Sole constructor.
@@ -64,6 +65,15 @@ public class SecurityHandler {
 	} // end storeNewPrice(double, int, long, double, double)
 
 	/**
+	 * Mark that this security handler does not contain a current price.
+	 * These are typically future prices; past prices are handled in applyUpdate.
+	 */
+	public void priceNotCurrent() {
+		this.newCurrentPrice = false;
+
+	} // end priceNotCurrent()
+
+	/**
 	 * Apply the stored update.
 	 */
 	public void applyUpdate() {
@@ -78,8 +88,10 @@ public class SecurityHandler {
 		}
 		newSnapshot.syncItem();
 
-		if (todaysSnapshot == null || this.newDate >= todaysSnapshot.getDateInt()) {
-			this.security.setRelativeRate(1 / this.newPrice);
+		if (this.newCurrentPrice) {
+			if (todaysSnapshot == null || this.newDate >= todaysSnapshot.getDateInt()) {
+				this.security.setRelativeRate(1 / this.newPrice);
+			}
 		}
 
 	} // end applyUpdate()
