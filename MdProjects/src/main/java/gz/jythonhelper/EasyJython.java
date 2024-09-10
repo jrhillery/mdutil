@@ -161,7 +161,7 @@ abstract class ClassGenerator {
     public static final Set<String> IGNORED_FIELDS = new HashSet<>(List.of("in"));
     public static final Set<String> IGNORED_METHODS = new HashSet<>(Arrays.asList(
        "wait", "hashCode", "notify", "notifyAll", "yield",
-       "and", "from", "is", "not", "or", "print"));
+       "and", "from", "is", "not", "or", "print", "with"));
 
     public static final String USER_HOME_SLASH = EasyJython.USER_HOME.replace('\\', '/');
     private final String outputDir;
