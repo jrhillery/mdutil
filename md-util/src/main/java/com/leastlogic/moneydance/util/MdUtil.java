@@ -130,12 +130,10 @@ public class MdUtil {
 		List<Account> subs = new ArrayList<>();
 		Iterator<Account> accounts = AccountUtil.getAccountIterator(book);
 
-		while (accounts.hasNext()) {
-			Account subAcct = accounts.next();
-
+		accounts.forEachRemaining(subAcct -> {
 			if (subAcct.getAccountType() == type)
 				subs.add(subAcct);
-		}
+		}); // end for each sub-account
 
 		return subs;
 	} // end getAccounts(AccountBook, AccountType)
@@ -183,13 +181,9 @@ public class MdUtil {
 	 * @return The current account balance
 	 */
 	public static BigDecimal getCurrentBalance(Account account) {
-		BigDecimal centBalance;
-
-		if (account.getAccountType() == ASSET) {
-			centBalance = BigDecimal.valueOf(account.getRecursiveUserCurrentBalance());
-		} else {
-			centBalance = BigDecimal.valueOf(account.getUserCurrentBalance());
-		}
+		BigDecimal centBalance = BigDecimal.valueOf((account.getAccountType() == ASSET)
+			? account.getRecursiveUserCurrentBalance()
+			: account.getUserCurrentBalance());
 		int decimalPlaces = account.getCurrencyType().getDecimalPlaces();
 
 		return centBalance.movePointLeft(decimalPlaces);
@@ -209,9 +203,7 @@ public class MdUtil {
 			// recurse to get sub-account balances
 			Iterator<Account> accounts = AccountUtil.getAccountIterator(account);
 
-			while (accounts.hasNext()) {
-				Account subAcct = accounts.next();
-
+			accounts.forEachRemaining(subAcct -> {
 				if (subAcct != account) {
 					long[] subBalances = getCentBalancesAsOfDates(book, subAcct, asOfDates);
 
@@ -219,7 +211,7 @@ public class MdUtil {
 						centBalances[i] += subBalances[i];
 					}
 				}
-			}
+			}); // end for each sub-account
 		}
 
 		return centBalances;
