@@ -22,7 +22,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="moneydance-devkit-5.1" level="application" />
+    <orderEntry type="library" name="moneydance-dev" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -32,7 +32,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="selenium-java-4.23.0" level="application" />
+    <orderEntry type="library" name="selenium-java" level="project" />
     <orderEntry type="module" module-name="md-util" />
     <orderEntry type="module" module-name="swing-util" />
   </component>

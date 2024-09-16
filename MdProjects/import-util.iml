@@ -18,6 +18,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="module" module-name="md-util" />
-    <orderEntry type="library" name="moneydance-devkit-5.1" level="application" />
+    <orderEntry type="library" name="moneydance-dev" level="project" />
   </component>
 </module>

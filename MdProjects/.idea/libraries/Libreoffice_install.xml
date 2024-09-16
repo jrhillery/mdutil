@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Libreoffice install">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Program Files/LibreOffice/program/classes/unoloader.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Program Files/LibreOffice/program/classes/libreoffice.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

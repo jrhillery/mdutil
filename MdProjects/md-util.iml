@@ -24,6 +24,6 @@
     <orderEntry type="module" module-name="jython-stubs" />
     <orderEntry type="library" name="Jython 2.7 interpreter library" level="application" />
     <orderEntry type="library" name="gson" level="project" />
-    <orderEntry type="library" name="moneydance-devkit-5.1" level="application" />
+    <orderEntry type="library" name="moneydance-dev" level="project" />
   </component>
 </module>

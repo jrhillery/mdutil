@@ -16,7 +16,7 @@
     <orderEntry type="module" module-name="jython-stubs" />
     <orderEntry type="library" name="Jython 2.7 interpreter library" level="application" />
     <orderEntry type="module" module-name="md-util" />
-    <orderEntry type="library" name="moneydance-devkit-5.1" level="application" />
+    <orderEntry type="library" name="moneydance-dev" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
