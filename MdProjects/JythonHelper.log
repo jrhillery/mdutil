@@ -1,3 +1,5 @@
+Directory:--->~\Documents\git\bootstrap-connector\src\main\java
+Directory:--->~\Documents\git\bootstrap-connector\target\generated-sources\annotations
 Directory:--->~\Documents\Prog\gitreps\mdutil\jython-stubs\src
 Directory:--->~\Documents\Prog\gitreps\mdutil\md-util\src
 --->Configure.py
@@ -5,9 +7,8 @@ from logging.config import dictConfig
 from java.lang import System
 Directory:--->~\Documents\Prog\gitreps\mdutil\md-util\src\main\java
 Directory:--->~\Documents\Prog\gitreps\mdutil\swing-util\src\main\java
-Directory:--->~\Documents\Prog\gitreps\ibondvals\ibond-values\src\main\java
-Directory:--->~\Documents\Prog\gitreps\ibondvals\ibond-values\src\main\resources
-Directory:--->~\Documents\Prog\gitreps\ibondvals\ibond-values\src\test\java
+Directory:--->~\Documents\Prog\gitreps\nwsync\nw-sync\src\main\java
+Directory:--->~\Documents\Prog\gitreps\nwsync\nw-sync\src\main\resources
 Directory:--->~\Documents\Prog\gitreps\modify\more-decimal\src\main\java
 Directory:--->~\Documents\Prog\gitreps\modify\more-decimal\src\main\resources
 Directory:--->~\Documents\Prog\gitreps\mdscripts\src
@@ -22,6 +23,9 @@ Directory:--->~\Documents\Prog\gitreps\mdimport\import-util\src\main\java
 Directory:--->~\Documents\Prog\gitreps\mdimport\import-util\src\main\resources
 Directory:--->~\Documents\Prog\gitreps\mdimport\yq-import\src\main\java
 Directory:--->~\Documents\Prog\gitreps\mdimport\yq-import\src\main\resources
+Directory:--->~\Documents\Prog\gitreps\ibondvals\ibond-values\src\main\java
+Directory:--->~\Documents\Prog\gitreps\ibondvals\ibond-values\src\main\resources
+Directory:--->~\Documents\Prog\gitreps\ibondvals\ibond-values\src\test\java
 Directory:--->~\Documents\Prog\gitreps\fwlookup\src
 --->Currency.py
 from collections import deque
@@ -107,10 +111,6 @@ Directory:--->~\Documents\Prog\gitreps\fwlookup\src\main\resources
 Directory:--->~\Documents\Prog\gitreps\mdimport\fw-import\src\main\java
 Directory:--->~\Documents\Prog\gitreps\mdimport\fw-import\src\main\resources
 Directory:--->~\Documents\Prog\gitreps\mdutil\MdProjects\src\main\java
-Directory:--->~\Documents\git\bootstrap-connector\src\main\java
-Directory:--->~\Documents\git\bootstrap-connector\target\generated-sources\annotations
-Directory:--->~\Documents\Prog\gitreps\nwsync\nw-sync\src\main\java
-Directory:--->~\Documents\Prog\gitreps\nwsync\nw-sync\src\main\resources
 Generating:Configure.Configure
 Class not found:Configure.Configure
 Generating:Currency.Currency
