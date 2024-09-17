@@ -7,10 +7,10 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../fwlookup">
-      <sourceFolder url="file://$MODULE_DIR$/../../fwlookup/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../fwlookup/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../fwlookup/src/main/resources" type="java-resource" />
+    <content url="file://$MODULE_DIR$/../../fwlookup/fw-lookup">
+      <sourceFolder url="file://$MODULE_DIR$/../../fwlookup/fw-lookup/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../fwlookup/fw-lookup/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../fwlookup/fw-lookup/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
