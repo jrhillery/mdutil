@@ -1,10 +1,15 @@
 <component name="ProjectDictionaryState">
   <dictionary name="John">
     <words>
+      <w>decrs</w>
       <w>fwimp</w>
       <w>fwimport</w>
+      <w>fwlookup</w>
       <w>hdrs</w>
       <w>hldn</w>
+      <w>incrs</w>
+      <w>leastlogic</w>
+      <w>mdimport</w>
       <w>mdutl</w>
       <w>moneydance</w>
       <w>netbenefits</w>
@@ -12,6 +17,8 @@
       <w>tbody</w>
       <w>thead</w>
       <w>xcption</w>
+      <w>yqimp</w>
+      <w>yqimport</w>
     </words>
   </dictionary>
 </component>

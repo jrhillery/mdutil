@@ -25,9 +25,7 @@ import javax.swing.text.html.StyleSheet;
  */
 public class HTMLPane extends JEditorPane {
 
-	@SuppressWarnings("SpellCheckingInspection")
 	private static final String CL_INCREASE = "incrs";
-	@SuppressWarnings("SpellCheckingInspection")
 	private static final String CL_DECREASE = "decrs";
 
 	@Serial
