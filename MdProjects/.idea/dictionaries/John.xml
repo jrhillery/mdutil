@@ -1,6 +1,8 @@
 <component name="ProjectDictionaryState">
   <dictionary name="John">
     <words>
+      <w>asctime</w>
+      <w>datefmt</w>
       <w>decrs</w>
       <w>excepcionito</w>
       <w>fwimp</w>
@@ -14,6 +16,7 @@
       <w>mdimport</w>
       <w>mdutl</w>
       <w>moneydance</w>
+      <w>msecs</w>
       <w>netbenefits</w>
       <w>prec</w>
       <w>tbody</w>
