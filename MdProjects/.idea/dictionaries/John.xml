@@ -2,11 +2,13 @@
   <dictionary name="John">
     <words>
       <w>decrs</w>
+      <w>excepcionito</w>
       <w>fwimp</w>
       <w>fwimport</w>
       <w>fwlookup</w>
       <w>hdrs</w>
       <w>hldn</w>
+      <w>ibond</w>
       <w>incrs</w>
       <w>leastlogic</w>
       <w>mdimport</w>
@@ -16,9 +18,12 @@
       <w>prec</w>
       <w>tbody</w>
       <w>thead</w>
+      <w>todays</w>
+      <w>treasurydirect</w>
       <w>xcption</w>
       <w>yqimp</w>
       <w>yqimport</w>
+      <w>yyyymm</w>
     </words>
   </dictionary>
 </component>
