@@ -15,8 +15,8 @@
       <sourceFolder url="file://$MODULE_DIR$/../../modify/more-decimal/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../modify/more-decimal/src/main/resources" type="java-resource" />
     </content>
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="md-util" />
     <orderEntry type="module" module-name="swing-util" />
     <orderEntry type="library" name="moneydance-dev" level="project" />

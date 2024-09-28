@@ -19,10 +19,10 @@
       <sourceFolder url="file://$MODULE_DIR$/../md-util/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../md-util/src/main/java" isTestSource="false" />
     </content>
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module" module-name="jython-stubs" />
     <orderEntry type="library" name="Python 2.7 interpreter library" level="application" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="jython-stubs" />
     <orderEntry type="library" name="gson" level="project" />
     <orderEntry type="library" name="moneydance-dev" level="project" />
   </component>

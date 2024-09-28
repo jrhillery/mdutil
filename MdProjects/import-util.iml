@@ -15,8 +15,8 @@
       <sourceFolder url="file://$MODULE_DIR$/../../mdimport/import-util/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../mdimport/import-util/src/main/resources" type="java-resource" />
     </content>
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="md-util" />
     <orderEntry type="library" name="moneydance-dev" level="project" />
   </component>

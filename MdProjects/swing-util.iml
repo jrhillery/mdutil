@@ -6,8 +6,8 @@
     <content url="file://$MODULE_DIR$/../swing-util">
       <sourceFolder url="file://$MODULE_DIR$/../swing-util/src/main/java" isTestSource="false" />
     </content>
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="md-util" />
   </component>
 </module>

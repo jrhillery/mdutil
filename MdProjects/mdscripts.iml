@@ -11,10 +11,10 @@
       <sourceFolder url="file://$MODULE_DIR$/../../mdscripts/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../mdscripts/src/main/java" isTestSource="false" />
     </content>
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module" module-name="jython-stubs" />
     <orderEntry type="library" name="Python 2.7 interpreter library" level="application" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="jython-stubs" />
     <orderEntry type="module" module-name="md-util" />
     <orderEntry type="library" name="moneydance-dev" level="project" />
     <orderEntry type="module-library">

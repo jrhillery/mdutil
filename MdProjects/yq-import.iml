@@ -15,8 +15,8 @@
       <sourceFolder url="file://$MODULE_DIR$/../../mdimport/yq-import/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../mdimport/yq-import/src/main/resources" type="java-resource" />
     </content>
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="md-util" />
     <orderEntry type="module" module-name="swing-util" />
     <orderEntry type="module" module-name="import-util" />
