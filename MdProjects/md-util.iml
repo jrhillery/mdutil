@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="EclipseModuleManager">
-    <libelement value="file:///moneydance-devkit-5.1/lib/extadmin.jar" />
-    <libelement value="file:///moneydance-devkit-5.1/lib/moneydance-dev.jar" />
-    <src_description expected_position="0">
-      <src_folder value="file://$MODULE_DIR$/../md-util/src/main/java" expected_position="0" />
-    </src_description>
-  </component>
   <component name="FacetManager">
     <facet type="Python" name="Python">
       <configuration sdkName="Python 2.7" />
