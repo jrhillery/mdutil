@@ -7,9 +7,9 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../mdscripts">
-      <sourceFolder url="file://$MODULE_DIR$/../../mdscripts/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../mdscripts/src/main/java" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/../../mdscripts/md-scripts">
+      <sourceFolder url="file://$MODULE_DIR$/../../mdscripts/md-scripts/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../mdscripts/md-scripts/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="Python 2.7 interpreter library" level="application" />

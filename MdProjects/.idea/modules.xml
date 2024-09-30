@@ -8,8 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/ibond-values.iml" filepath="$PROJECT_DIR$/ibond-values.iml" />
       <module fileurl="file://$PROJECT_DIR$/import-util.iml" filepath="$PROJECT_DIR$/import-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/jython-stubs.iml" filepath="$PROJECT_DIR$/jython-stubs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/md-scripts.iml" filepath="$PROJECT_DIR$/md-scripts.iml" />
       <module fileurl="file://$PROJECT_DIR$/md-util.iml" filepath="$PROJECT_DIR$/md-util.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mdscripts.iml" filepath="$PROJECT_DIR$/mdscripts.iml" />
       <module fileurl="file://$PROJECT_DIR$/more-decimal.iml" filepath="$PROJECT_DIR$/more-decimal.iml" />
       <module fileurl="file://$PROJECT_DIR$/nw-sync.iml" filepath="$PROJECT_DIR$/nw-sync.iml" />
       <module fileurl="file://$PROJECT_DIR$/swing-util.iml" filepath="$PROJECT_DIR$/swing-util.iml" />
