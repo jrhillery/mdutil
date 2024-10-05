@@ -36,15 +36,11 @@ public class MdUtil {
 
 	/**
 	 * @param security        The Moneydance security
+	 * @param price           The price for this snapshot:
 	 * @param currentSnapshot Today's currency snapshot for the supplied security
-	 * @return The price in today's currency snapshot
 	 */
-	public static BigDecimal validateCurrentUserRate(CurrencyType security,
-			CurrencySnapshot currentSnapshot) {
-		if (currentSnapshot == null)
-			return BigDecimal.ONE; // default price to 1 when no snapshot
-
-		BigDecimal price = convRateToPrice(currentSnapshot.getRate());
+	public static void validateCurrentUserRate(
+			CurrencyType security, BigDecimal price, CurrencySnapshot currentSnapshot) {
 		BigDecimal oldPrice = convRateToPrice(security.getRelativeRate());
 
 		if (price.compareTo(oldPrice) != 0) {
@@ -57,7 +53,6 @@ public class MdUtil {
 				priceFmt.format(price));
 		}
 
-		return price;
 	} // end validateCurrentUserRate(CurrencyType, CurrencySnapshot)
 
 	/**
