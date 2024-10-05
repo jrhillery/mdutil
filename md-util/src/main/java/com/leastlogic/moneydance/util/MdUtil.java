@@ -8,6 +8,7 @@ import static java.math.RoundingMode.HALF_EVEN;
 
 import java.io.InputStream;
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
@@ -32,6 +33,7 @@ import com.infinitekind.moneydance.model.CurrencyType;
  */
 public class MdUtil {
 
+	public static final MathContext PRECISION_13 = new MathContext(13, HALF_EVEN);
 	public static final String IBOND_TICKER_PREFIX = "IBond";
 
 	/**
@@ -66,12 +68,12 @@ public class MdUtil {
 
 	/**
 	 * @param price The price
-	 * @return Price rounded to the tenth place past the decimal point
+	 * @return Price rounded to 13 digit precision
 	 */
 	public static BigDecimal roundPrice(double price) {
 		BigDecimal bd = BigDecimal.valueOf(price);
 
-		return bd.setScale(10, HALF_EVEN);
+        return bd.round(PRECISION_13);
 	} // end roundPrice(double)
 
 	/**
