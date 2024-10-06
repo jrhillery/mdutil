@@ -27,6 +27,7 @@ class MdStorageUtil(object):
 class MdUtil(object):
     # source:file:/~/Documents/Prog/gitreps/mdutil/md-util/bin/com/leastlogic/moneydance/util/MdUtil.class
     IBOND_TICKER_PREFIX = None
+    PRECISION_13 = None
 
     @staticmethod
     def convDateIntToLocal(int=None):
@@ -90,7 +91,7 @@ class MdUtil(object):
         pass
 
     @staticmethod
-    def validateCurrentUserRate(CurrencyType=None, CurrencySnapshot1=None):
+    def validateCurrentUserRate(CurrencyType=None, BigDecimal1=None, CurrencySnapshot2=None):
         pass
 
 class SnapshotList(object):

@@ -12,14 +12,7 @@ import java.math.MathContext;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Locale;
-import java.util.NoSuchElementException;
-import java.util.Properties;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import com.infinitekind.moneydance.model.Account;
 import com.infinitekind.moneydance.model.Account.AccountType;
@@ -40,22 +33,26 @@ public class MdUtil {
 	 * @param security        The Moneydance security
 	 * @param price           The price for this snapshot:
 	 * @param currentSnapshot Today's currency snapshot for the supplied security
+	 * @return Optional String describing correction to the current price
 	 */
-	public static void validateCurrentUserRate(
+	public static Optional<String> validateCurrentUserRate(
 			CurrencyType security, BigDecimal price, CurrencySnapshot currentSnapshot) {
 		BigDecimal oldPrice = convRateToPrice(security.getRelativeRate());
 
-		if (price.compareTo(oldPrice) != 0) {
-			security.setRelativeRate(currentSnapshot.getRate());
-			DecimalFormat priceFmt = (DecimalFormat) NumberFormat.getCurrencyInstance();
-			priceFmt.setMinimumFractionDigits(8);
+		if (price.compareTo(oldPrice) == 0)
+			return Optional.empty();
 
-			System.err.format("Changed security %s (%s) current price from %s to %s.%n",
-				security.getName(), security.getTickerSymbol(), priceFmt.format(oldPrice),
-				priceFmt.format(price));
-		}
+		security.setRelativeRate(currentSnapshot.getRate());
 
-	} // end validateCurrentUserRate(CurrencyType, CurrencySnapshot)
+		DecimalFormat priceFmt = (DecimalFormat) NumberFormat.getCurrencyInstance();
+		priceFmt.setMinimumFractionDigits(Math.max(
+				price.stripTrailingZeros().scale(),
+				oldPrice.stripTrailingZeros().scale()));
+
+        return Optional.of("Changed %s (%s) current price from %s to %s.".formatted(
+				security.getName(), security.getTickerSymbol(),
+				priceFmt.format(oldPrice), priceFmt.format(price)));
+	} // end validateCurrentUserRate(CurrencyType, BigDecimal, CurrencySnapshot)
 
 	/**
 	 * @param rate The Moneydance currency rate for a security
