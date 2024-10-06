@@ -9,16 +9,16 @@ Directory:--->~\Documents\Prog\gitreps\mdutil\md-util\src\main\java
 Directory:--->~\Documents\Prog\gitreps\mdutil\swing-util\src\main\java
 Directory:--->~\Documents\Prog\gitreps\nwsync\nw-sync\src\main\java
 Directory:--->~\Documents\Prog\gitreps\nwsync\nw-sync\src\main\resources
-Directory:--->~\Documents\Prog\gitreps\modify\more-decimal\src\main\java
-Directory:--->~\Documents\Prog\gitreps\modify\more-decimal\src\main\resources
-Directory:--->~\Documents\Prog\gitreps\mdscripts\src
+Directory:--->~\Documents\Prog\gitreps\mdscripts\more-decimal\src\main\java
+Directory:--->~\Documents\Prog\gitreps\mdscripts\more-decimal\src\main\resources
+Directory:--->~\Documents\Prog\gitreps\mdscripts\md-scripts\src
 --->PlannedSpending.py
 from datetime import date, timedelta
 from decimal import Decimal
 from com.infinitekind.moneydance.model import AbstractTxn, Account, AccountBook, ParentTxn, Reminder, ReminderSet
 from typing import Dict, List
 from Configure import Configure
-Directory:--->~\Documents\Prog\gitreps\mdscripts\src\main\java
+Directory:--->~\Documents\Prog\gitreps\mdscripts\md-scripts\src\main\java
 Directory:--->~\Documents\Prog\gitreps\mdimport\import-util\src\main\java
 Directory:--->~\Documents\Prog\gitreps\mdimport\import-util\src\main\resources
 Directory:--->~\Documents\Prog\gitreps\mdimport\yq-import\src\main\java
