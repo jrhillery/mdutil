@@ -11,9 +11,6 @@
     <buildFile url="file://$PROJECT_DIR$/../../mdimport/yq-import/build/build.xml">
       <antCommandLine value="-J-Djava.security.manager=allow" />
     </buildFile>
-    <buildFile url="file://$PROJECT_DIR$/../../fwlookup/fw-lookup/build/build.xml">
-      <antCommandLine value="-J-Djava.security.manager=allow" />
-    </buildFile>
     <buildFile url="file://$PROJECT_DIR$/../../mdscripts/more-decimal/build/build.xml">
       <antCommandLine value="-J-Djava.security.manager=allow" />
     </buildFile>
