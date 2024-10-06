@@ -33,10 +33,11 @@ public class MdUtil {
 	 * @param security        The Moneydance security
 	 * @param price           The price for this snapshot:
 	 * @param currentSnapshot Today's currency snapshot for the supplied security
+	 * @param locale          Desired locale
 	 * @return Optional String describing correction to the current price
 	 */
-	public static Optional<String> validateCurrentUserRate(
-			CurrencyType security, BigDecimal price, CurrencySnapshot currentSnapshot) {
+	public static Optional<String> validateCurrentUserRate(CurrencyType security,
+			BigDecimal price, CurrencySnapshot currentSnapshot, Locale locale) {
 		BigDecimal oldPrice = convRateToPrice(security.getRelativeRate());
 
 		if (price.compareTo(oldPrice) == 0)
@@ -44,10 +45,7 @@ public class MdUtil {
 
 		security.setRelativeRate(currentSnapshot.getRate());
 
-		DecimalFormat priceFmt = (DecimalFormat) NumberFormat.getCurrencyInstance();
-		priceFmt.setMinimumFractionDigits(Math.max(
-				price.stripTrailingZeros().scale(),
-				oldPrice.stripTrailingZeros().scale()));
+		NumberFormat priceFmt = getCurrencyFormat(locale, oldPrice, price);
 
         return Optional.of("Changed %s (%s) current price from %s to %s.".formatted(
 				security.getName(), security.getTickerSymbol(),
@@ -56,7 +54,7 @@ public class MdUtil {
 
 	/**
 	 * @param rate The Moneydance currency rate for a security
-	 * @return The security price rounded to the tenth place past the decimal point
+	 * @return The security price rounded to 13 digit precision
 	 */
 	public static BigDecimal convRateToPrice(double rate) {
 
@@ -76,21 +74,21 @@ public class MdUtil {
 	/**
 	 * Returns a currency format for the specified locale.
 	 *
-	 * @param l Desired locale
-	 * @param value Reference value
-	 * @return A currency number format with the number of fraction digits in value
+	 * @param locale Desired locale
+	 * @param value1 First reference value
+	 * @param value2 Second reference value
+	 * @return A currency number format with the number of fraction digits in either value
 	 */
-	public static NumberFormat getCurrencyFormat(Locale l, BigDecimal value) {
-		DecimalFormat formatter = (DecimalFormat) NumberFormat.getCurrencyInstance(l);
-		int valScale = value.scale();
-
-		if (valScale < 2) {
-			valScale = 2; // some quotes omit the trailing zeros
-		}
-		formatter.setMinimumFractionDigits(valScale);
+	public static NumberFormat getCurrencyFormat(
+			Locale locale, BigDecimal value1, BigDecimal value2) {
+		DecimalFormat formatter = (DecimalFormat) NumberFormat.getCurrencyInstance(locale);
+		formatter.setMinimumFractionDigits(Math.max(Math.max(
+				value1.stripTrailingZeros().scale(),
+				value2.stripTrailingZeros().scale()),
+				2));
 
 		return formatter;
-	} // end getCurrencyFormat(Locale, BigDecimal)
+	} // end getCurrencyFormat(Locale, BigDecimal, BigDecimal)
 
 	/**
 	 * @param dateInt The numeric date value in decimal form YYYYMMDD
