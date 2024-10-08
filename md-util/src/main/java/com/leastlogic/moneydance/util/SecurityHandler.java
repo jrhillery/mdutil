@@ -77,7 +77,6 @@ public class SecurityHandler {
 	 * Apply the stored update.
 	 */
 	public void applyUpdate() {
-		CurrencySnapshot todaysSnapshot = this.snapshotList.getTodaysSnapshot();
 		CurrencySnapshot newSnapshot = this.security.setSnapshotInt(this.newDate,
 			1 / this.newPrice);
 
@@ -89,6 +88,8 @@ public class SecurityHandler {
 		newSnapshot.syncItem();
 
 		if (this.newCurrentPrice) {
+			CurrencySnapshot todaysSnapshot = this.snapshotList.getTodaysSnapshot();
+
 			if (todaysSnapshot == null || this.newDate >= todaysSnapshot.getDateInt()) {
 				this.security.setRelativeRate(1 / this.newPrice);
 			}
