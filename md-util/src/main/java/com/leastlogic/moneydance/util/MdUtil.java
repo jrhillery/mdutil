@@ -134,7 +134,7 @@ public class MdUtil {
 	 * @param securityName Security name
 	 * @return The Moneydance security sub-account with the specified name
 	 */
-	public static Account getSubAccountByName(Account account, String securityName) {
+	public static Optional<Account> getSubAccountByName(Account account, String securityName) {
 		Iterator<Account> accounts = AccountUtil.getAccountIterator(account);
 
 		while (accounts.hasNext()) {
@@ -142,10 +142,10 @@ public class MdUtil {
 			String acctName = subAcct.getAccountName();
 
 			if (acctName.equalsIgnoreCase(securityName))
-				return subAcct;
+				return Optional.of(subAcct);
 		}
 
-		return null;
+		return Optional.empty();
 	} // end getSubAccountByName(Account, String)
 
 	/**
