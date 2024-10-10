@@ -13,6 +13,8 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 import com.infinitekind.moneydance.model.Account;
 import com.infinitekind.moneydance.model.Account.AccountType;
@@ -133,16 +135,11 @@ public class MdUtil {
 	 * @param type The type of accounts to return
 	 * @return The Moneydance accounts with the specified type in the book
 	 */
-	public static List<Account> getAccounts(AccountBook book, AccountType type) {
-		List<Account> subs = new ArrayList<>();
-		Iterator<Account> accounts = AccountUtil.getAccountIterator(book);
+	public static Stream<Account> getAccounts(AccountBook book, AccountType type) {
+		Iterable<Account> accounts = () -> AccountUtil.getAccountIterator(book);
 
-		accounts.forEachRemaining(subAcct -> {
-			if (subAcct.getAccountType() == type)
-				subs.add(subAcct);
-		}); // end for each sub-account
-
-		return subs;
+		return StreamSupport.stream(accounts.spliterator(), false)
+			.filter(subAcct -> subAcct.getAccountType() == type);
 	} // end getAccounts(AccountBook, AccountType)
 
 	/**
