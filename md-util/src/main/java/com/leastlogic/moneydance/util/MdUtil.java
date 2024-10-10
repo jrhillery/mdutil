@@ -90,6 +90,22 @@ public class MdUtil {
 	} // end getCurrencyFormat(Locale, BigDecimal, BigDecimal)
 
 	/**
+	 * @param locale Desired locale
+	 * @param value1 First reference value
+	 * @param value2 Second reference value
+	 * @return A number format with the number of fraction digits in either value
+	 */
+	public static NumberFormat getNumberFormat(
+			Locale locale, BigDecimal value1, BigDecimal value2) {
+		DecimalFormat formatter = (DecimalFormat) NumberFormat.getNumberInstance(locale);
+		formatter.setMinimumFractionDigits(Math.max(
+				value1.stripTrailingZeros().scale(),
+				value2.stripTrailingZeros().scale()));
+
+		return formatter;
+	} // end getNumberFormat(BigDecimal, BigDecimal)
+
+	/**
 	 * @param dateInt The numeric date value in decimal form YYYYMMDD
 	 * @return The corresponding local date
 	 */
