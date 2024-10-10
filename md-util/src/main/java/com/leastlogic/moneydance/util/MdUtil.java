@@ -162,22 +162,22 @@ public class MdUtil {
 	} // end getSubAccountByName(Account, String)
 
 	/**
-	 * @param account    The root account
-	 * @param accountNum Investment account number
+	 * @param account The root account
+	 * @param acctNum Investment account number
 	 * @return The Moneydance investment account with the specified number
 	 */
-	public static Account getSubAccountByInvestNumber(Account account, String accountNum) {
+	public static Optional<Account> getSubAccountByInvestNumber(Account account, String acctNum) {
 		Iterator<Account> accounts = AccountUtil.getAccountIterator(account);
 
 		while (accounts.hasNext()) {
 			Account subAcct = accounts.next();
-			String acctNum = subAcct.getInvestAccountNumber();
+			String accountNumber = subAcct.getInvestAccountNumber();
 
-			if (acctNum.equalsIgnoreCase(accountNum))
-				return subAcct;
+			if (accountNumber.equalsIgnoreCase(acctNum))
+				return Optional.of(subAcct);
 		}
 
-		return null;
+		return Optional.empty();
 	} // end getSubAccountByInvestNumber(Account, String)
 
 	/**
