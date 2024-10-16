@@ -6,6 +6,8 @@ package com.leastlogic.moneydance.util;
 import com.infinitekind.moneydance.model.CurrencySnapshot;
 import com.infinitekind.moneydance.model.CurrencyType;
 
+import java.util.Optional;
+
 /**
  * This object handles deferred updates to a Moneydance security.
  */
@@ -88,9 +90,9 @@ public class SecurityHandler {
 		newSnapshot.syncItem();
 
 		if (this.newCurrentPrice) {
-			CurrencySnapshot todaysSnapshot = this.snapshotList.getTodaysSnapshot();
+			Optional<CurrencySnapshot> todaysSnapshot = this.snapshotList.getTodaysSnapshot();
 
-			if (todaysSnapshot == null || this.newDate >= todaysSnapshot.getDateInt()) {
+			if (todaysSnapshot.isEmpty() || this.newDate >= todaysSnapshot.get().getDateInt()) {
 				this.security.setRelativeRate(1 / this.newPrice);
 			}
 		}

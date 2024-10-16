@@ -6,7 +6,9 @@ package com.leastlogic.moneydance.util;
 import com.infinitekind.moneydance.model.CurrencySnapshot;
 import com.infinitekind.moneydance.model.CurrencyType;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Optional;
 import java.util.TreeMap;
 
 /**
@@ -25,25 +27,24 @@ public class SnapshotList {
 	public SnapshotList(CurrencyType security) {
 		this.security = security;
 
-      security.getSnapshots().forEach(snapShot ->
-			this.snapshots.put(snapShot.getDateInt(), snapShot));
+		security.getSnapshots().forEach(snapShot ->
+				this.snapshots.put(snapShot.getDateInt(), snapShot));
 
 	} // end (CurrencyType) constructor
 
 	/**
 	 * @param dateInt The desired date
-	 * @return The currency snapshot for our security on the specified date
+	 * @return Optional currency snapshot for our security on the specified date
 	 */
-	public CurrencySnapshot getSnapshotForDate(int dateInt) {
-		Integer snapshotDate = this.snapshots.floorKey(dateInt);
+	public Optional<CurrencySnapshot> getSnapshotForDate(int dateInt) {
 
-		return snapshotDate == null ? null : this.snapshots.get(snapshotDate);
+		return Optional.ofNullable(this.snapshots.floorKey(dateInt)).map(this.snapshots::get);
 	} // end getSnapshotForDate(int)
 
 	/**
-	 * @return The last currency snapshot for our security before, or on, today
+	 * @return Optional last currency snapshot for our security before, or on, today
 	 */
-	public CurrencySnapshot getTodaysSnapshot() {
+	public Optional<CurrencySnapshot> getTodaysSnapshot() {
 		int today = MdUtil.convLocalToDateInt(LocalDate.now());
 
 		return getSnapshotForDate(today);
@@ -56,6 +57,15 @@ public class SnapshotList {
 
 		return this.security;
 	} // end getSecurity()
+
+	/**
+	 * @param snapshot Currency snapshot to use
+	 * @return The security price for the given snapshot
+	 */
+	public static BigDecimal getPrice(CurrencySnapshot snapshot) {
+
+		return MdUtil.convRateToPrice(snapshot.getRate());
+	} // end getPrice(CurrencySnapshot)
 
 	/**
 	 * @return A string representation of this SnapshotList
