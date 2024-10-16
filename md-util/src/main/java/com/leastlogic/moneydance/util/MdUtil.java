@@ -13,6 +13,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
@@ -20,6 +21,7 @@ import com.infinitekind.moneydance.model.Account;
 import com.infinitekind.moneydance.model.Account.AccountType;
 import com.infinitekind.moneydance.model.AccountBook;
 import com.infinitekind.moneydance.model.AccountUtil;
+import com.infinitekind.moneydance.model.CurrencySnapshot;
 import com.infinitekind.moneydance.model.CurrencyType;
 
 /**
@@ -31,27 +33,32 @@ public class MdUtil {
 	public static final String IBOND_TICKER_PREFIX = "IBond";
 
 	/**
-	 * @param security The Moneydance security
-	 * @param price    The price for the current snapshot
-	 * @param rate     The rate for the current snapshot
-	 * @param locale   Desired locale
-	 * @return Optional String describing correction to the current price
+	 * Retrieve the price for this snapshot and validate the current price.
+	 *
+	 * @param security          The Moneydance security
+	 * @param currentSnapshot   The current currency snapshot to use
+	 * @param locale            Desired locale
+	 * @param displayCorrection Lambda to consume any correction message
+	 * @return The price for the supplied snapshot, as a BigDecimal
 	 */
-	public static Optional<String> validateCurrentUserRate(CurrencyType security,
-			BigDecimal price, double rate, Locale locale) {
+	public static BigDecimal getAndValidateCurrentSnapshotPrice(
+			CurrencyType security, CurrencySnapshot currentSnapshot,
+			Locale locale, Consumer<String> displayCorrection) {
+		double rate = currentSnapshot.getRate();
 		BigDecimal oldPrice = convRateToPrice(security.getRelativeRate());
+		BigDecimal price = convRateToPrice(rate);
 
-		if (price.compareTo(oldPrice) == 0)
-			return Optional.empty();
+		if (price.compareTo(oldPrice) != 0) {
+			security.setRelativeRate(rate);
 
-		security.setRelativeRate(rate);
+			NumberFormat priceFmt = getCurrencyFormat(locale, oldPrice, price);
+			displayCorrection.accept("Changed %s (%s) current price from %s to %s.".formatted(
+					security.getName(), security.getTickerSymbol(),
+					priceFmt.format(oldPrice), priceFmt.format(price)));
+		}
 
-		NumberFormat priceFmt = getCurrencyFormat(locale, oldPrice, price);
-
-        return Optional.of("Changed %s (%s) current price from %s to %s.".formatted(
-				security.getName(), security.getTickerSymbol(),
-				priceFmt.format(oldPrice), priceFmt.format(price)));
-	} // end validateCurrentUserRate(CurrencyType, BigDecimal, double, Locale)
+		return price;
+	} // end getAndValidateCurrentSnapshotPrice(CurrencyType, CurrencySnapshot, Locale, Consumer<String>)
 
 	/**
 	 * @param rate The Moneydance currency rate for a security
