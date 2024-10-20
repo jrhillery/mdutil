@@ -12,6 +12,7 @@ import java.awt.image.BufferedImage;
 import java.io.InputStream;
 import java.io.Serial;
 import java.math.BigDecimal;
+import java.util.Optional;
 
 import javax.imageio.ImageIO;
 import javax.swing.JComponent;
@@ -117,10 +118,10 @@ public class HTMLPane extends JEditorPane {
 	/**
 	 * @param imgFileName The image file name
 	 * @param srcClass    The class whose class loader will be used
-	 * @return The named image from the class loader
+	 * @return Optional named image from the class loader
 	 */
-	public static BufferedImage readResourceImage(String imgFileName, Class<?> srcClass) {
-		BufferedImage image = null;
+	public static Optional<BufferedImage> readResourceImage(String imgFileName, Class<?> srcClass) {
+		Optional<BufferedImage> image = Optional.empty();
 		InputStream imgStream = srcClass.getResourceAsStream(imgFileName);
 
 		if (imgStream == null) {
@@ -128,7 +129,7 @@ public class HTMLPane extends JEditorPane {
 				srcClass);
 		} else {
 			try (imgStream) {
-				image = ImageIO.read(imgStream);
+				image = Optional.ofNullable(ImageIO.read(imgStream));
 			} // end try-with-resource imgStream
 			catch (Exception e) {
 				System.err.format("Exception reading image %s: %s%n", imgFileName, e);
