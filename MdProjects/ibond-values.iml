@@ -13,5 +13,23 @@
     <orderEntry type="module" module-name="md-util" />
     <orderEntry type="module" module-name="swing-util" />
     <orderEntry type="library" name="moneydance-dev" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Program Files/Moneydance/lib/moneydance.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Program Files/Moneydance/lib/kotlin-stdlib-1.9.20.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
