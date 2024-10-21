@@ -49,7 +49,7 @@ public class MdStorageUtil {
       String dataStr = this.gson.toJson(data);
 
       if (this.localStorage == null)
-         throw new MduException(null, "No local storage present for %s: %s.", key, dataStr);
+         throw new MduException(null, "No local storage present for %s: %s", key, dataStr);
 
       this.localStorage.put(key, dataStr);
 
@@ -67,12 +67,12 @@ public class MdStorageUtil {
       String key = asKey(name);
 
       if (this.localStorage == null)
-         throw new MduException(null, "No local storage present with %s.", key);
+         throw new MduException(null, "No local storage present with %s", key);
 
       String dataStr = this.localStorage.get(key);
 
       if (dataStr == null)
-         throw new MduException(null, "Persisted data not found for %s.", key);
+         throw new MduException(null, "Persisted data not found for %s", key);
 
       return this.gson.fromJson(dataStr, classOfT);
    } // end retrieveData(String, Class)

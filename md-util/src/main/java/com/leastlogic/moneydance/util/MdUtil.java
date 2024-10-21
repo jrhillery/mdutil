@@ -52,7 +52,7 @@ public class MdUtil {
 			security.setRelativeRate(rate);
 
 			NumberFormat priceFmt = getCurrencyFormat(locale, oldPrice, price);
-			displayCorrection.accept("Changed %s (%s) current price from %s to %s.".formatted(
+			displayCorrection.accept("Changed %s (%s) current price from %s to %s".formatted(
 					security.getName(), security.getTickerSymbol(),
 					priceFmt.format(oldPrice), priceFmt.format(price)));
 		}
@@ -290,7 +290,7 @@ public class MdUtil {
 			throws MduException {
 		InputStream propsStream = srcClass.getClassLoader().getResourceAsStream(propsFileName);
 		if (propsStream == null) {
-			throw new MduException(null, "Unable to find properties %s on %s class path.",
+			throw new MduException(null, "Unable to find properties %s on %s class path",
 				propsFileName, srcClass);
 		}
 
@@ -299,7 +299,7 @@ public class MdUtil {
 			props.load(propsStream);
 		} // end try-with-resource propsStream
 		catch (Exception e) {
-			throw new MduException(e, "Exception loading properties %s.", propsFileName);
+			throw new MduException(e, "Exception loading properties %s", propsFileName);
 		}
 
 		return props;
