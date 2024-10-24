@@ -18,5 +18,15 @@
     <orderEntry type="module" module-name="jython-stubs" />
     <orderEntry type="library" name="gson" level="project" />
     <orderEntry type="library" name="moneydance-dev" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Program Files/Moneydance/lib/moneydance.jar!/" />
+          <root url="jar://C:/Program Files/Moneydance/lib/kotlin-stdlib-1.9.21.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

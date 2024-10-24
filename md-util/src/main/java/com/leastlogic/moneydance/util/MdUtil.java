@@ -23,6 +23,7 @@ import com.infinitekind.moneydance.model.AccountBook;
 import com.infinitekind.moneydance.model.AccountUtil;
 import com.infinitekind.moneydance.model.CurrencySnapshot;
 import com.infinitekind.moneydance.model.CurrencyType;
+import com.infinitekind.util.AppDebug;
 
 /**
  * Collection of common utility methods handy for Moneydance extensions.
@@ -259,7 +260,7 @@ public class MdUtil {
 		try {
 			messageBundle = ResourceBundle.getBundle(baseBundleName, locale);
 		} catch (Exception e) {
-			System.err.format(locale, "Unable to load message bundle %s. %s%n", baseBundleName, e);
+			AppDebug.ALL.log("Unable to load message bundle %s: %s".formatted(baseBundleName, e));
 
 			messageBundle = new ResourceBundle() {
 				@SuppressWarnings("NullableProblems")

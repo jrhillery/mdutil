@@ -3,6 +3,8 @@
  */
 package com.leastlogic.swing.util;
 
+import com.infinitekind.util.AppDebug;
+
 import static javax.swing.text.StyleConstants.NameAttribute;
 import static javax.swing.text.html.HTML.Tag.BODY;
 
@@ -11,6 +13,7 @@ import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
 import java.io.Serial;
+import java.io.StringWriter;
 import java.math.BigDecimal;
 import java.util.Optional;
 
@@ -64,7 +67,7 @@ public class HTMLPane extends JEditorPane {
 				doc.insertBeforeEnd(getBody(doc), htmlText.toString());
 			}
 		} catch (Exception e) {
-			e.printStackTrace(System.err);
+			AppDebug.ALL.log("Problem adding text to html body", e);
 		}
 
 	} // end addText(String)
@@ -88,14 +91,16 @@ public class HTMLPane extends JEditorPane {
 		if (doc.getLength() > 0) {
 			try {
 				// show prior HTML content to help maintain this code
-				getEditorKit().write(System.err, doc, 0, doc.getLength());
+				StringWriter writer = new StringWriter();
+				getEditorKit().write(writer, doc, 0, doc.getLength());
+				AppDebug.ALL.log(writer.toString());
 			} catch (Exception e) {
-				e.printStackTrace(System.err);
+				AppDebug.ALL.log("Problem showing html", e);
 			}
 			try {
 				doc.setInnerHTML(getBody(doc), "<p />");
 			} catch (Exception e) {
-				e.printStackTrace(System.err);
+				AppDebug.ALL.log("Problem clearing html", e);
 			}
 		}
 
@@ -125,14 +130,14 @@ public class HTMLPane extends JEditorPane {
 		InputStream imgStream = srcClass.getResourceAsStream(imgFileName);
 
 		if (imgStream == null) {
-			System.err.format("Unable to find image %s on %s class path.%n", imgFileName,
-				srcClass);
+			AppDebug.ALL.log("Unable to find image %s on %s class path"
+					.formatted(imgFileName, srcClass));
 		} else {
 			try (imgStream) {
 				image = Optional.ofNullable(ImageIO.read(imgStream));
 			} // end try-with-resource imgStream
 			catch (Exception e) {
-				System.err.format("Exception reading image %s: %s%n", imgFileName, e);
+				AppDebug.ALL.log("Exception reading image %s: %s".formatted(imgFileName, e));
 			}
 		}
 

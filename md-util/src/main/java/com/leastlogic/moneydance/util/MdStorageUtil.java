@@ -1,6 +1,7 @@
 package com.leastlogic.moneydance.util;
 
 import com.google.gson.Gson;
+import com.infinitekind.util.AppDebug;
 
 import java.util.Map;
 
@@ -91,8 +92,8 @@ public class MdStorageUtil {
          String dataStr = this.localStorage.remove(key);
 
          if (contained) {
-            System.err.format("Removed %s (%s) from Moneydance local storage.%n",
-               key, dataStr);
+            AppDebug.ALL.log("Removed %s (%s) from Moneydance local storage"
+                    .formatted(key, dataStr));
          }
       }
 
