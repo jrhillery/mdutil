@@ -50,8 +50,9 @@ public class MdStorageUtil {
       String dataStr = this.gson.toJson(data);
 
       if (this.localStorage == null)
-         throw new MduException(null, "No local storage present for %s: %s", key, dataStr);
+         throw new MduException(null, "No local storage present for %s %s", key, dataStr);
 
+      AppDebug.DEBUG.log(() -> "Persisting %s %s".formatted(key, dataStr));
       this.localStorage.put(key, dataStr);
 
    } // end persistData(Object, String)
@@ -59,9 +60,9 @@ public class MdStorageUtil {
    /**
     * Retrieve persisted data object from the specified folder and file name.
     *
-    * @param <T>      type of object to return
     * @param name     file name
     * @param classOfT class of return type
+    * @param <T>      type of object to return
     * @return Specified persisted data object
     */
    public <T> T retrieveData(String name, Class<T> classOfT) throws MduException {
