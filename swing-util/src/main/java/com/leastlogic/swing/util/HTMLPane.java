@@ -3,7 +3,7 @@
  */
 package com.leastlogic.swing.util;
 
-import com.infinitekind.util.AppDebug;
+import com.leastlogic.moneydance.util.MdLog;
 
 import static javax.swing.text.StyleConstants.NameAttribute;
 import static javax.swing.text.html.HTML.Tag.BODY;
@@ -67,7 +67,7 @@ public class HTMLPane extends JEditorPane {
 				doc.insertBeforeEnd(getBody(doc), htmlText.toString());
 			}
 		} catch (Exception e) {
-			AppDebug.ALL.log("Problem adding text to html body", e);
+			MdLog.all("Problem adding text to html body", e);
 		}
 
 	} // end addText(String)
@@ -93,14 +93,14 @@ public class HTMLPane extends JEditorPane {
 				// show prior HTML content to help maintain this code
 				StringWriter writer = new StringWriter();
 				getEditorKit().write(writer, doc, 0, doc.getLength());
-				AppDebug.ALL.log(writer.toString());
+				MdLog.all(writer.toString());
 			} catch (Exception e) {
-				AppDebug.ALL.log("Problem showing html", e);
+				MdLog.all("Problem showing html", e);
 			}
 			try {
 				doc.setInnerHTML(getBody(doc), "<p />");
 			} catch (Exception e) {
-				AppDebug.ALL.log("Problem clearing html", e);
+				MdLog.all("Problem clearing html", e);
 			}
 		}
 
@@ -130,14 +130,14 @@ public class HTMLPane extends JEditorPane {
 		InputStream imgStream = srcClass.getResourceAsStream(imgFileName);
 
 		if (imgStream == null) {
-			AppDebug.ALL.log("Unable to find image %s on %s class path"
+			MdLog.all("Unable to find image %s on %s class path"
 					.formatted(imgFileName, srcClass));
 		} else {
 			try (imgStream) {
 				image = Optional.ofNullable(ImageIO.read(imgStream));
 			} // end try-with-resource imgStream
 			catch (Exception e) {
-				AppDebug.ALL.log("Exception reading image %s: %s".formatted(imgFileName, e));
+				MdLog.all("Exception reading image %s: %s".formatted(imgFileName, e));
 			}
 		}
 

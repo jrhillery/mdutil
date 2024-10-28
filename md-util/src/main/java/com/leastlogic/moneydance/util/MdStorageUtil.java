@@ -1,7 +1,6 @@
 package com.leastlogic.moneydance.util;
 
 import com.google.gson.Gson;
-import com.infinitekind.util.AppDebug;
 
 import java.util.Map;
 
@@ -52,7 +51,7 @@ public class MdStorageUtil {
       if (this.localStorage == null)
          throw new MduException(null, "No local storage present for %s %s", key, dataStr);
 
-      AppDebug.DEBUG.log(() -> "Persisting %s %s".formatted(key, dataStr));
+      MdLog.debug(() -> "Persisting %s %s".formatted(key, dataStr));
       this.localStorage.put(key, dataStr);
 
    } // end persistData(Object, String)
@@ -93,7 +92,7 @@ public class MdStorageUtil {
          String dataStr = this.localStorage.remove(key);
 
          if (contained) {
-            AppDebug.ALL.log("Removed %s (%s) from Moneydance local storage"
+            MdLog.all("Removed %s (%s) from Moneydance local storage"
                     .formatted(key, dataStr));
          }
       }

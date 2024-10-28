@@ -1,6 +1,6 @@
 package com.leastlogic.swing.util;
 
-import com.infinitekind.util.AppDebug;
+import com.leastlogic.moneydance.util.MdLog;
 import com.leastlogic.moneydance.util.MdStorageUtil;
 import com.leastlogic.moneydance.util.MduException;
 
@@ -98,7 +98,7 @@ public class AwtScreenUtil {
 
          mdStorage.persistData(this.win.getBounds(), WIN_BOUNDS);
       } catch (MduException e) {
-         AppDebug.ALL.log(e.getLocalizedMessage());
+         MdLog.all(e.getLocalizedMessage());
       }
 
    } // end persistWindowCoordinates(MdStorageUtil)
@@ -117,7 +117,7 @@ public class AwtScreenUtil {
          fitOnScreen(windowBounds);
          this.win.setBounds(windowBounds);
       } catch (MduException e) {
-         AppDebug.ALL.log(e.getLocalizedMessage());
+         MdLog.all(e.getLocalizedMessage());
          this.win.setSize(defaultWidth, defaultHeight);
       }
 
