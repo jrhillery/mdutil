@@ -249,39 +249,6 @@ public class MdUtil {
 	} // end getBalancesAsOfDates(AccountBook, Account, int[])
 
 	/**
-	 * @param baseBundleName The base name of the resource bundle, a fully qualified class name
-	 * @param locale         The locale for which a resource bundle is desired
-	 * @return A resource bundle instance for the specified base bundle name
-	 */
-	public static ResourceBundle getMsgBundle(String baseBundleName, Locale locale) {
-		ResourceBundle messageBundle;
-
-		try {
-			messageBundle = ResourceBundle.getBundle(baseBundleName, locale);
-		} catch (Exception e) {
-			MdLog.all("Unable to load message bundle %s: %s".formatted(baseBundleName, e));
-
-			messageBundle = new ResourceBundle() {
-				@SuppressWarnings("NullableProblems")
-				protected Object handleGetObject(String key) {
-					// just use the key since we have no message bundle
-					return key;
-				}
-
-				@SuppressWarnings("NullableProblems")
-				public Enumeration<String> getKeys() {
-					return new Enumeration<>() {
-						public boolean hasMoreElements() { return false; }
-						public String nextElement() { throw new NoSuchElementException(); }
-					};
-				} // end getKeys()
-			}; // end new ResourceBundle() {...}
-		} // end catch
-
-		return messageBundle;
-	} // end getMsgBundle(String, Locale)
-
-	/**
 	 * @param propsFileName Our properties file name
 	 * @param srcClass      The class whose class loader will be used
 	 * @return A properties instance with the specified file content
