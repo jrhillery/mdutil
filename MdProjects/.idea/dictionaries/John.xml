@@ -6,15 +6,15 @@
       <w>datefmt</w>
       <w>decrs</w>
       <w>excepcionito</w>
-      <w>fwimp</w>
       <w>fwimport</w>
+      <w>fwimpt</w>
       <w>hdrs</w>
       <w>hldn</w>
       <w>ibond</w>
+      <w>ibvals</w>
       <w>incrs</w>
       <w>leastlogic</w>
       <w>mdimport</w>
-      <w>mdutl</w>
       <w>moneydance</w>
       <w>msecs</w>
       <w>netbenefits</w>
@@ -25,8 +25,8 @@
       <w>todays</w>
       <w>treasurydirect</w>
       <w>xcption</w>
-      <w>yqimp</w>
       <w>yqimport</w>
+      <w>yqimpt</w>
       <w>yyyymm</w>
     </words>
   </dictionary>
