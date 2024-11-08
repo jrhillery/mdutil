@@ -17,12 +17,8 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import com.infinitekind.moneydance.model.Account;
+import com.infinitekind.moneydance.model.*;
 import com.infinitekind.moneydance.model.Account.AccountType;
-import com.infinitekind.moneydance.model.AccountBook;
-import com.infinitekind.moneydance.model.AccountUtil;
-import com.infinitekind.moneydance.model.CurrencySnapshot;
-import com.infinitekind.moneydance.model.CurrencyType;
 
 /**
  * Collection of common utility methods handy for Moneydance extensions.
@@ -199,6 +195,31 @@ public class MdUtil {
 
 		return centBalance.movePointLeft(decimalPlaces);
 	} // end getCurrentBalance(Account)
+
+	/**
+	 * @param txn Transaction to query
+	 * @return The transaction amount
+	 */
+	public static BigDecimal getTxnAmount(SplitTxn txn) {
+		Account parentAccount = txn.getParentTxn().getAccount();
+		int decimalPlaces = parentAccount.getCurrencyType().getDecimalPlaces();
+
+		return BigDecimal.valueOf(txn.getAmount()).movePointLeft(decimalPlaces);
+	} // end getTxnAmount(SplitTxn)
+
+	/**
+	 * @param book    The root account for all transactions
+	 * @param account Moneydance account to obtain the balance for
+	 * @param date    Date to obtain the balance for
+	 * @return Account balance as of the end of the date
+	 */
+	public static BigDecimal getBalanceAsOf(AccountBook book, Account account, LocalDate date) {
+        BigDecimal centBalance = BigDecimal.valueOf(
+			AccountUtil.getBalanceAsOfDate(book, account, convLocalToDateInt(date)));
+		int decimalPlaces = account.getCurrencyType().getDecimalPlaces();
+
+		return centBalance.movePointLeft(decimalPlaces);
+	} // end getBalanceAsOf(AccountBook, Account, LocalDate)
 
 	/**
 	 * @param book      The root account for all transactions
