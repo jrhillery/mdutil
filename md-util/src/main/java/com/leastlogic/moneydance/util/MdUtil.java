@@ -148,7 +148,7 @@ public class MdUtil {
 	/**
 	 * @param account      The parent account
 	 * @param securityName Security name
-	 * @return The Moneydance security sub-account with the specified name
+	 * @return The Moneydance security subaccount with the specified name
 	 */
 	public static Optional<Account> getSubAccountByName(Account account, String securityName) {
 		Iterator<Account> accounts = AccountUtil.getAccountIterator(account);
@@ -232,7 +232,7 @@ public class MdUtil {
 		long[] centBalances = AccountUtil.getBalancesAsOfDates(book, account, asOfDates);
 
 		if (account.getAccountType() == ASSET) {
-			// recurse to get sub-account balances
+			// recurse to get subaccount balances
 			Iterator<Account> accounts = AccountUtil.getAccountIterator(account);
 
 			accounts.forEachRemaining(subAcct -> {
@@ -243,7 +243,7 @@ public class MdUtil {
 						centBalances[i] += subBalances[i];
 					}
 				}
-			}); // end for each sub-account
+			}); // end for each subaccount
 		}
 
 		return centBalances;
