@@ -3,7 +3,9 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../../fastexcel" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="https://javadoc.io/doc/org.dhatim/fastexcel-reader/0.20.0/org.dhatim.fastexcel.reader" />
+    </JAVADOC>
     <SOURCES />
     <jarDirectory url="file://$PROJECT_DIR$/../../../fastexcel" recursive="false" />
   </library>
