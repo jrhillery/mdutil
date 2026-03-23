@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.leastlogic</groupId>
+        <artifactId>MdProjects</artifactId>
+        <version>1-SNAPSHOT</version>
+        <relativePath>../MdProjects</relativePath>
+    </parent>
+
+    <artifactId>swing-util</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.leastlogic</groupId>
+            <artifactId>md-util</artifactId>
+            <version>1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>

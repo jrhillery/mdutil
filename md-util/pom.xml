@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.leastlogic</groupId>
+        <artifactId>MdProjects</artifactId>
+        <version>1-SNAPSHOT</version>
+        <relativePath>../MdProjects</relativePath>
+    </parent>
+
+    <artifactId>md-util</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.infinitekind</groupId>
+            <artifactId>moneydance-dev</artifactId>
+            <version>5.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.infinitekind</groupId>
+            <artifactId>extadmin</artifactId>
+            <version>5.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.infinitekind</groupId>
+            <artifactId>moneydance-jar</artifactId> <!-- AppDebug is here -->
+            <version>2023.2</version>
+            <scope>system</scope>
+            <!-- moneydance.runtime is set in ~/.m2/settings.xml -->
+            <systemPath>${moneydance.runtime}/lib/moneydance.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId> <!-- AppDebug seems to need this -->
+            <version>1.9.23</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>
