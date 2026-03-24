@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="Python" name="Python">
-      <configuration sdkName="Python 2.7" />
-    </facet>
-  </component>
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../md-util/bin" />
     <exclude-output />
@@ -13,9 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../md-util/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="Python 2.7 interpreter library" level="application" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="jython-stubs" />
     <orderEntry type="library" name="gson" level="project" />
     <orderEntry type="library" name="moneydance-dev" level="project" />
     <orderEntry type="module-library">
