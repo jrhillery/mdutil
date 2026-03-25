@@ -2,6 +2,11 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="local-lib" />
+      <option name="name" value="local-lib" />
+      <option name="url" value="file://C:\Users\John\gitreps\mdutil\md-util/lib" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
@@ -12,9 +17,24 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="local-lib" />
+      <option name="name" value="local-lib" />
+      <option name="url" value="file://C:\Users\John\gitreps\mdutil\swing-util/lib" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="local-lib" />
+      <option name="name" value="local-lib" />
+      <option name="url" value="file://C:\Users\John\gitreps\ibond-values/lib" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="local-lib" />
+      <option name="name" value="local-lib" />
+      <option name="url" value="file://C:\Users\John\gitreps\mdutil\MdProjects/lib" />
     </remote-repository>
   </component>
 </project>
