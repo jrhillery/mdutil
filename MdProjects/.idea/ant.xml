@@ -2,7 +2,6 @@
 <project version="4">
   <component name="AntConfiguration">
     <buildFile url="file://$PROJECT_DIR$/../../mdimport/fw-import/build/build.xml" />
-    <buildFile url="file://$PROJECT_DIR$/../../ibond-values/build/build.xml" />
     <buildFile url="file://$PROJECT_DIR$/../../nwsync/nw-sync/build/build.xml" />
     <buildFile url="file://$PROJECT_DIR$/../../mdimport/yq-import/build/build.xml" />
     <buildFile url="file://$PROJECT_DIR$/../../mdscripts/more-decimal/build/build.xml" />
