@@ -32,28 +32,21 @@
             </resource>
         </resources>
 
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>groovy-maven-plugin</artifactId>
-                <version>2.1.1</version>
-                <executions>
-                    <execution>
-                        <id>extract-version-digits</id>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <source>
-                                def v = project.version
-                                def digits = v.replaceAll(/[^0-9]/, "")
-                                project.properties.setProperty("module.build", digits)
-                            </source>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>buildnumber-maven-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <configuration>
+                        <format>{0,number}</format>
+                        <items>
+                            <item>buildNumber</item>
+                        </items>
+                        <ignoreEmptyScmUrl>true</ignoreEmptyScmUrl>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 </project>
