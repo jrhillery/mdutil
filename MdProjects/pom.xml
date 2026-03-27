@@ -12,6 +12,7 @@
         <module>../../mdimport/import-util</module>
         <module>../md-util</module>
         <module>../swing-util</module>
+        <module>../../mdimport/yq-import</module>
     </modules>
 
     <properties>

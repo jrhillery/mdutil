@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/md-scripts.iml" filepath="$PROJECT_DIR$/md-scripts.iml" />
       <module fileurl="file://$PROJECT_DIR$/more-decimal.iml" filepath="$PROJECT_DIR$/more-decimal.iml" />
       <module fileurl="file://$PROJECT_DIR$/nw-sync.iml" filepath="$PROJECT_DIR$/nw-sync.iml" />
-      <module fileurl="file://$PROJECT_DIR$/yq-import.iml" filepath="$PROJECT_DIR$/yq-import.iml" />
     </modules>
   </component>
 </project>
