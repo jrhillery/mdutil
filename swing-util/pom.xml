@@ -4,7 +4,7 @@
     <parent>
         <groupId>com.leastlogic</groupId>
         <artifactId>MdProjects</artifactId>
-        <version>1-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
         <relativePath>../MdProjects</relativePath>
     </parent>
 
@@ -14,7 +14,7 @@
         <dependency>
             <groupId>com.leastlogic</groupId>
             <artifactId>md-util</artifactId>
-            <version>1-SNAPSHOT</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
