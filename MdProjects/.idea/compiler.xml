@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="fw-import" />
         <module name="ibondvalues" />
         <module name="swing-util" />
         <module name="md-util" />
         <module name="bootstrap-connector" />
+        <module name="import-util" />
       </profile>
     </annotationProcessing>
   </component>

@@ -7,7 +7,9 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>../../mdimport/fw-import</module>
         <module>../../ibond-values</module>
+        <module>../../mdimport/import-util</module>
         <module>../md-util</module>
         <module>../swing-util</module>
     </modules>
