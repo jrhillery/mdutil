@@ -6,18 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="nw-sync" />
         <module name="ibondvalues" />
         <module name="yqimport" />
         <module name="md-util" />
         <module name="import-util" />
         <module name="fw-import" />
-        <module name="bootstrap-connector" />
       </profile>
     </annotationProcessing>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="bootstrap-connector" options="-Xlint:unchecked" />
-    </option>
   </component>
 </project>
