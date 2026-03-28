@@ -9,7 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="md-util" />
-    <orderEntry type="module" module-name="swing-util" />
     <orderEntry type="library" name="moneydance-dev" level="project" />
   </component>
 </module>

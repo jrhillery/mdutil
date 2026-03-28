@@ -11,7 +11,6 @@
         <module name="md-util" />
         <module name="import-util" />
         <module name="fw-import" />
-        <module name="swing-util" />
         <module name="bootstrap-connector" />
       </profile>
     </annotationProcessing>
