@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.leastlogic</groupId>
+    <groupId>com.github.jrhillery</groupId>
     <artifactId>MdProjects</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
