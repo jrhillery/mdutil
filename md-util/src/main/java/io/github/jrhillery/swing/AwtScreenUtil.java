@@ -1,8 +1,8 @@
-package com.leastlogic.swing.util;
+package io.github.jrhillery.swing;
 
-import com.leastlogic.moneydance.util.MdLog;
-import com.leastlogic.moneydance.util.MdStorageUtil;
-import com.leastlogic.moneydance.util.MduException;
+import io.github.jrhillery.moneydance.MdLog;
+import io.github.jrhillery.moneydance.MdStorageUtil;
+import io.github.jrhillery.moneydance.MduException;
 
 import java.awt.*;
 

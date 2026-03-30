@@ -1,7 +1,7 @@
 /*
  * Created on Jan 20, 2018
  */
-package com.leastlogic.moneydance.util;
+package io.github.jrhillery.moneydance;
 
 import java.io.Serial;
 

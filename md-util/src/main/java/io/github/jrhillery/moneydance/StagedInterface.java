@@ -1,4 +1,4 @@
-package com.leastlogic.moneydance.util;
+package io.github.jrhillery.moneydance;
 
 import java.util.Optional;
 

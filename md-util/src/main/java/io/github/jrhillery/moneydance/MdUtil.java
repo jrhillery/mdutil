@@ -1,7 +1,7 @@
 /*
  * Created on Jan 10, 2018
  */
-package com.leastlogic.moneydance.util;
+package io.github.jrhillery.moneydance;
 
 import static com.infinitekind.moneydance.model.Account.AccountType.ASSET;
 import static java.math.RoundingMode.HALF_EVEN;

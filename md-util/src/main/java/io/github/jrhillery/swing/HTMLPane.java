@@ -1,9 +1,9 @@
 /*
  * Created on Jan 5, 2018
  */
-package com.leastlogic.swing.util;
+package io.github.jrhillery.swing;
 
-import com.leastlogic.moneydance.util.MdLog;
+import io.github.jrhillery.moneydance.MdLog;
 
 import static javax.swing.text.StyleConstants.NameAttribute;
 import static javax.swing.text.html.HTML.Tag.BODY;
