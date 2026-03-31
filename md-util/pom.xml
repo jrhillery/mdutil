@@ -25,12 +25,6 @@
         </dependency>
         <dependency>
             <groupId>com.infinitekind</groupId>
-            <artifactId>extadmin</artifactId>
-            <version>5.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.infinitekind</groupId>
             <artifactId>moneydance-jar</artifactId> <!-- AppDebug is here -->
             <version>2023.2</version>
             <scope>system</scope>
