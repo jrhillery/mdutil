@@ -1,0 +1,9 @@
+{
+  "vendor" = "John Hillery"
+  "module_build" = "${buildNumber}"
+  "minbuild" = "5059"
+  "vendor.url" = "${project.url}"
+  "module_name" = "${project.name}"
+  "module_desc" = "<html><body><title>${project.name}</title><p>${project.description}</p></body></html>"
+  "desc" = "${project.description}"
+}

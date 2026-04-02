@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="fwimport" />
         <module name="nw-sync" />
         <module name="ibondvalues" />
         <module name="yqimport" />
         <module name="md-util" />
         <module name="import-util" />
-        <module name="fw-import" />
       </profile>
     </annotationProcessing>
   </component>
