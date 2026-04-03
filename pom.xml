@@ -51,7 +51,12 @@
                             </filter>
                         </filters>
                         <transformers>
-                            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"/>
+                            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <manifestEntries>
+                                    <Implementation-Version>${project.version}</Implementation-Version>
+                                    <Implementation-Title>${project.name}</Implementation-Title>
+                                </manifestEntries>
+                            </transformer>
                             <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer"/>
                             <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer"/>
                             <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
