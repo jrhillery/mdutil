@@ -36,6 +36,9 @@
                     <artifactId>maven-shade-plugin</artifactId>
                     <version>3.6.2</version>
                     <configuration>
+                        <outputFile>
+                            ${project.build.directory}/${project.artifactId}-${project.version}.mxt
+                        </outputFile>
                         <minimizeJar>true</minimizeJar>
                         <filters>
                             <filter>

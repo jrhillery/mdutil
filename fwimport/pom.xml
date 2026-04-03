@@ -38,11 +38,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <configuration>
-                    <outputFile>
-                        target/fwimport-1.0-SNAPSHOT.mxt
-                    </outputFile>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>

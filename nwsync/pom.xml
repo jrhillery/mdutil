@@ -54,9 +54,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <configuration>
-                    <outputFile>
-                        target/nwsync-1.0-SNAPSHOT.mxt
-                    </outputFile>
                     <filters>
                         <filter>
                             <!-- keep some classes that shade would discard when minimizing -->
