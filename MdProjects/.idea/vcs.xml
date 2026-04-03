@@ -3,8 +3,5 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../ibondvalues" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../mdimport" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../mdscripts" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../nwsync" vcs="Git" />
   </component>
 </project>
