@@ -7,15 +7,14 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../mdscripts/md-scripts">
-      <sourceFolder url="file://$MODULE_DIR$/../../mdscripts/md-scripts/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../mdscripts/md-scripts/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../mdscripts/md-scripts/jython-stubs" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/md-scripts">
+      <sourceFolder url="file://$MODULE_DIR$/md-scripts/jython-stubs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/md-scripts/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/md-scripts/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="Python 2.7 interpreter library" level="application" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="md-util" />
     <orderEntry type="library" name="moneydance-dev" level="project" />
     <orderEntry type="module-library">
       <library>
@@ -23,9 +22,7 @@
           <root url="jar://C:/Program Files/Moneydance/lib/moneydance.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="jar://C:/Program Files/Moneydance/lib/moneydance.jar!/" />
-        </SOURCES>
+        <SOURCES />
       </library>
     </orderEntry>
   </component>
