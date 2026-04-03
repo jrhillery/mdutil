@@ -8,7 +8,7 @@
 
     <modules>
         <module>fwimport</module>
-        <module>../ibond-values</module>
+        <module>../ibondvalues</module>
         <module>import-util</module>
         <module>md-util</module>
         <module>nwsync</module>
