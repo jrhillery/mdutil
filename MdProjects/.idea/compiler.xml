@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="fwimport" />
-        <module name="nw-sync" />
         <module name="ibondvalues" />
         <module name="yqimport" />
         <module name="md-util" />
+        <module name="nwsync" />
         <module name="import-util" />
       </profile>
     </annotationProcessing>

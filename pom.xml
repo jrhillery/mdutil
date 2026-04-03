@@ -11,7 +11,7 @@
         <module>../ibond-values</module>
         <module>import-util</module>
         <module>md-util</module>
-        <module>../nwsync/nw-sync</module>
+        <module>nwsync</module>
         <module>yqimport</module>
     </modules>
 

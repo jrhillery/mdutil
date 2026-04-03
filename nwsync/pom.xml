@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.jrhillery</groupId>
+        <artifactId>MdHobby</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>nwsync</artifactId>
+    <name>NW Sync</name>
+    <description>
+        Module used to synchronize John's NW spreadsheet document with Moneydance.
+    </description>
+    <url>https://github.com/jrhillery/nw-sync</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.infinitekind</groupId>
+            <artifactId>moneydance-dev</artifactId>
+            <version>5.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.libreoffice</groupId>
+            <artifactId>unoil</artifactId>
+            <version>5.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.libreoffice</groupId>
+            <artifactId>ridl</artifactId>
+            <version>5.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.libreoffice</groupId>
+            <artifactId>juh</artifactId>
+            <version>5.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.jeremysolarz</groupId>
+            <artifactId>bootstrap-connector</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.jrhillery</groupId>
+            <artifactId>md-util</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <configuration>
+                    <outputFile>
+                        target/nwsync-1.0-SNAPSHOT.mxt
+                    </outputFile>
+                    <filters>
+                        <filter>
+                            <!-- keep some classes that shade would discard when minimizing -->
+                            <artifact>*</artifact>
+                            <excludeDefaults>false</excludeDefaults>
+                            <includes>
+                                <include>com/sun/star/comp/**</include>
+                                <include>com/sun/star/lib/connections/socket/*</include>
+                                <include>com/sun/star/lib/uno/**</include>
+                            </includes>
+                        </filter>
+                    </filters>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
