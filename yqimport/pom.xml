@@ -4,7 +4,7 @@
     <parent>
         <groupId>io.github.jrhillery</groupId>
         <artifactId>MdHobby</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </parent>
 
     <artifactId>yqimport</artifactId>
@@ -24,12 +24,12 @@
         <dependency>
             <groupId>io.github.jrhillery</groupId>
             <artifactId>import-util</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>io.github.jrhillery</groupId>
             <artifactId>md-util</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
